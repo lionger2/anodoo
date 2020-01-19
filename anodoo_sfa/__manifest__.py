@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "anodoo_sfa",
+    'name': "销售自动化",
 
     'summary': """
     """,
@@ -10,22 +10,26 @@
     """,
 
     'author': "Anodoo",
-    'website': "http://www.anodoo.com",
+    'website': "http://www.anodoo.com/module/anodoo_safe",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Anodoo',
-    'version': '0.1',
+    'version': '13.1',
+    'application': True,
+    'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base', 'crm', 'sale', 'sales_team', 'sale_management', 'delivery', 'account', 'product_margin'],
+    'depends': ['anodoo_base'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/sfa_menu.xml',
+        'data/sfa_data.xml',
+        'security/sfa_security.xml',
+        'security/ir.model.access.csv',
         'views/sfa_views.xml',
+        'views/sfa_menu.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "anodoo_engage_website",
+    'name': "交互渠道-官网",
 
     'summary': """
     """,
@@ -16,20 +16,20 @@
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Anodoo',
-    'version': '0.1',
+    'version': '13.1',
+    'application': False,
+    'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base', 'anodoo_engage', 'anodoo_mktauto', 'website', 'website_form', 'website_mail', 'website_mail_channel',
-                'website_rating', 'survey', 'website_blog', 'website_slides', 'website_slides_survey', 'website_forum', 
-                'website_event', 'website_event_track', 'portal', 'website_membership', 'website_profile', 
-                'website_customer', 'website_partner', 'website_sale', 'mass_mailing', 'utm', 'link_tracker'],
+    'depends': ['anodoo_base', 'anodoo_engage', 'anodoo_mktauto'],
 
     # always loaded
     'data': [
         'data/engage_website_data.xml',
-        # 'security/ir.model.access.csv',
+        'security/engage_website_security.xml',
+        'security/ir.model.access.csv',
+        'views/engage_website_views.xml',
         'views/engage_website_menu.xml',
-        'views/views.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

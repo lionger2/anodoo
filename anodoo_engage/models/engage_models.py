@@ -16,12 +16,12 @@ from odoo import models, fields, api
 
 class EngageChannel(models.Model):
     _name = 'anodoo.engage.channel'
-    _description = 'Engage Channel'
+    _description = '客户交互渠道'
     _order = "sequence"
         
-    code = fields.Char('渠道代码', required=True)
-    name = fields.Char('渠道名称', required=True, translate=False)
-    description = fields.Text('渠道描述', translate=False)
+    code = fields.Char('代码', required=True)
+    name = fields.Char('名称', required=True, translate=False)
+    description = fields.Text('描述', translate=False)
     
     online = fields.Selection([('online', '线上'), ('offline', '线下'), ('on_and_off', '线上和线下')], required=True, string='线上或线下')
     type = fields.Selection([('intype', '自有交互渠道'), ('outtype', '第三方交互渠道')], required=True, string='是否自有交互渠道' )

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+  
+    <menuitem id="contact_menu_root" name="联系人" sequence="20" />
+    	<menuitem parent="contact_menu_root" id="contact_menu_contact" name="联系人" />
+    	
+    	<menuitem parent="contact_menu_root" id="contact_menu_analysis" name="分析" />
+    	<menuitem parent="contact_menu_root" id="contact_menu_config" name="配置" />
+    		<menuitem parent="contact_menu_config" id="contact_menu_config_market" name="市场营销" />
+    		
+    	
+    	
+
+</odoo>

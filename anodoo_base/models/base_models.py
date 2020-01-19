@@ -18,3 +18,11 @@ class IrTranslation(models.Model):
     _inherit = "ir.translation"
     
     anodoo = fields.Boolean('Anodoo标记', default=False)
+    
+#Anodoo中对res.partner的基类定义
+class Parnter(models.Model):
+    _inherit = 'res.partner'
+    
+    partner_type = fields.Char('扩展类型', default='contact', help='Anodoo按照Odoo设计，用来实现contact,customer, dealer等')
+    
+    

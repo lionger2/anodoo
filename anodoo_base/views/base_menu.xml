@@ -2,6 +2,8 @@
 <odoo>
   
     <menuitem parent="base.menu_administration" id="odoo_history_menu" name="保留菜单" />
+    	<menuitem parent="odoo_history_menu" id="base.menu_management"/>
+    	
     	<menuitem parent="odoo_history_menu" id="mail.menu_root_discuss"/>
     	<menuitem parent="odoo_history_menu" id="calendar.mail_menu_calendar"/>
     	<menuitem parent="odoo_history_menu" id="contacts.menu_contacts"/>
