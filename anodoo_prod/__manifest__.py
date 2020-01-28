@@ -25,7 +25,7 @@
 
     # always loaded
     'data': [
-        'data/proj_data.xml',
+        'data/prod_data.xml',
         'security/prod_security.xml',
         'security/ir.model.access.csv',
         'views/prod_views.xml',

@@ -25,4 +25,8 @@ class Parnter(models.Model):
     
     partner_type = fields.Char('扩展类型', default='contact', help='Anodoo按照Odoo设计，用来实现contact,customer, dealer等')
     
+    #重写父类，名称还是使用本身的名称
+    def _get_name(self):
+        return self.name
+
     

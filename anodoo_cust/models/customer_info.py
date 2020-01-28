@@ -4,7 +4,7 @@ class Customer(models.Model):
     #extend anodoo_base.Partner
     _inherit = 'res.partner'
         
-    identity = fields.Char('唯一标识信息', help='客户唯一标识信息')
+    customer_identity = fields.Char('唯一标识信息', help='客户唯一标识信息')
     
     #个人客户
     belong_company = fields.Many2one('res.partner', '工作公司', help='个人客户所工作公司')
@@ -41,8 +41,6 @@ class Customer(models.Model):
     
     #customer_user_ids = ''
     
-    def init(self):
-        self.partner_type = 'customer'
         
  #   @api.model
   #  def _search(self, args, offset=0, limit=None, order=None, count=False, access_rights_uid=None):
@@ -94,9 +92,6 @@ class ProspectCustomer(models.Model):
     _inherit = 'res.partner' 
     
     is_prospect = fields.Boolean('是否潜在客户', compute='_compute_is_prospect', store=True)
-    
-    def init(self):
-        self.partner_type = 'customer'
         
     @api.depends('lifetime_stage_id')
     def _compute_is_prospect(self):
@@ -109,10 +104,7 @@ class LosingCustomer(models.Model):
     _inherit = 'res.partner' 
     
     is_losing = fields.Boolean('是否流失客户', compute='_compute_is_losing', store=True)
-    
-    def init(self):
-        self.partner_type = 'customer'
-        
+          
     @api.depends('lifetime_stage_id')
     def _compute_is_losing(self):
         for record in self:
@@ -124,9 +116,6 @@ class SuccessCustomer(models.Model):
     _inherit = 'res.partner'
     
     is_success = fields.Boolean('是否成功客户', compute='_compute_is_success', store=True)
-    
-    def init(self):
-        self.partner_type = 'customer'
         
     @api.depends('lifetime_stage_id')
     def _compute_is_success(self):
@@ -146,3 +135,5 @@ class CustomerRelationCustomer(models.Model):
                                      string='关系类型', default='business', required=True, help='客户与客户关系的类型')
     
     is_reverse = fields.Boolean('是否反向关系', default=False, help='客户和客户关系的定义一般都是反向的')
+    
+    

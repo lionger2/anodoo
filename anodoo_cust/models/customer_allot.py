@@ -5,16 +5,16 @@ class CustomerPool(models.Model):
     _description = '客户池'
     
     name = fields.Char(string='客户池名称', required=True, translate=True)
-    
+     
     is_private = fields.Boolean('是否私有', default=False, help='私有客户池或公有客户池')
-       
+        
     manager_user_id = fields.Many2one('res.users', string='管理员')
-    
+     
     description = fields.Text('描述', translate=False)
     
     belong_user_ids = fields.Many2many('res.users', string='所属个人', help='客户池所属用户，可以是一个或多个')
     
-    #belong_team_ids = fields.Many2many('res.users', string='所属团队', help='客户池所属团队，可以是一个或多个')
+    belong_team_ids = fields.Many2many('crm.team', string='所属团队', help='客户池所属团队，可以是一个或多个')
     
     segment_ids = fields.Many2many('anodoo.customer.segment', string='客户细分', help='客户池通过管理客户细分来是实现动态的客户列表关联')
     

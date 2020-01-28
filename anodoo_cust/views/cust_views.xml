@@ -57,7 +57,7 @@
                                 <div class="oe_kanban_details">
                                     <strong class="o_kanban_record_title oe_partner_heading">
                                     	<field name="display_name"/>
-                                    	<t t-if="record.identity.raw_value">（<field name="identity"/>）</t>
+                                    	<t t-if="record.customer_identity.raw_value">（<field name="customer_identity"/>）</t>
                                     </strong>
                                     <div>
                                         <field name="customer_label_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
@@ -65,7 +65,7 @@
                                     <div class="o_kanban_tags_section oe_kanban_partner_categories"/>
                                     <ul>
                                     	<li t-if="record.customer_type.raw_value and record.customer_size.raw_value"><field name="customer_type"/> , <field name="customer_size"/></li>
-                     					<t t-if="record.customer_type.raw_value==person and record.function.raw_value">
+                     					<t t-if="record.customer_type.raw_value=='person' and record.function.raw_value">
                                         <li>
                                         	<field name="function"/><t t-if="record.belong_company.raw_value"> , <field name="belong_company"/></t>
                                         </li>
@@ -152,7 +152,7 @@
 
                     <group>
                         <group name="base_info" string="基本信息">
-                        	<field name="identity" />
+                        	<field name="customer_identity" />
                         	<field name="customer_priority" widget="priority"/>
                         	<field name="lifetime_id" options='{"no_open": True, "no_create": True}' required="1"/>
                         	<field name="belong_company" widget="res_partner_many2one" domain="" context="{}" attrs="{'invisible': [('customer_type','!=', 'person')]}"/>
@@ -543,6 +543,7 @@
 			                 </group>
 			                 <group name="belong" colspan="4">
 			                     <field name="belong_user_ids" widget="many2many_tags" options="{'no_create': True}" attrs="{'readonly': ['|', ('is_default_public', '=', True), ('belong_person_id', '!=', False)]}"/>
+			                     <field name="belong_team_ids" widget="many2many_tags" options="{'no_create': True}" attrs="{'readonly': ['|', ('is_default_public', '=', True), ('belong_person_id', '!=', False)]}"/>
 			                 </group>
 			                 <group name="segment_ids" colspan="4">
 			                     <field name="segment_ids" widget="many2many_tags" options="{'no_create': True}" attrs="{'readonly': ['|', ('is_default_public', '=', True), ('belong_person_id', '!=', False)]}"/>
@@ -719,7 +720,7 @@
 		                <group name="group_top">
 			                 <group name="group_left">
 			                     <field name="customer_id" />
-			                     <field name="identity" />
+			                     <field name="user_identity" />
 			                     <field name="product" />
 			                 </group>
 			                 <group name="group_right">			                 	
@@ -738,7 +739,7 @@
 	        <field name="arch" type="xml">
 	            <tree>
 	                <field name="customer_id" />
-	                <field name="identity" />
+	                <field name="user_identity" />
 	                <field name="product" />
 	                <field name="contact_id" />
 	                <field name="register_date" />
@@ -751,8 +752,8 @@
 	        <field name="model">anodoo.customer.user</field>
 	        <field name="arch" type="xml">
 	            <search>
-	            	<field name="identity" filter_domain="[('identity', 'ilike', self)]" />
-		           
+	            	<field name="user_identity" filter_domain="[('user_identity', 'ilike', self)]" />
+		           	<field name="customer_id" filter_domain="[('customer_id.name', 'ilike', self)]" />
 		           	<group expand="1" string="Group By">
 		           		<filter name="groupby_customer_id"  string="客户" context="{'group_by':'customer_id'}" />               	
 		           	</group>         	
@@ -770,10 +771,11 @@
 		                <group name="group_top">
 			                 <group name="group_left">
 			                     <field name="user_id" />
-			                     <field name="operation_type" />
+			                     <field name="customer_name" />
+			                     <field name="product" />
 			                 </group>
-			                 <group name="group_right">
-			                 	
+			                 <group name="group_right">			                 	
+			                     <field name="operation_type" />
 			                     <field name="operation_time" />
 			                     <field name="comment" />
 			                 </group>
@@ -788,6 +790,8 @@
 	        <field name="arch" type="xml">
 	            <tree>
 	                <field name="user_id" />
+	                <field name="customer_name" />
+	                <field name="product" />
 	                <field name="operation_type" />
 	                <field name="operation_time" />
 	                <field name="comment" />               
@@ -799,8 +803,8 @@
 	        <field name="model">anodoo.customer.user.operation</field>
 	        <field name="arch" type="xml">
 	            <search>
-	            	<field name="user_id" filter_domain="[('user_id.identity', 'ilike', self)]" />
-		            
+	            	<field name="user_id" filter_domain="[('user_id.user_identity', 'ilike', self)]" />
+		            <field name="customer_name" filter_domain="[('customer_name', 'ilike', self)]" />
 		           	<group expand="1" string="Group By">
 		           		<filter name="groupby_operation_type"  string="操作类型" context="{'group_by':'operation_type'}" />               	
 		           	</group>         	

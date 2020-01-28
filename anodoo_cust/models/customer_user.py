@@ -3,12 +3,12 @@ from odoo import models, fields, api
 class CustomerUser(models.Model):
     _name = "anodoo.customer.user"
     _description = '客户下的具体用户'
-    _rec_name = 'identity'
+    _rec_name = 'user_identity'
     
     customer_id = fields.Many2one('res.partner', string='客户', domain="[('partner_type', '=', 'customer')]")
     
     
-    identity = fields.Char('唯一标识信息', help='用户唯一标识信息')
+    user_identity = fields.Char('唯一标识信息', help='用户唯一标识信息')
     
     product = fields.Char('产品')
     
@@ -25,6 +25,11 @@ class CustomerUserOperation(models.Model):
     _rec_name = 'operation_type'
     
     user_id = fields.Many2one('anodoo.customer.user', string='用户')
+    
+    product = fields.Char(related='user_id.product')
+    
+    customer_name = fields.Char(related='user_id.customer_id.name', store=True, string='客户')
+    
     
     operation_type = fields.Char('操作类习惯')
     
