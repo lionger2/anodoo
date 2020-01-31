@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//anodoo_base/__manifest__.py=utf-8
+encoding//anodoo_base/models/__init__.py=utf-8
 encoding//anodoo_base/models/base_models.py=utf-8
 encoding//anodoo_base/models/res_country.py=utf-8
 encoding//anodoo_contact/__init__.py=utf-8
@@ -32,6 +33,7 @@ encoding//anodoo_proj/__manifest__.py=utf-8
 encoding//anodoo_sale/__manifest__.py=utf-8
 encoding//anodoo_sale/models/__init__.py=utf-8
 encoding//anodoo_sale/models/sale_project.py=utf-8
+encoding//anodoo_sale/models/sale_quota.py=utf-8
 encoding//anodoo_sale/models/sale_team.py=utf-8
 encoding//anodoo_sale/models/sale_territory.py=utf-8
 encoding//anodoo_sfa/__manifest__.py=utf-8

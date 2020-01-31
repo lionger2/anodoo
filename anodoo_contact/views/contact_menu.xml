@@ -157,12 +157,7 @@
 				<menuitem parent="contact_menu_config_contacts" id="contact_menu_config_contacts_tag" name="联系人标签" action="base.action_partner_category_form" />
 				<menuitem parent="contact_menu_config_contacts" id="contact_menu_config_contacts_title" name="联系人头衔" action="base.action_partner_title_contact" />
 				<menuitem parent="contact_menu_config_contacts" id="contact_menu_config_contacts_industry" name="公司行业" action="base.res_partner_industry_action" />
-			<menuitem parent="contact_menu_config" id="contact_menu_config_address" name="地址" />
-				
-				<menuitem parent="contact_menu_config_address" id="contact_menu_config_address_country" name="国家"  action="base.action_country" />
-				<menuitem parent="contact_menu_config_address" id="contact_menu_config_address_state" name="省" action="base.action_country_state" />
-				<menuitem parent="contact_menu_config_address" id="contact_menu_config_address_city" name="市" action="base.action_country_group" />
-				<menuitem parent="contact_menu_config_address" id="contact_menu_config_address_location" name="位置" action="base.action_country_group" />
+			
 			<menuitem parent="contact_menu_config" id="contact_menu_config_bank" name="银行" />
 				<menuitem parent="contact_menu_config_bank" id="contact_menu_config_bank_list" name="银行" action="base.action_res_bank_form" />
 				<menuitem parent="contact_menu_config_bank" id="contact_menu_config_bank_account" name="银行账号" action="base.action_res_partner_bank_account_form"/>

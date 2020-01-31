@@ -21,8 +21,8 @@ class CountryStateCity(models.Model):
     _name = 'res.country.state.city'
     _order = 'code'
 
-    state_id = fields.Many2one('res.country.state', string='State', required=True)
-    country_id = fields.Many2one('res.country', related='state_id.country_id', string='Country', required=True, store=True, readonly=True)
+    state_id = fields.Many2one('res.country.state', string='State', required=True, domain="[('country_id', '=?', country_id)]")
+    country_id = fields.Many2one('res.country', string='Country', required=True)
     
     name = fields.Char(string='City Name', required=True)
     code = fields.Char(string='City Code', help='City Code', required=True)

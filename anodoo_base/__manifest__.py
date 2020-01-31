@@ -43,9 +43,9 @@
     'data': [
         'data/base_data.xml',
         'security/base_security.xml',
-        'security/ir.model.access.csv',           
+        'security/ir.model.access.csv',          
+        'views/base_views.xml',         
         'views/base_menu.xml',
-        'views/views.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
