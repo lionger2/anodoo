@@ -7,7 +7,7 @@ class CustomerLifetime(models.Model):
     _rec_name = 'name'
     _order = "sequence, id"
     
-    name = fields.Char('名称', required=True, translate=True)
+    name = fields.Char('名称', required=True)
     
     sequence = fields.Integer('序号', default=1, help="客户生命周期序号")
     
@@ -34,7 +34,7 @@ class CustomerLifetimeStage(models.Model):
     
     lifetime_id = fields.Many2one('anodoo.customer.lifetime', string='生命周期')
     
-    name = fields.Char('名称', required=True, translate=True)
+    name = fields.Char('名称', required=True)
     sequence = fields.Integer('序号', default=1, help="客户生命周期阶段的序号")
     is_default = fields.Boolean('默认阶段', default=False)
     

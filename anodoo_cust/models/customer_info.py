@@ -52,7 +52,7 @@ class Customer(models.Model):
     @api.model
     def default_get(self, default_fields):
         # OVERRIDE
-        values = super(Customer, self).default_get(default_fields)
+        values = super().default_get(default_fields)
         
         lifetime_id = values.get('lifetime_id')
         if 'lifetime_stage_id' in default_fields and lifetime_id:

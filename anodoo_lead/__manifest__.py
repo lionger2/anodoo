@@ -27,9 +27,12 @@
     'data': [
         'security/lead_security.xml',
         'security/ir.model.access.csv',
+        'wizard/crm_lead_lost_views.xml',
+        'wizard/crm_merge_opportunities_views.xml',
+        'wizard/crm_lead_to_opportunity_views.xml',
         'views/lead_views.xml',
         'views/lead_menu.xml',
-        'views/templates.xml',
+        'views/templates.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

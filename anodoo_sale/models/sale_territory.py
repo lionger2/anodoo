@@ -19,7 +19,7 @@ class SaleTerritory(models.Model):
     _description = '销售区域'
     _parent_store = True
     
-    name = fields.Char(string='名称', required=True, translate=True)
+    name = fields.Char(string='名称', required=True)
     
     parent_id = fields.Many2one('anodoo.sale.territory', string='父区域', index=True, ondelete='cascade')
     child_ids = fields.One2many('anodoo.sale.territory', 'parent_id', string='子区域')

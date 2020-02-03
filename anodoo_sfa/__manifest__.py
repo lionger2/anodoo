@@ -21,7 +21,7 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base'],
+    'depends': ['anodoo_base', 'anodoo_sale', 'anodoo_lead'],
 
     # always loaded
     'data': [
@@ -29,6 +29,12 @@
         'security/sfa_security.xml',
         'security/ir.model.access.csv',
         'views/sfa_views.xml',
+        'views/process_views.xml',
+        'views/cpq_views.xml',
+        'views/contr_views.xml',
+        'views/order_views.xml',
+        'views/invc_views.xml',
+        'views/pay_views.xml',
         'views/sfa_menu.xml',
         'views/templates.xml',
     ],

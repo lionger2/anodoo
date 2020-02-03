@@ -8,7 +8,7 @@ class CustomerType(models.Model):
     _name = "anodoo.customer.type"
     _description = '客户性质'
     
-    name = fields.Char('名称', required=True, translate=True)
+    name = fields.Char('名称', required=True)
     
     sequence = fields.Integer('序号', default=1)
     
@@ -23,7 +23,7 @@ class CustomerSize(models.Model):
     _name = "anodoo.customer.size"
     _description = '客户规模'
     
-    name = fields.Char('名称', required=True, translate=True)
+    name = fields.Char('名称', required=True)
     
     sequence = fields.Integer('序号', default=1)
     
@@ -41,7 +41,7 @@ class CustomerLabelCategory(models.Model):
     _description = '客户标签分类'
     _parent_store = True
     
-    name = fields.Char(string='分类名称', required=True, translate=True)
+    name = fields.Char(string='分类名称', required=True)
     
     parent_id = fields.Many2one('anodoo.customer.label.category', string='父分类', index=True, ondelete='cascade')
     child_ids = fields.One2many('anodoo.customer.label.category', 'parent_id', string='子分类')
@@ -94,7 +94,7 @@ class CustomerLabel(models.Model):
     _name = "anodoo.customer.label"
     _description = "客户标签"
     
-    name = fields.Char(string='标签名称', required=True, translate=True)
+    name = fields.Char(string='标签名称', required=True)
     
     category_id = fields.Many2one('anodoo.customer.label.category', string='标签分类')
     
@@ -106,7 +106,7 @@ class CustomerSegment(models.Model):
     _name = "anodoo.customer.segment"
     _description = '客户细分，客户群，客户分群'
     
-    name = fields.Char(string='客户细分名称', required=True, translate=True)
+    name = fields.Char(string='客户细分名称', required=True)
     
     label_ids = fields.Many2many('anodoo.customer.label', string='客户标签', help='客户细分对应的客户标签，根据标签批判客户')
     

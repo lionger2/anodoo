@@ -26,7 +26,7 @@ class TeamRole(models.Model):
     _description = '团队角色'
     _order = 'sequence'
     
-    name = fields.Char('名称', required=True, translate=True)
+    name = fields.Char('名称', required=True)
     
     sequence = fields.Integer('序号', default=10)
     

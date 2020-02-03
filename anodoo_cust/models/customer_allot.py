@@ -4,7 +4,7 @@ class CustomerPool(models.Model):
     _name = "anodoo.customer.pool"
     _description = '客户池'
     
-    name = fields.Char(string='客户池名称', required=True, translate=True)
+    name = fields.Char(string='客户池名称', required=True)
      
     is_private = fields.Boolean('是否私有', default=False, help='私有客户池或公有客户池')
         

@@ -12,7 +12,7 @@ class SaleGoalModel(models.Model):
     _order = 'id'
     
     
-    name = fields.Char('名称', required=True, translate=True)
+    name = fields.Char('名称', required=True)
     
     sequence = fields.Integer('序号', default=10, help="序号")
     
@@ -56,7 +56,7 @@ class SaleGoal(models.Model):
     _order = 'id'
     
     
-    name = fields.Char('名称', required=True, translate=True)
+    name = fields.Char('名称', required=True)
     
     sequence = fields.Integer('序号', default=10, help="序号")
     
@@ -87,7 +87,7 @@ class SaleGoalState(models.Model):
     _order = "sequence, id"
     
     
-    name = fields.Char('名称', required=True, translate=True)
+    name = fields.Char('名称', required=True)
     
     sequence = fields.Integer('序号', default=10, help="序号")
     
