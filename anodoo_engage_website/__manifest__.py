@@ -3,14 +3,15 @@
     'name': "交互渠道-官网",
 
     'summary': """
+        官网
     """,
 
     'description': """
-        Long description of module's purpose
+        官网
     """,
 
     'author': "Anodoo",
-    'website': "http://www.anodoo.com",
+    'website': "http://www.anodoo.com/module/anodoo-engage-website",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml

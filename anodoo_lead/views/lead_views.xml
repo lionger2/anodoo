@@ -17,7 +17,7 @@
 	        		<field name="can_convert" invisible="1"/>
 	                <button string="认定通过" name="qualify_success" type="object" class="btn btn-secondary"
 	                title="线索认定通过" attrs="{'invisible':[('is_qualify', '=', False)]}"/>
-	                <button name="%(anodoo_lead.action_anodoo_lead_qualify_lost)d" string="认定不通过"
+	                <button string="认定不通过" name="%(anodoo_lead.action_anodoo_lead_qualify_lost)d" 
                             type="action" class="btn btn-secondary" context="{'default_lead_id': active_id, 'default_is_for': type}" attrs="{'invisible':[('is_qualify', '=', False)]}"/>
                             
 	            </xpath>

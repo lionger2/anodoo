@@ -8,11 +8,19 @@
 	        <field name="is_default_public">True</field>
 	    </record>
 	    
+	    <!-- 默认生命周期和阶段定义 -->
 	    <record model="anodoo.customer.lifetime" id="default_customer_lifetime">
 	        <field name="name">默认客户生命周期定义</field>
 	        <field name="description">如果客户没有匹配到其他的客户生命周期定义，则使用默认客户生命周期</field>
 	        <field name="sequence">0</field>
 	        <field name="is_default">True</field>
+	    </record>
+	    <record model="anodoo.customer.lifetime.stage" id="default_customer_lifetime_stage_new">
+	        <field name="name">新建</field>
+	        <field name="description">默认的新建阶段</field>
+	        <field name="sequence">0</field>
+	        <field name="is_default">True</field>
+	        <field name="lifetime_id" ref="default_customer_lifetime"/>
 	    </record>
 	    
 	    <!-- 客户的默认生命周期设置，可以在后台修改 -->

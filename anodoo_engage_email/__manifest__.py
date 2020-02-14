@@ -3,15 +3,15 @@
     'name': "交互渠道-邮件",
 
     'summary': """
-    
+        邮件交互,包括邮件营销
     """,
 
     'description': """
-        Long description of module's purpose
+        邮件交互,包括邮件营销
     """,
 
     'author': "Anodoo",
-    'website': "http://www.anodoo.com",
+    'website': "http://www.anodoo.com/module/anodoo-engage-email",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml

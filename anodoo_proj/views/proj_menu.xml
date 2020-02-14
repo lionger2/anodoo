@@ -1,10 +1,14 @@
 <?xml version="1.0"?>
 <odoo>
+	<!-- 
+	<record id="project.open_view_project_all" model="ir.actions.act_window">
+		<field name="domain">[('project_type', '=', 'common')]</field>
+	</record>
+	 -->
   
     <menuitem id="proj_menu_root" name="项目" sequence="70" web_icon="project,static/description/icon.png"/>
     	<menuitem parent="proj_menu_root" id="proj_menu_project" name="项目" />
-    		<menuitem parent="proj_menu_project" id="proj_menu_project_list" name="所有项目(看板)" action="project.open_view_project_all" />
-    		<menuitem parent="proj_menu_project" id="proj_menu_project_list2" name="所有项目(列表)" action="project.open_view_project_all_config"/>
+    		<menuitem parent="proj_menu_project" id="proj_menu_project_list" name="项目管理" action="project.open_view_project_all" />
     		
     	<menuitem parent="proj_menu_root" id="proj_menu_plan" name="计划" />
     	
@@ -31,6 +35,7 @@
     	<menuitem parent="proj_menu_root" id="proj_menu_config" name="配置" />
     		<menuitem parent="proj_menu_config" id="proj_menu_config_project" name="项目" />
     			<menuitem parent="proj_menu_config_project" id="proj_menu_config_project_setting" name="基本设置" action="project.project_config_settings_action" />
+    			<menuitem parent="proj_menu_config_project" id="proj_menu_config_project_config" name="项目配置" action="project.open_view_project_all_config"/>
     			
     		<menuitem parent="proj_menu_config" id="proj_menu_config_task" name="任务" />
     			<menuitem parent="proj_menu_config_task" id="proj_menu_config_task_stages" name="任务阶段" action="project.open_task_type_form" />

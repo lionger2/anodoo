@@ -3,14 +3,15 @@
     'name': "交互渠道-会议",
 
     'summary': """
+        会议交互,通过线上,线下会议等形式和客户交互
     """,
 
     'description': """
-        Long description of module's purpose
+        会议交互,通过线上,线下会议等形式和客户交互
     """,
 
     'author': "Anodoo",
-    'website': "http://www.anodoo.com",
+    'website': "http://www.anodoo.com/module/anodoo-engage-meeting",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml

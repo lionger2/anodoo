@@ -3,11 +3,11 @@
     'name': "Anodoo 演示",
 
     'summary': """
-    Anodoo的所有功能演示
+        Anodoo的所有功能演示
     """,
 
     'description': """
-        Long description of module's purpose
+        Anodoo的所有功能演示
     """,
 
     'author': "Anodoo",

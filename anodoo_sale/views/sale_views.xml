@@ -372,6 +372,8 @@
 			                     <field name="owner_team_id" attrs="{'invisible': ['!', '&amp;', ('dimension_type', '=', 'business'), ('business_type', '=', 'team')]}"/>
 			                     <field name="owner_salesperson_id" attrs="{'invisible': ['!', '&amp;', ('dimension_type', '=', 'business'), ('business_type', '=', 'salesperson')]}"/>
 			                     <field name="owner_customer_id" attrs="{'invisible': ['!', '&amp;', ('dimension_type', '=', 'business'), ('business_type', '=', 'customer')]}"/>
+			                     <field name="owner_product_category_id" attrs="{'invisible': ['!', '&amp;', ('dimension_type', '=', 'business'), ('business_type', '=', 'productcategory')]}"/>
+			                     <field name="owner_product_template_id" attrs="{'invisible': ['!', '&amp;', ('dimension_type', '=', 'business'), ('business_type', '=', 'product')]}"/>
 			                     
 			                     <field name="owner_year" attrs="{'invisible': ['!', '&amp;', ('dimension_type', '=', 'datetime'), ('datetime_type', '=', 'year')]}"/>
 			                     <field name="owner_quarter" attrs="{'invisible': ['!', '&amp;', ('dimension_type', '=', 'datetime'), ('datetime_type', '=', 'quarter')]}"/>

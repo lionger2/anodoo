@@ -3,25 +3,26 @@
     'name': "产品管理",
 
     'summary': """
+        产品管理
     """,
 
     'description': """
-        Long description of module's purpose
+        产品管理
     """,
 
     'author': "Anodoo",
-    'website': "http://www.anodoo.com/module/anodoo_prod",
+    'website': "http://www.anodoo.com/module/anodoo-prod",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Anodoo',
     'version': '13.1',
-    'application': True,
+    'application': False,
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base'],
+    'depends': ['anodoo_base', 'anodoo_sale'],
 
     # always loaded
     'data': [

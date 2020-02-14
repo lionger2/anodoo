@@ -49,6 +49,28 @@
                                     </kanban>
                                 </field>
                             </page>
+                            <page name="role_members" string="角色成员" >
+                            	<field name="team_member_ids" context="{'team_id': id}">
+			                     	<tree editable='bottom'>
+						                <field name="role_id" />
+						                <field name="user_id" />
+						                <field name="sequence" />  
+						                <field name="description" />              
+						            </tree>
+			                     </field>
+                            </page>
+                            <page name="role" string="角色" >
+                            	<field name="team_roles" context="{'team_id': id}">
+			                     	<tree editable='bottom'>
+						                <field name="name" />
+						                <field name="is_leader" />
+						                <field name="is_default" />  
+						                <field name="group_id" />    
+						                <field name="sequence" />  
+						                <field name="description" />             
+						            </tree>
+			                     </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from . import crm_stage
 
 class Lead(models.Model):    
     _inherit = 'crm.lead'
@@ -15,6 +16,10 @@ class Lead(models.Model):
     user_id = fields.Many2one('res.users', string='线索负责人')
     
     owner_team_id = fields.Many2one('crm.team', string='线索团队')
+    owner_team_name = fields.Char('团队名称', related='owner_team_id.name')
+    owner_team_description = fields.Text('团队描述')
+    #, related='owner_team_id.description'
+    
     
     is_qualify = fields.Boolean('是否认定阶段', related='stage_id.is_qualify', default=False)
     
@@ -78,3 +83,6 @@ class Lead(models.Model):
             合并线索商机后,将被合并的线索/商机关联到新线索/商机上.
         '''
         return self.super().merge_opportunity(user_id=user_id, team_id=team_id)
+    
+    def qualify_success(self):
+        pass

@@ -39,6 +39,7 @@ class CustomerLifetimeStage(models.Model):
     is_default = fields.Boolean('默认阶段', default=False)
     
     fold = fields.Boolean('合并', default=False)
+    description = fields.Text('描述', translate=False)
     
     is_prospect = fields.Boolean('是否潜在客户', default=False)
     is_losing = fields.Boolean('是否流失客户', default=False)

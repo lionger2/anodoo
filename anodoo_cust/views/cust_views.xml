@@ -133,6 +133,7 @@
                 <field name="is_prospect" invisible="1"/>
                 <field name="is_losing" invisible="1"/>
                 <field name="is_success" invisible="1"/>
+                <field name="parent_id" invisible="1"/>
                 <sheet>
                     <div class="oe_button_box" name="button_box"/>
                     <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
@@ -188,6 +189,20 @@
                             <field name="vat"/>
                             <field name="bank_ids"/>
                             <field name="credit_limit"/>
+                        </page>
+                        <page name='sales_purchases' string="销售信息">
+                            <group name="container_row_2">
+                                <group string="Sales" name="sale" priority="1">
+                                    <field name="user_id"/>
+                                </group>
+                                <group string="Purchase" name="purchase" priority="2" invisible="1">
+                                </group>
+                                <group name="misc" string="Misc">
+                                    <field name="ref" string="Reference"/>
+                                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly': True}"/>
+                                    <field name="industry_id" attrs="{'invisible': [('is_company', '=', False)]}" options="{'no_create': True}"/>
+                                </group>
+                            </group>
                         </page>
                         <page name="customer_relation" string="客户与客户关系">
                             <field name="customer_relation_customer_ids"/>

@@ -10,7 +10,7 @@
     """,
 
     'author': "Anodoo",
-    'website': "http://www.anodoo.com/module/anodoo_safe",
+    'website': "http://www.anodoo.com/product/anodoo-sfa",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -21,7 +21,11 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base', 'anodoo_sale', 'anodoo_lead'],
+    'depends': ['anodoo_base', 'anodoo_sale', 
+                'anodoo_crm',
+                'anodoo_lead', 
+                'anodoo_oppor', 'anodoo_process', 'anodoo_quote', 
+                'anodoo_order', 'anodoo_invoice', 'anodoo_pay'],
 
     # always loaded
     'data': [

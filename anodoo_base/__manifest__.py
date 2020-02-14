@@ -35,8 +35,9 @@
                 'website_event_questions', 'website_event_track', 'website_form', 
                 'website_forum', 'website_mail', 'website_mail_channel', 
                 'website_membership', 'website_partner', 'website_profile', 
-                'website_rating', 'website_sale', 'website_sale_slides', 
+                'website_sale', 'website_sale_slides', 
                 'website_slides', 'website_slides_survey'
+                #'website_rating', 
                 ],
 
     # always loaded

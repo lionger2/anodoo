@@ -3,14 +3,15 @@
     'name': "项目管理",
 
     'summary': """
+        项目管理
     """,
 
     'description': """
-        Long description of module's purpose
+        项目管理
     """,
 
     'author': "Anodoo",
-    'website': "http://www.anodoo.com/module/anodoo_proj",
+    'website': "http://www.anodoo.com/module/anodoo-proj",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml

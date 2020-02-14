@@ -1,5 +1,18 @@
 <?xml version="1.0"?>
 <odoo>
+	<!--  14 没有 survey.label
+	<record model="ir.actions.act_window" id="action_survey_label_form">
+        <field name="name">Suggested Values</field>
+        <field name="res_model">survey.label</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="survey_label_search"/>
+        <field name="context">{'search_default_group_by_question': True}</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_empty_folder">
+            No survey labels found
+          </p>
+        </field>
+    </record>-->
   
     <menuitem id="engage_website_menu_root" name="网站" sequence="80" web_icon="website,static/description/icon.png"/>
     	<menuitem parent="engage_website_menu_root" id="engage_website_menu_website" name="官网" />
@@ -43,13 +56,15 @@
     		<menuitem parent="engage_website_menu_livechat" id="engage_website_menu_livechat_config" name="配置" />
     			<menuitem parent="engage_website_menu_livechat_config" id="engage_website_menu_livechat_config_canned" name="快捷消息" action="im_livechat.im_livechat_canned_response_action" />
     			
+    			<!-- 14 没有 -->
+    			<!-- 
     	<menuitem parent="engage_website_menu_root" id="engage_website_menu_survey" name="问卷调查" />
     		<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_list" name="问卷" action="survey.action_survey_form"/>
 			<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_questions" name="问题库"  action="survey.action_survey_question_form"/>
-        	<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_label" name="问题选项" action="survey.action_survey_label_form"/>
+        	<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_label" name="问题选项" action="survey.action_survey_question_form"/>
         	<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_answer" name="答卷记录" action="survey.action_survey_user_input"/>
         	<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_line" name="答卷明细" action="survey.action_survey_user_input_line"/>
-        	
+        	 -->
     	<menuitem parent="engage_website_menu_root" id="engage_website_menu_elearning" name="在线学习"/>
     		<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_courses" name="课程" action="website_slides.slide_channel_action_overview"/>
     		<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_contents" name="课程内容" action="website_slides.slide_slide_action"/>
@@ -110,14 +125,15 @@
     		<menuitem parent="engage_menu_channel_website_livechat" id="engage_menu_channel_website_livechat_channels" name="会话通路" action="im_livechat.im_livechat_channel_action"/>
     		<menuitem parent="engage_menu_channel_website_livechat" id="engage_menu_channel_website_livechat_history" name="会话历史" action="im_livechat.mail_channel_action"/>
     		<menuitem parent="engage_menu_channel_website_livechat" id="engage_menu_channel_website_livechat_rating" name="评价" action="im_livechat.rating_rating_action_livechat_report"/>
-    		
+    		<!-- 14 没有 -->
+    			<!-- 
     	<menuitem parent="engage_menu_channel_website" id="engage_menu_channel_website_survey" name="问卷调查" />
     		<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_list" name="问卷" action="survey.action_survey_form"/>
 			<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_questions" name="问题库"  action="survey.action_survey_question_form"/>
-        	<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_label" name="问题选项" action="survey.action_survey_label_form"/>
+        	<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_label" name="问题选项" action="survey.action_survey_question_form"/>
         	<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_answer" name="答卷记录" action="survey.action_survey_user_input"/>
         	<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_line" name="答卷明细" action="survey.action_survey_user_input_line"/>
-        	
+        	-->
     	<menuitem parent="engage_menu_channel_website" id="engage_menu_channel_website_elearning" name="在线学习"/>
     		<menuitem parent="engage_menu_channel_website_elearning" id="engage_menu_channel_website_elearning_courses" name="课程" action="website_slides.slide_channel_action_overview"/>
     		<menuitem parent="engage_menu_channel_website_elearning" id="engage_menu_channel_website_elearning_contents" name="课程内容" action="website_slides.slide_slide_action"/>

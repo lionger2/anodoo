@@ -3,14 +3,15 @@
     'name': "团队协同",
 
     'summary': """
+        团队协同
     """,
 
     'description': """
-        Long description of module's purpose
+        团队协同
     """,
 
     'author': "Anodoo",
-    'website': "http://www.anodoo.com/module/anodoo_team",
+    'website': "http://www.anodoo.com/module/anodoo-team",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml

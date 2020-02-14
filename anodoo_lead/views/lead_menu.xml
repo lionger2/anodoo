@@ -147,8 +147,8 @@
     		<menuitem parent="lead_menu_convert" id="lead_menu_convert_can_convert" name="可转化线索" action="action_lead_list_can_convert"/>
     		<menuitem parent="lead_menu_convert" id="lead_menu_convert_converted" name="成功线索" action="action_lead_list_converted"/>
     	<menuitem parent="lead_menu_root" id="lead_menu_analysis" name="分析" />
-    		<menuitem parent="lead_menu_analysis" id="lead_menu_analysis_lead" name="线索分析" action="crm.crm_opportunity_report_action_lead" groups="crm.group_use_lead"/>
-			<menuitem parent="lead_menu_analysis" id="lead_menu_analysis_reveal" name="线索收集分析" action="crm_iap_lead_website.crm_reveal_view_action" groups="base.group_no_one"/>
+    		<menuitem parent="lead_menu_analysis" id="lead_menu_analysis_lead" name="线索分析" action="crm.crm_opportunity_report_action_lead" />
+			<menuitem parent="lead_menu_analysis" id="lead_menu_analysis_reveal" name="线索收集分析" action="crm_iap_lead_website.crm_reveal_view_action" />
         
     	<menuitem parent="lead_menu_root" id="lead_menu_config" name="配置" />
     		<menuitem parent="lead_menu_config" id="lead_menu_config_lead" name="线索管理"  />
