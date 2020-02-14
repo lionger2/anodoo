@@ -3,10 +3,11 @@
     'name': "销售自动化",
 
     'summary': """
+        销售自动化
     """,
 
     'description': """
-        Long description of module's purpose
+        销售自动化
     """,
 
     'author': "Anodoo",
@@ -33,17 +34,11 @@
         'security/sfa_security.xml',
         'security/ir.model.access.csv',
         'views/sfa_views.xml',
-        'views/process_views.xml',
-        'views/cpq_views.xml',
-        'views/contr_views.xml',
-        'views/order_views.xml',
-        'views/invc_views.xml',
-        'views/pay_views.xml',
         'views/sfa_menu.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/sfa_demo.xml',
     ],
 }
