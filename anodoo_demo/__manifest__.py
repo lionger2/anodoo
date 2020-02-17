@@ -22,10 +22,14 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base', 'anodoo_cust', 'anodoo_engage', 'anodoo_engage_email',
-                'anodoo_engage_event', 'anodoo_engage_meeting', 'anodoo_engage_sms',
-                'anodoo_engage_website', 'anodoo_lead', 'anodoo_mkt', 'anodoo_mktauto',
-                'anodoo_prod', 'anodoo_proj', 'anodoo_sale', 'anodoo_sfa', 'anodoo_team'],
+    'depends': ['anodoo_auth', 'anodoo_demo', 'anodoo_invoice', 'anodoo_pay', 'anodoo_sale',
+                'anodoo_base', 'anodoo_ecomm', 'anodoo_lead', 'anodoo_portal', 'anodoo_sfa',
+                'anodoo_blog', 'anodoo_elearn', 'anodoo_meeting', 'anodoo_process', 'anodoo_sms',
+                'anodoo_contact', 'anodoo_email', 'anodoo_mkt', 'anodoo_prod', 'anodoo_team',
+                'anodoo_content', 'anodoo_engage', 'anodoo_mktauto', 'anodoo_profile', 'anodoo_tech',
+                'anodoo_crm', 'anodoo_event', 'anodoo_oppor', 'anodoo_proj', 'anodoo_website',
+                'anodoo_cust', 'anodoo_forum', 'anodoo_order', 'anodoo_quote',
+                ],
 
     # always loaded
     'data': [

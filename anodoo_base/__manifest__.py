@@ -3,7 +3,7 @@
     'name': "Anodoo 基础",
 
     'summary': """
-        这个是Anodoo的所有应用和模块的基础。
+        这个是对Odoo的base, web等基础模块的扩展, 也是Anodoo的所有应用和模块的基础。
     """,
 
     'description': """
