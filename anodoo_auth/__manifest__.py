@@ -32,6 +32,7 @@
         'views/auth_views.xml',
         'views/auth_menu.xml',
         'views/auth_templates.xml',
+        'views/res_config_settings_views.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -20,9 +20,10 @@
     'version': '13.1',
     'application': False,
     'installable': True,
+    'auto_install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base', 'anodoo_sale', 'anodoo_lead'],
+    'depends': ['anodoo_sfa',  'anodoo_sale', 'anodoo_lead'],
 
     # always loaded
     'data': [

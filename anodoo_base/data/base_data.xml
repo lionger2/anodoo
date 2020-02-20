@@ -6,5 +6,12 @@
 	        <field name="description">Anodoo Application, 所有Anodoo应用，模块，权限的分类</field>
 	        <field name="sequence">0</field>
 	    </record>
+	    
+	    <record model="anodoo.product" id="default_anodoo_product">
+	        <field name="product_name">Anodoo</field>
+	        <field name="product_description">Anodoo, 基于Odoo和GPL的开源免费CRM</field>
+	    </record>
+	    
+	    
 	</data>
 </odoo>

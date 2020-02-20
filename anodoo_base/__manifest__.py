@@ -44,10 +44,13 @@
     'data': [
         'data/base_data.xml',
         'security/base_security.xml',
-        'security/ir.model.access.csv',          
-        'views/base_views.xml',         
+        'security/ir.model.access.csv', 
+        'views/ir_module_views.xml',   
+        'views/res_users_views.xml', 
+        'views/base_views.xml',                 
         'views/base_menu.xml',
-        'views/templates.xml',
+        'views/base_templates.xml',        
+        'views/res_config_settings_views.xml', 
     ],
     # only loaded in demonstration mode
     'demo': [

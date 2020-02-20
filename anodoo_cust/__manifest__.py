@@ -20,9 +20,10 @@
     'version': '13.1',
     'application': False,
     'installable': True,
+    'auto_install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base'],
+    'depends': ['anodoo_crm'],
 
     # always loaded
     'data': [
