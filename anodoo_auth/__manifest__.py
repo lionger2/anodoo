@@ -22,7 +22,7 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base', 'auth_signup'],
+    'depends': ['anodoo_base', 'auth_signup', 'auth_oauth'],
 
     # always loaded
     'data': [
@@ -30,6 +30,7 @@
         'security/auth_security.xml',
         'security/ir.model.access.csv',
         'views/auth_views.xml',
+        'views/auth_oauth_views.xml',
         'views/auth_menu.xml',
         'views/auth_templates.xml',
         'views/res_config_settings_views.xml'
