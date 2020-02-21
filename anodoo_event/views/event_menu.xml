@@ -23,10 +23,10 @@
 	   			<menuitem parent="engage_event_menu_root_config" id="engage_event_menu_root_config_tags" name="议程安排标签" action="website_event_track.action_event_track_tag" />
 	   			<menuitem parent="engage_event_menu_root_config" id="engage_event_menu_root_config_stages" name="议程安排阶段" action="website_event_track.event_track_stage_action" />    			
 	   	
-	   	<!-- 注册到anodoo_engage -->
+	   	<!-- 注册到anodoo_engage 
 	   	<menuitem parent="anodoo_engage.engage_menu_channel" id="engage_menu_channel_event" name="活动"/>
 	   		<menuitem parent="engage_menu_channel_event" id="engage_menu_channel_event_list" name="活动" action="event.action_event_view" />
 			<menuitem parent="engage_menu_channel_event" id="engage_menu_channel_event_tracks" name="议程安排跟进" action="website_event_track.action_event_track"/>
-
+-->
 	</data>
 </odoo>

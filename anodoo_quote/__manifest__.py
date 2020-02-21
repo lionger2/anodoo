@@ -23,7 +23,7 @@
     'auto_install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_sfa',  'anodoo_sale', 'anodoo_lead'],
+    'depends': ['anodoo_sfa'],
 
     # always loaded
     'data': [

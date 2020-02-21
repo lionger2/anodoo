@@ -21,13 +21,13 @@
 	    		<menuitem parent="engage_sms_menu_config" id="engage_sms_menu_config_mkt" name="短信营销"/>
 	    			<menuitem parent="engage_sms_menu_config_mkt" id="engage_sms_menu_config_mkt_blacklist" name="群发黑名单" action="phone_validation.phone_blacklist_action"/>
 	    			
-	    <!-- 注册到anodoo_engage -->
+	    <!-- 注册到anodoo_engage 
 		<menuitem parent="anodoo_engage.engage_menu_channel" id="engage_menu_channel_sms" name="短信"/>
 			<menuitem parent="engage_menu_channel_sms" id="engage_menu_channel_sms_list" name="短信列表" action="sms.sms_sms_action"/>
-			
-	    <!-- 注册到anodoo_mktauto -->
+			-->
+	    <!-- 注册到anodoo_mktauto 
 		<menuitem parent="anodoo_mktauto.mktauto_menu_channel" id="mktauto_menu_channel_sms" name="短信"/>
 			<menuitem parent="mktauto_menu_channel_sms" id="mktauto_menu_channel_sms_mkt" name="短信营销" action="mass_mailing_sms.mailing_mailing_action_sms"/>
-			
+			-->
 	</data>
 </odoo>

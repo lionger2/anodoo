@@ -79,6 +79,7 @@ encoding//anodoo_profile/__manifest__.py=utf-8
 encoding//anodoo_proj/__manifest__.py=utf-8
 encoding//anodoo_proj/models/__init__.py=utf-8
 encoding//anodoo_proj/models/project.py=utf-8
+encoding//anodoo_quote/__manifest__.py=utf-8
 encoding//anodoo_sale/__manifest__.py=utf-8
 encoding//anodoo_sale/models/__init__.py=utf-8
 encoding//anodoo_sale/models/sale_project.py=utf-8

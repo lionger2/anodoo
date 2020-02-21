@@ -22,7 +22,8 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base', 'website_forum'],
+    'depends': ['website_forum',
+                'anodoo_base'],
 
     # always loaded
     'data': [

@@ -29,23 +29,7 @@
 	    			<menuitem parent="engage_website_menu_website_config" id="engage_website_menu_website_config_pages" name="页面" action="website.action_website_pages_list"/>
 	    			<menuitem parent="engage_website_menu_website_config" id="engage_website_menu_website_config_menu" name="菜单" action="website.action_website_menu"/>
 	    			<menuitem parent="engage_website_menu_website_config" id="engage_website_menu_website_config_rewrite" name="重定向" action="website.action_website_rewrite_list"/>
-	    			
-	    	<menuitem parent="engage_website_menu_root" id="engage_website_menu_blog" name="博客" />
-	    		<menuitem parent="engage_website_menu_blog" id="engage_website_menu_blog_articles" name="文章" action="website_blog.action_blog_post"/>
-	    		<menuitem parent="engage_website_menu_blog" id="engage_website_menu_blog_config" name="配置" />
-	    			<menuitem parent="engage_website_menu_blog_config" id="engage_website_menu_blog_config_tagcategory" name="标签分类" action="website_blog.action_tag_category"/>
-	    			<menuitem parent="engage_website_menu_blog_config" id="engage_website_menu_blog_config_tag" name="标签" action="website_blog.action_tags"/>
-	    			<menuitem parent="engage_website_menu_blog_config" id="engage_website_menu_blog_config_category" name="栏目" action="website_blog.action_blog_blog"/>
-	    			    			
-	    	<menuitem parent="engage_website_menu_root" id="engage_website_menu_forum" name="论坛" />
-	    		<menuitem parent="engage_website_menu_forum" id="engage_website_menu_forum_posts" name="帖子" action="website_forum.action_forum_post"/>
-	    		<menuitem parent="engage_website_menu_forum" id="engage_website_menu_forum_report" name="分析" />
-	    			<menuitem parent="engage_website_menu_forum_report" id="engage_website_menu_forum_report_forum" name="板块分析" action="website_slides_forum.forum_post_action_report"/>
-	    		<menuitem parent="engage_website_menu_forum" id="engage_website_menu_forum_config" name="配置" />
-	    			<menuitem parent="engage_website_menu_forum_config" id="engage_website_menu_forum_config_forums" name="板块" action="website_forum.action_forum_forum"/>
-	    			<menuitem parent="engage_website_menu_forum_config" id="engage_website_menu_forum_config_ranks" name="级别" action="gamification.gamification_karma_ranks_action"/>
-	    			<menuitem parent="engage_website_menu_forum_config" id="engage_website_menu_forum_config_labels" name="标签" action="website_forum.forum_tag_action"/>
-	    			
+	    		
 					
 	    	<menuitem parent="engage_website_menu_root" id="engage_website_menu_livechat" name="在线聊天" />
 	    		<menuitem parent="engage_website_menu_livechat" id="engage_website_menu_livechat_channels" name="会话通路" action="im_livechat.im_livechat_channel_action"/>
@@ -65,7 +49,7 @@
 	        	<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_label" name="问题选项" action="survey.action_survey_question_form"/>
 	        	<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_answer" name="答卷记录" action="survey.action_survey_user_input"/>
 	        	<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_line" name="答卷明细" action="survey.action_survey_user_input_line"/>
-	        	 -->
+	        	 
 	    	<menuitem parent="engage_website_menu_root" id="engage_website_menu_elearning" name="在线学习"/>
 	    		<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_courses" name="课程" action="website_slides.slide_channel_action_overview"/>
 	    		<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_contents" name="课程内容" action="website_slides.slide_slide_action"/>
@@ -92,7 +76,7 @@
 					<menuitem parent="engage_website_menu_ecom_report" id="engage_website_menu_ecom_report_dashboard" name="销售分析" action="website_sale.sale_report_action_dashboard" />
 				<menuitem parent="engage_website_menu_ecom" id="engage_website_menu_ecom_config" name="配置" />
 					<menuitem parent="engage_website_menu_ecom_config" id="engage_website_menu_ecom_config_category" name="目录" action="website_sale.product_public_category_action" />
-				
+				-->
 			<menuitem parent="engage_website_menu_root" id="engage_website_menu_utm" name="链接跟踪"/>
 				<menuitem parent="engage_website_menu_utm" id="engage_website_menu_utm_link" name="链接" action="link_tracker.link_tracker_action"/>
 				<menuitem parent="engage_website_menu_utm" id="engage_website_menu_utm_campaigns" name="活动" action="mass_mailing.action_view_utm_campaigns"/>
@@ -108,7 +92,8 @@
 	
 		
 			
-		<!-- 注册到anodoo_engage -->
+		<!-- 
+		注册到anodoo_engage 
 		<menuitem parent="anodoo_engage.engage_menu_channel" id="engage_menu_channel_website" name="官网"/>
 	    	<menuitem parent="engage_menu_channel_website" id="engage_menu_channel_website_website" name="官网" />
 	    		<menuitem parent="engage_menu_channel_website_website" id="engage_menu_channel_website_website_vistors" name="访问者" />
@@ -126,15 +111,15 @@
 	    		<menuitem parent="engage_menu_channel_website_livechat" id="engage_menu_channel_website_livechat_channels" name="会话通路" action="im_livechat.im_livechat_channel_action"/>
 	    		<menuitem parent="engage_menu_channel_website_livechat" id="engage_menu_channel_website_livechat_history" name="会话历史" action="im_livechat.mail_channel_action"/>
 	    		<menuitem parent="engage_menu_channel_website_livechat" id="engage_menu_channel_website_livechat_rating" name="评价" action="im_livechat.rating_rating_action_livechat_report"/>
-	    		<!-- 14 没有 -->
-	    			<!-- 
+	    		
+	    		14 没有问卷调查 
 	    	<menuitem parent="engage_menu_channel_website" id="engage_menu_channel_website_survey" name="问卷调查" />
 	    		<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_list" name="问卷" action="survey.action_survey_form"/>
 				<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_questions" name="问题库"  action="survey.action_survey_question_form"/>
 	        	<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_label" name="问题选项" action="survey.action_survey_question_form"/>
 	        	<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_answer" name="答卷记录" action="survey.action_survey_user_input"/>
 	        	<menuitem parent="engage_menu_channel_website_survey" id="engage_menu_channel_website_survey_line" name="答卷明细" action="survey.action_survey_user_input_line"/>
-	        	-->
+	        	
 	    	<menuitem parent="engage_menu_channel_website" id="engage_menu_channel_website_elearning" name="在线学习"/>
 	    		<menuitem parent="engage_menu_channel_website_elearning" id="engage_menu_channel_website_elearning_courses" name="课程" action="website_slides.slide_channel_action_overview"/>
 	    		<menuitem parent="engage_menu_channel_website_elearning" id="engage_menu_channel_website_elearning_contents" name="课程内容" action="website_slides.slide_slide_action"/>
@@ -148,11 +133,11 @@
 			<menuitem parent="engage_menu_channel_website" id="engage_menu_channel_website_ecom" name="电商"/>
 				<menuitem parent="engage_menu_channel_website_ecom" id="engage_menu_channel_website_ecom_abandoned" name="放弃的购物车" action="website_sale.action_view_abandoned_tree"/>
 				
-				
-		<!-- 注册到anodoo_mktauto -->
+		-->		
+		<!-- 注册到anodoo_mktauto 
 		<menuitem parent="anodoo_mktauto.mktauto_menu_channel" id="mktauto_menu_channel_website" name="官网"/>
 			<menuitem parent="mktauto_menu_channel_website" id="mktauto_menu_channel_website_utm" name="链接跟踪"/>
 				<menuitem parent="mktauto_menu_channel_website_utm" id="mktauto_menu_channel_website_utm_link" name="链接" action="link_tracker.link_tracker_action"/>
-			
+			-->
 	</data>
 </odoo>

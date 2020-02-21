@@ -31,13 +31,13 @@
 	    			<menuitem parent="engage_email_menu_config_mkt" id="engage_email_menu_config_mkt_trace" name="群发跟踪" action="mass_mailing.mailing_trace_action"/>
 	    			
 	    			
-	    <!-- 注册到anodoo_engage -->
+	    <!-- 注册到anodoo_engage 
 		<menuitem parent="anodoo_engage.engage_menu_channel" id="engage_menu_channel_email" name="邮件"/>
 			<menuitem parent="engage_menu_channel_email" id="engage_menu_channel_email_list" name="邮件列表" action="mail.action_view_mail_mail"/>
-			
-	    <!-- 注册到anodoo_mktauto -->
+			-->
+	    <!-- 注册到anodoo_mktauto 
 		<menuitem parent="anodoo_mktauto.mktauto_menu_channel" id="mktauto_menu_channel_email" name="邮件"/>
 	     	<menuitem parent="mktauto_menu_channel_email" id="mktauto_menu_channel_email_mkt" name="邮件营销" action="mass_mailing.mailing_mailing_action_mail"/>	
-			
+			-->
 	</data>
 </odoo>

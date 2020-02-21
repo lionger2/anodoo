@@ -22,7 +22,8 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base', 'sales_team'],
+    'depends': ['sales_team',
+                'anodoo_base'],
 
     # always loaded
     'data': [
