@@ -20,12 +20,12 @@ class AuthOAuthProvider(models.Model):
         获取其他参数
         '''
         
-        if (self.other_params_dict is None):
-            try:
-                self.other_params_dict = literal_eval(self.other_params)
-            except ValueError:
-                self.other_params_dict = {}
-                return default
+       # if (self.other_params_dict is None):
+        try:
+            self.other_params_dict = literal_eval(self.other_params)
+        except ValueError:
+            self.other_params_dict = {}
+            return default
             
         return self.other_params_dict.get(key, default)
             

@@ -144,8 +144,8 @@ class OAuthController(Controller):
         
         #params = request.env['ir.config_parameter'].sudo()
 
-        appid = providers[0].get_other_params('dingtalk.appid', default='')
-        appscret = providers[0].get_other_params('dingtalk.qr.appsecret', default='')
+        appid = providers[0].client_id
+        appscret = providers[0].client_secret
         if not appid or not appscret:
             raise werkzeug.exceptions.NotFound()
 
