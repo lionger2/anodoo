@@ -23,7 +23,8 @@
     'auto_install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_mktauto'],
+    'depends': ['crm', 'iap', 'crm_iap_lead', 'crm_iap_lead_enrich', #'crm_iap_lead_website',
+                'anodoo_mktauto'],
 
     # always loaded
     'data': [

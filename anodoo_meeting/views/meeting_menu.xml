@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data noupdate="0">
-		<menuitem id="engage_meeting_menu_root" name="会议" sequence="84" />
+		<menuitem id="engage_meeting_menu_root" name="Anodoo 会议" sequence="84" />
 			<menuitem parent="engage_meeting_menu_root" id="engage_meeting_menu_root_calendar" name="会议日历" action="calendar.action_calendar_event" web_icon="calendar,static/description/icon.png" />
-			<menuitem parent="engage_meeting_menu_root" id="engage_meeting_menu_root_report" name="分析" />
-	   		<menuitem parent="engage_meeting_menu_root" id="engage_meeting_menu_root_config" name="配置" />
+			<menuitem parent="engage_meeting_menu_root" id="engage_meeting_menu_root_report" name="分析" sequence="90" />
+	   		<menuitem parent="engage_meeting_menu_root" id="engage_meeting_menu_root_config" name="配置" sequence="100" />
 				<menuitem parent="engage_meeting_menu_root_config" id="engage_meeting_menu_root_config_type" name="会议类型" action="calendar.action_calendar_event_type" />
 				<menuitem parent="engage_meeting_menu_root_config" id="engage_meeting_menu_root_config_alarm" name="会议提醒" action="calendar.action_calendar_alarm" />	
 	   	

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
-    	<!-- 参考base.重新定一个配置中心 -->
+    <data noupdate="0">
+    	<!-- 参考base.重新定一个配置中心 -->  
         <record id="view_res_config_settings_form" model="ir.ui.view">
             <field name="name">res.config.settings.view.form</field>
             <field name="model">res.config.settings</field>
             <field name="arch" type="xml">
-                <form string="Settings" class="oe_form_configuration o_base_settings" js_class="base_settings">
+                <form string="基础配置" class="oe_form_configuration o_base_settings" js_class="base_settings">
                     <div class="o_control_panel">
                         <div class="o_panel">
                             <div class="title h2 mb0 mt4 text-muted d-none d-md-block">配置</div>
@@ -24,86 +24,11 @@
                         <div class="settings_tab"/>
                         <div class="settings">
                         
-                        	<!-- Anodoo产品配置 -->
-                            <div class="app_settings_block" data-string="Anodoo Config" string="Anodoo配置" data-key="anodoo_base" groups="anodoo_base.anodoo_group_manager">
-			                    <!-- 一部分 -->
-			                    <div id="sfa_test">
-			                    	<!-- 一行:标题 -->
-			                    	<h2>产品配置</h2>
-			                    	<!-- 一行 -->
-			                    	<div class="row mt16 o_settings_container">
-			                    		<!-- 一块 -->
-				                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead" title="Use leads if y.">
-				                            <div class="o_setting_left_pane">
-				                                
-				                            </div>
-				                            <div class="o_setting_right_pane">
-				                            	<field name="anodoo_product_id" invisible="1"/>
-				                                <label for="product_name"/> : <field name="product_name"/>
-				                                <br/>
-				                                <label for="product_website"/> : <field name="product_website"/>
-				                                <br/>				                                
-				                                <label for="product_description"/> : <field name="product_description"/>
-				                                <div class="text-muted">
-				                                    修改产品名称,Logo,Icon,用来替换系统内所有Anodoo的标识.
-				                                </div>
-				                            </div>
-				                        </div>
-				                        
-				                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead2" title="Use leads if y.">
-				                            <div class="o_setting_left_pane">
-				                            </div>
-				                            <div class="o_setting_right_pane">				                                
-				                                <label for="product_logo"/> : <field name="product_logo" widget="image" class="w-25 mt-2"/>
-				                                <br/>
-				                                <label for="product_icon"/> : <field name="product_icon" widget="image" class="w-25 mt-2"/>
-				                                <div class="text-muted">
-				                                    上传Logo,Icon文件,注意文件像素不要过大.
-				                                </div>
-				                            </div>
-				                        </div>				                        
-				                    </div>
-			                    </div>
-			                    <div id="addon_function">
-			                    	<h2>扩展功能</h2>
-				                    <div class="row mt16 o_settings_container">	                        
-				                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead3" title="Use leads if y.">
-				                            <div class="o_setting_left_pane">
-				                                
-				                            </div>
-				                            <div class="o_setting_right_pane">
-				                                <span class='o_form_label'>
-		                                        用户菜单扩展    
-		                                        </span>		
-		                                        <div class="text-muted">
-		                                        右上角用户菜单扩展,便于用户快速进入一些功能,或者外部链接.
-		                                        </div>
-		                                        <br/>
-		                                        <button name="%(anodoo_base.action_anodoo_usermenu_link_list)d" icon="fa-arrow-right" type="action" string="管理用户菜单链接" class="btn-link o_web_settings_access_rights"/>
-				                            </div>
-				                        </div>	
-				                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead3" title="Use leads if y.">
-				                            <div class="o_setting_left_pane">
-				                                
-				                            </div>
-				                            <div class="o_setting_right_pane">
-				                                <span class='o_form_label'>
-		                                        数据清理
-		                                        </span>		
-		                                        <div class="text-muted">
-		                                        数据清理,便于管理员快速清理系统一些功能的数据,清注意清理前的备份.
-		                                        </div>
-		                                        <br/>
-		                                        <button name="%(anodoo_base.action_anodoo_data_clean_list)d" icon="fa-arrow-right" type="action" string="管理数据清理" class="btn-link o_web_settings_access_rights"/>
-				                            </div>
-				                        </div>				                        
-				                    </div>
-			                    </div>
-			                </div>
+                        	
 			                
 			                <!-- 系统配置 -->
 			                <field name="company_id" invisible="1"/>
-			                <div class="app_settings_block" data-string="System Config" string="系统配置" data-key="crm" groups="anodoo_base.anodoo_group_manager">
+			                <div class="app_settings_block" data-string="System Config" string="系统配置" data-key="anodoo_base" groups="anodoo_base.anodoo_group_manager">
 			                    <div id="invite_users">
 		                            <h2>用户</h2>
 		                            <div class="row mt16 o_settings_container">
@@ -222,7 +147,84 @@
 		                            </div>
 		                        </div>
 		                        
-		                        <div id='about'>
+		                        
+                        
+			               
+			                    <!-- 一部分 -->
+			                    <div id="sfa_test">
+			                    	<!-- 一行:标题 -->
+			                    	<h2>产品配置</h2>
+			                    	<!-- 一行 -->
+			                    	<div class="row mt16 o_settings_container">
+			                    		<!-- 一块 -->
+				                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead" title="Use leads if y.">
+				                            <div class="o_setting_left_pane">
+				                                
+				                            </div>
+				                            <div class="o_setting_right_pane">
+				                            	<field name="anodoo_product_id" invisible="1"/>
+				                                <label for="product_name"/> : <field name="product_name"/>
+				                                <br/>
+				                                <label for="product_website"/> : <field name="product_website"/>
+				                                <br/>				                                
+				                                <label for="product_description"/> : <field name="product_description"/>
+				                                <div class="text-muted">
+				                                    修改产品名称,Logo,Icon,用来替换系统内所有Anodoo的标识.
+				                                </div>
+				                            </div>
+				                        </div>
+				                        
+				                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead2" title="Use leads if y.">
+				                            <div class="o_setting_left_pane">
+				                            </div>
+				                            <div class="o_setting_right_pane">				                                
+				                                <label for="product_logo"/> : <field name="product_logo" widget="image" class="w-25 mt-2"/>
+				                                <br/>
+				                                <label for="product_icon"/> : <field name="product_icon" widget="image" class="w-25 mt-2"/>
+				                                <div class="text-muted">
+				                                    上传Logo,Icon文件,注意文件像素不要过大.
+				                                </div>
+				                            </div>
+				                        </div>				                        
+				                    </div>
+			                    </div>
+			                    <div id="addon_function">
+			                    	<h2>扩展功能</h2>
+				                    <div class="row mt16 o_settings_container">	                        
+				                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead3" title="Use leads if y.">
+				                            <div class="o_setting_left_pane">
+				                                
+				                            </div>
+				                            <div class="o_setting_right_pane">
+				                                <span class='o_form_label'>
+		                                        用户菜单扩展    
+		                                        </span>		
+		                                        <div class="text-muted">
+		                                        右上角用户菜单扩展,便于用户快速进入一些功能,或者外部链接.
+		                                        </div>
+		                                        <br/>
+		                                        <button name="%(anodoo_base.action_anodoo_usermenu_link_list)d" icon="fa-arrow-right" type="action" string="管理用户菜单链接" class="btn-link o_web_settings_access_rights"/>
+				                            </div>
+				                        </div>	
+				                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead3" title="Use leads if y.">
+				                            <div class="o_setting_left_pane">
+				                                
+				                            </div>
+				                            <div class="o_setting_right_pane">
+				                                <span class='o_form_label'>
+		                                        数据清理
+		                                        </span>		
+		                                        <div class="text-muted">
+		                                        数据清理,便于管理员快速清理系统一些功能的数据,清注意清理前的备份.
+		                                        </div>
+		                                        <br/>
+		                                        <button name="%(anodoo_base.action_anodoo_data_clean_list)d" icon="fa-arrow-right" type="action" string="管理数据清理" class="btn-link o_web_settings_access_rights"/>
+				                            </div>
+				                        </div>				                        
+				                    </div>
+			                    </div>
+			                    
+			                    <div id='about'>
 		                            <h2>关于</h2>
 		                            <div class="row mt16 o_settings_container">
 		                            	<div class='col-xs-12 col-md-6 o_setting_box'>
@@ -243,26 +245,24 @@
 		                                </div>
 		                            </div>
 		                        </div>
-                        
 			                </div>
                         </div>
                     </div>
                 </form>
             </field>
         </record>
-        
-        
-        <record id="action_general_settings" model="ir.actions.act_window">
+      
+        <record id="action_anodoo_general_settings" model="ir.actions.act_window">
             <field name="name">Settings</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">res.config.settings</field>
             <field name="view_mode">form</field>
             <field name="view_id" ref="view_res_config_settings_form"></field>
             <field name="target">inline</field>
-            <field name="context">{'module' : 'general_settings'}</field>
+            <field name="context">{'module' : 'anodoo_base'}</field>
         </record>
 
-        <menuitem id="menu_general_settings" name="Anodoo配置"  parent="base.menu_administration" action="action_general_settings"/>
-        
+        <menuitem id="menu_anodoo_general_settings" name="Anodoo配置"  parent="base.menu_administration" action="action_anodoo_general_settings"/>
+
     </data>
 </odoo>

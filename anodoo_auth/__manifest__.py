@@ -22,7 +22,8 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base', 'auth_signup', 'auth_oauth'],
+    'depends': ['auth_signup', 'auth_oauth', 'auth_password_policy', 'auth_password_policy_signup',
+                'anodoo_base'],
 
     # always loaded
     'data': [

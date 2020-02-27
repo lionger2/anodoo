@@ -9,7 +9,7 @@
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('settings')]" position="inside">
             	<!-- 整个 -->
-                <div class="app_settings_block" data-string="Anodoo SFA" string="Anodoo SFA" data-key="anodoo_sfa" groups="anodoo_base.anodoo_group_manager">
+                <div class="app_settings_block" data-string="Anodoo SFA" string="销售自动化" data-key="anodoo_sfa" groups="anodoo_base.anodoo_group_manager">
                     <!-- 一部分 -->
                     <div id="sfa_test">
                     	<!-- 一行:标题 -->

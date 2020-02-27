@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data noupdate="0">
-
+		<menuitem  id="engage_website_menu_elearning" name="Anodoo 在线学习" sequence="76"/>
+    		<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_courses" name="课程" action="website_slides.slide_channel_action_overview"/>
+    		<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_contents" name="课程内容" action="website_slides.slide_slide_action"/>
+    		<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_reviews" name="评论" action="website_slides.rating_rating_action_slide_channel"/>
+    		<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_certifications" name="认证" action="website_slides_survey.survey_survey_action_slides"/>
+			<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_report" name="分析" sequence="90"/>
+				<menuitem parent="engage_website_menu_elearning_report" id="engage_website_menu_elearning_report_courses" name="课程分析" action="website_slides.slide_channel_action_report"/>
+				<menuitem parent="engage_website_menu_elearning_report" id="engage_website_menu_elearning_report_contents" name="课程内容分析" action="website_slides.slide_slide_action_report"/>
+				<menuitem parent="engage_website_menu_elearning_report" id="engage_website_menu_elearning_report_revenues" name="收入分析" action="website_sale_slides.sale_report_action_slides"/>
+				<menuitem parent="engage_website_menu_elearning_report" id="engage_website_menu_elearning_report_revies" name="评论分析" action="website_slides.rating_rating_action_slide_channel_report"/>
+				<menuitem parent="engage_website_menu_elearning_report" id="engage_website_menu_elearning_report_quizzes" name="测验分析" action="website_slides.slide_question_action_report"/>
+				<menuitem parent="engage_website_menu_elearning_report" id="engage_website_menu_elearning_report_certifications" name="认证分析" action="website_slides_survey.survey_survey_action_slides_report"/>
+			<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_config" name="配置" sequence="100"/>
+				<menuitem parent="engage_website_menu_elearning_config" id="engage_website_menu_elearning_config_settings" name="基本配置" action="website_slides.website_slides_action_settings"/>
+				<menuitem parent="engage_website_menu_elearning_config" id="engage_website_menu_elearning_config_coursetags" name="课程标签" action="website_slides.slide_channel_tag_group_action"/>/>
+				<menuitem parent="engage_website_menu_elearning_config" id="engage_website_menu_elearning_config_contenttags" name="内容标签" action="website_slides.action_slide_tag"/>
+	
 	</data>
 </odoo>

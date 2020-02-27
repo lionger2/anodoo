@@ -22,7 +22,8 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base'],
+    'depends': ['sms', 'mass_mailing_sms', 'phone_validation',
+                'anodoo_base'],
 
     # always loaded
     'data': [

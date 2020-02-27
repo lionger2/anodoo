@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data noupdate="0">
-		<menuitem id="engage_email_menu_root" name="电子邮件" sequence="82" />
+		<menuitem id="engage_email_menu_root" name="Anodoo 电子邮件" sequence="82" />
 	    	<menuitem parent="engage_email_menu_root" id="engage_email_menu_mail" name="邮件" />
 	    		<menuitem parent="engage_email_menu_mail" id="engage_email_menu_mail_list" name="邮件列表" action="mail.action_view_mail_mail"/>
 	
@@ -12,13 +12,13 @@
 	    	<menuitem parent="engage_email_menu_root" id="engage_email_menu_mkt" name="邮件营销" />
 	    		<menuitem parent="engage_email_menu_mkt" id="engage_email_menu_mkt_list" name="邮件营销" action="mass_mailing.mailing_mailing_action_mail"/>
 	    			
-	    	<menuitem parent="engage_email_menu_root" id="engage_email_menu_analysis" name="分析"/>
+	    	<menuitem parent="engage_email_menu_root" id="engage_email_menu_analysis" name="分析" sequence="90"/>
 	    		
 	    		<menuitem parent="engage_email_menu_analysis" id="engage_email_menu_analysis_mail" name="邮件"/>
 	    		<menuitem parent="engage_email_menu_analysis" id="engage_email_menu_analysis_mkt" name="邮件营销"/>
 	    			<menuitem parent="engage_email_menu_analysis_mkt" id="engage_email_menu_analysis_mkt_report" name="邮件群发报表" action="mass_mailing.mailing_trace_report_action_mail"/>
 	    		
-	    	<menuitem parent="engage_email_menu_root" id="engage_email_menu_config" name="配置"/>
+	    	<menuitem parent="engage_email_menu_root" id="engage_email_menu_config" name="配置" sequence="100"/>
 	    		<menuitem parent="engage_email_menu_config" id="engage_email_menu_config_mail" name="邮件"/>
 	    			<menuitem parent="engage_email_menu_config_mail" id="engage_email_menu_config_mail_fetch" name="收件服务器" action="fetchmail.action_email_server_tree"/>
 	    			<menuitem parent="engage_email_menu_config_mail" id="engage_email_menu_config_mail_send" name="发件服务器" action="base.action_ir_mail_server_list"/>

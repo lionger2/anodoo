@@ -23,7 +23,8 @@
     'auto_install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_sfa' ],
+    'depends': ['crm', 'sales_team', 'sale',
+                'anodoo_sfa' ],
 
     # always loaded
     'data': [

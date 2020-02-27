@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<data>
+    <data noupdate="0">
         <record id="view_res_config_settings_form" model="ir.ui.view">
             <field name="name">anodoo.config.settings.view.form.inherit.auth.signup</field>
             <field name="model">res.config.settings</field>

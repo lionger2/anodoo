@@ -22,7 +22,7 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['sales_team',
+    'depends': ['mail', 'sales_team',
                 'anodoo_base'],
 
     # always loaded
@@ -31,6 +31,7 @@
         'security/team_security.xml',
         'security/ir.model.access.csv',
         'views/team_views.xml',
+        'views/res_config_settings_views.xml',
         'views/team_menu.xml',
         'views/templates.xml',
     ],

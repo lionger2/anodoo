@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<data>
+    <data noupdate="0">
 	
 		<!-- 用户菜单扩展 model_id: anodoo.usermenu.link-->
 	    <record id="view_anodoo_usermenu_link_form" model="ir.ui.view">
@@ -122,106 +123,8 @@
 	        <field name="context">{'active_test':True}</field>
 	    </record>
 	    
-		<!-- 城市 model_id: res.country.state.city-->
-	    <record id="view_res_country_state_city_form" model="ir.ui.view">
-	        <field name="name">res.country.state.city.view.form</field>
-	        <field name="model">res.country.state.city</field>
-	        <field name="priority">100</field>
-	        <field name="arch" type="xml">
-	            <form string="res_country_state_city">
-	                <sheet>
-		                <group name="group_top">
-			                 <group name="group_left">
-			                     <field name="code" />
-			                     <field name="name" />
-			                 </group>
-			                 <group name="group_right">
-			                     <field name="country_id" />
-			                     <field name="state_id" />
-			                 </group>
-			             </group>
-	                </sheet>
-	            </form>            
-	        </field>
-	    </record>
-	    <record id="view_res_country_state_city_list" model="ir.ui.view">
-	        <field name="name">res.country.state.city.view.list</field>
-	        <field name="model">res.country.state.city</field>
-	        <field name="priority">100</field>
-	        <field name="arch" type="xml">
-	            <tree>
-	                <field name="code" />
-	                <field name="name" />
-	                <field name="country_id" />
-	                <field name="state_id" />           
-	            </tree>
-	        </field>
-	    </record>
-	    <record id="view_res_country_state_city_search" model="ir.ui.view">
-	        <field name="name">res.country.state.city.view.search</field>
-	        <field name="model">res.country.state.city</field>
-	        <field name="priority">100</field>
-	        <field name="arch" type="xml">
-	            <search>
-	            	<field name="code" filter_domain="[('code', 'ilike', self)]" />
-	            	<field name="name" filter_domain="[('name', 'ilike', self)]" />
-		            <separator/>            	
-		           	<group expand="1" string="Group By">
-		           		<filter name="groupby_state_id"  string="省" context="{'group_by':'state_id'}" />               	
-		           	</group>         	
-	            </search>
-	        </field>
-	    </record>
+		
 	    
-	    <record id="view_translation_tree" model="ir.ui.view">
-            <field name="model">ir.translation</field>
-            <field name="inherit_id" ref="base.view_translation_tree"/> 
-            <field name="arch" type="xml">
-            	<xpath expr="//field[@name='state']" position="after">
-	        		<field name="anodoo"/>	        		
-                    <field name="module"/>
-                    <field name="res_id"/>
-	        	</xpath>
-            </field>
-        </record>
-        <!-- 
-	    <record id="view_translation_search" model="ir.ui.view">
-            <field name="model">ir.translation</field>
-            <field name="inherit_id" ref="base.view_translation_search"/> 
-            <field name="arch" type="xml">
-            	<xpath expr="//filter[@name='state']" position="after">
-	        		<field name="anodoo"/>	        		
-                    <field name="module"/>
-                    <field name="res_id"/>
-	        	</xpath>
-	        	
-                <search string="Translations">
-                	
-                    <filter string="Untranslated" name="untranslated"
-                        domain="['|','|',('state','=','to_translate'),('value', '=', False),('value','=','')]"/>
-                    <filter name="openerp-web"
-                        string="Web-only translations"
-                        domain="[('comments', 'like', 'openerp-web')]"/>
-                    <field name="lang"/>
-                    <field name="src"/>
-                    <field name="value"/>
-                    <field name="name" filter_domain="('|', ('name', '=', self), ('name', 'ilike', self + ','))" string="Model"/>
-                    <field name="res_id" filter_domain="('&amp;', ('name', '=', 'ir.ui.view,arch_db'), ('res_id', '=', self))" string="View ID"/>
-                </search>
-                 
-            </field>
-        </record>
-	    -->
 	    
-	    <record id="view_users_search" model="ir.ui.view">
-            <field name="name">res.users.search</field>
-            <field name="model">res.users</field>
-            <field name="inherit_id" ref="base.view_users_search"/> 
-            <field name="arch" type="xml">
-            	<xpath expr="//filter[@name='no_share']" position="after">
-	        		<filter name="is_share" string="外部用户" domain="[('share','=', True)]"/>	
-	        	</xpath>
-            </field>
-        </record>
 	</data>
 </odoo>

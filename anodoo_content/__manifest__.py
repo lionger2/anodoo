@@ -30,6 +30,7 @@
         'security/content_security.xml',
         'security/ir.model.access.csv',
         'views/content_views.xml',
+        'views/res_config_settings_views.xml',
         'views/content_menu.xml',
         'views/content_templates.xml',
     ],

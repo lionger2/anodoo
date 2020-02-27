@@ -22,7 +22,7 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['event',
+    'depends': ['event', 'website_event_track',
                 'anodoo_base'],
 
     # always loaded

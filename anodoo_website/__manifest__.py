@@ -22,7 +22,7 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['website',
+    'depends': ['website', 'im_livechat', 'website_livechat', 'link_tracker',
                 'anodoo_base'],
 
     # always loaded

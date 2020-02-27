@@ -22,7 +22,8 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base'],
+    'depends': ['product', 'sale_coupon', 'uom',
+                'anodoo_base', 'anodoo_sale'],
 
     # always loaded
     'data': [
@@ -30,6 +31,7 @@
         'security/prod_security.xml',
         'security/ir.model.access.csv',
         'views/prod_views.xml',
+        'views/res_config_settings_views.xml',
         'views/prod_menu.xml',
         'views/templates.xml',
     ],

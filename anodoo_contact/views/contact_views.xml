@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<data>
+    <data noupdate="0">
 		<!-- 参考：客户联系信息，不可增删改，仅仅显示 -->
         <record id="view_contact_kanban_customer" model="ir.ui.view">
             <field name="name">anodoo.contact.kanban.customer</field>

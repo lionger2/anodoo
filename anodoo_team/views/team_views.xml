@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<data>
+    <data noupdate="0">
 		<!-- 团队 model_id: crm.team-->
 	    <record id="view_anodoo_team_form" model="ir.ui.view">
 	        <field name="name">anodoo.team.view.form</field>

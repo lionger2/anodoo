@@ -20,9 +20,11 @@
     'version': '13.1',
     'application': False,
     'installable': True,
+    'auto-install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_team', 'anodoo_proj', 'anodoo_content'],
+    'depends': [
+                'anodoo_mktauto', 'anodoo_team', 'anodoo_proj', 'anodoo_content'],
 
     # always loaded
     'data': [

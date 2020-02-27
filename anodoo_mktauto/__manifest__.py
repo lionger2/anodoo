@@ -18,18 +18,19 @@
     # for the full list
     'category': 'Anodoo',
     'version': '13.1',
-    'application': False,
+    'application': True,
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_mkt'],
+    'depends': ['anodoo_base'],
 
     # always loaded
     'data': [
         'data/mktauto_data.xml',
         'security/mktauto_security.xml',
         'security/ir.model.access.csv',
-        'views/mktauto_views.xml',
+        'views/mktauto_views.xml',        
+        'views/res_config_settings_views.xml',
         'views/mktauto_menu.xml',
         'views/templates.xml',
     ],

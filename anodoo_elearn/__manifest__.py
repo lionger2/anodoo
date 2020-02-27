@@ -22,7 +22,7 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['website_slides',
+    'depends': ['website_slides', 'website_slides_survey', 'website_sale_slides',
                 'anodoo_base'],
 
     # always loaded

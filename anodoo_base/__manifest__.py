@@ -18,26 +18,11 @@
     # for the full list
     'category': 'Anodoo',
     'version': '13.1',
-    'application': False,
+    'application': True,
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['account', 'base', 'calendar', 'contacts', 'crm', 'crm_iap_lead', 
-                'crm_iap_lead_website', 'delivery', 'event', 'fetchmail', 'hr', 
-                'hr_attendance', 'hr_expense', 'hr_holidays', 'hr_recruitment', 
-                'hr_timesheet', 'hr_timesheet_attendance', 'im_livechat', 
-                'link_tracker', 'mail', 'mass_mailing', 'mass_mailing_sms', 
-                'membership', 'phone_validation', 'portal', 'product', 
-                'product_margin', 'project', 'purchase', 'sale', 'sale_coupon', 
-                'sale_management', 'sale_timesheet', 'sales_team', 'sms', 'snailmail', 
-                'stock', 'survey', 'uom', 'utm', 'website', 'website_blog', 
-                'website_crm_partner_assign', 'website_customer', 'website_event', 
-                'website_event_questions', 'website_event_track', 'website_form', 
-                'website_forum', 'website_mail', 'website_mail_channel', 
-                'website_membership', 'website_partner', 'website_profile', 
-                'website_sale', 'website_sale_slides', 
-                'website_slides', 'website_slides_survey'
-                #'website_rating', 
+    'depends': ['base', 'web', 'base_setup', 'mail'
                 ],
 
     # always loaded
@@ -45,8 +30,12 @@
         'data/base_data.xml',
         'security/base_security.xml',
         'security/ir.model.access.csv', 
+        #'views/iap_assets.xml',  #iap widget js依赖
         'views/ir_module_views.xml',   
         'views/res_users_views.xml', 
+        'views/ir_ui_menu_views.xml',
+        'views/ir_translation_views.xml',
+        'views/res_country_views.xml', 
         'views/base_views.xml',                 
         'views/base_menu.xml',
         'views/base_templates.xml',        

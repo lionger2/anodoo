@@ -141,7 +141,7 @@
         <field name="act_window_id" ref="action_contact_company_list"/>
     </record>
   
-    <menuitem id="contact_menu_root" name="联系人" sequence="20" />
+    <menuitem parent="anodoo_crm.crm_menu_root" id="contact_menu_root" name="联系人" sequence="20" />
     	<menuitem parent="contact_menu_root" id="contact_menu_contact" name="联系人" />
     		<menuitem parent="contact_menu_contact" id="contact_menu_contact_person" name="个人联系人" action="action_contact_person_list"/>
     		<menuitem parent="contact_menu_contact" id="contact_menu_contact_company" name="公司联系人" action="action_contact_company_list"/>
@@ -151,17 +151,19 @@
     		<menuitem parent="contact_menu_customer" id="contact_menu_customer_company" name="公司客户联系信息" action="action_contact_customer_company_list"/>
     		<menuitem parent="contact_menu_customer" id="contact_menu_customer_other" name="其他客户联系信息" action="action_contact_customer_other_list"/>
     		
-    	<menuitem parent="contact_menu_root" id="contact_menu_analysis" name="分析" />
-    	<menuitem parent="contact_menu_root" id="contact_menu_config" name="配置" />
-    		<menuitem parent="contact_menu_config" id="contact_menu_config_contacts" name="联系人" />
-				<menuitem parent="contact_menu_config_contacts" id="contact_menu_config_contacts_tag" name="联系人标签" action="base.action_partner_category_form" />
-				<menuitem parent="contact_menu_config_contacts" id="contact_menu_config_contacts_title" name="联系人头衔" action="base.action_partner_title_contact" />
-				<menuitem parent="contact_menu_config_contacts" id="contact_menu_config_contacts_industry" name="公司行业" action="base.res_partner_industry_action" />
-			
-			<menuitem parent="contact_menu_config" id="contact_menu_config_bank" name="银行" />
-				<menuitem parent="contact_menu_config_bank" id="contact_menu_config_bank_list" name="银行" action="base.action_res_bank_form" />
-				<menuitem parent="contact_menu_config_bank" id="contact_menu_config_bank_account" name="银行账号" action="base.action_res_partner_bank_account_form"/>
-			
+    	<!-- 注入到crm -->
+    	<menuitem parent="anodoo_crm.crm_menu_analysis" id="contact_menu_analysis" name="分析" />
+    	
+    	<!-- 注入到crm -->
+   		<menuitem parent="anodoo_crm.crm_menu_config" id="contact_menu_config_contacts" name="联系人" />
+			<menuitem parent="contact_menu_config_contacts" id="contact_menu_config_contacts_tag" name="联系人标签" action="base.action_partner_category_form" />
+			<menuitem parent="contact_menu_config_contacts" id="contact_menu_config_contacts_title" name="联系人头衔" action="base.action_partner_title_contact" />
+			<menuitem parent="contact_menu_config_contacts" id="contact_menu_config_contacts_industry" name="公司行业" action="base.res_partner_industry_action" />
+		
+		<menuitem parent="anodoo_crm.crm_menu_config" id="contact_menu_config_bank" name="银行" />
+			<menuitem parent="contact_menu_config_bank" id="contact_menu_config_bank_list" name="银行" action="base.action_res_bank_form" />
+			<menuitem parent="contact_menu_config_bank" id="contact_menu_config_bank_account" name="银行账号" action="base.action_res_partner_bank_account_form"/>
+		
     		
     	
     	

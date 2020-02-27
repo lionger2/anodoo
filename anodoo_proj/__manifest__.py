@@ -22,13 +22,15 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base'],
+    'depends': ['project',
+                'anodoo_base'],
 
     # always loaded
     'data': [
         'security/proj_security.xml',
         'security/ir.model.access.csv',
         'views/proj_views.xml',
+        'views/res_config_settings_views.xml',
         'views/proj_menu.xml',
         'views/templates.xml',
     ],
