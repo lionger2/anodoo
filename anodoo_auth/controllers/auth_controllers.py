@@ -17,3 +17,5 @@ class LoginHome(Home):
         response = super(LoginHome, self).web_login(redirect=redirect, *args, **kw)
                
         return response
+    
+    

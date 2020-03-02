@@ -31,6 +31,7 @@
         'security/blog_security.xml',
         'security/ir.model.access.csv',
         'views/blog_views.xml',
+        'views/website_blog_views.xml',
         'views/res_config_settings_views.xml',
         'views/blog_menu.xml',
         'views/blog_templates.xml',
