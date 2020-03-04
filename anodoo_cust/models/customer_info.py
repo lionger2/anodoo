@@ -6,7 +6,7 @@ class Customer(models.Model):
         
     customer_identity = fields.Char('唯一标识信息', help='客户唯一标识信息')
     
-    #个人客户
+    #个人客户  -- 迁移到contact中
     belong_company = fields.Many2one('res.partner', '工作公司', help='个人客户所工作公司')
     function = fields.Char(string='工作职位')
     

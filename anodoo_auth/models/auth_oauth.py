@@ -24,10 +24,8 @@ class AuthOAuthProvider(models.Model):
        # if (self.other_params_dict is None):
         try:
             self.other_params_dict = literal_eval(self.other_params)
-            print('a')
         except ValueError:
             self.other_params_dict = {}
-            print('b')
             return default
             
         return self.other_params_dict.get(key, default)

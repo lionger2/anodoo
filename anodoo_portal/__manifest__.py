@@ -31,6 +31,7 @@
         'security/portal_security.xml',
         'security/ir.model.access.csv',
         'views/portal_views.xml',
+        'views/res_config_settings_views.xml',
         'views/portal_menu.xml',
         'views/portal_templates.xml',
     ],

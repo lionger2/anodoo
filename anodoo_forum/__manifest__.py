@@ -31,6 +31,8 @@
         'security/forum_security.xml',
         'security/ir.model.access.csv',
         'views/forum_views.xml',
+        'views/forum.xml',
+        'views/res_config_settings_views.xml',
         'views/forum_menu.xml',
         'views/forum_templates.xml',
     ],

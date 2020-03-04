@@ -22,7 +22,7 @@
 	                                <field name="group_sfa_test"/>
 	                            </div>
 	                            <div class="o_setting_right_pane">
-	                                <label for="group_use_lead"/>
+	                                <label for="group_sfa_test"/>
 	                                <div class="text-muted">
 	                                    Add a qualification step before the creation of an opportunity
 	                                </div>

@@ -15,6 +15,8 @@
 				<menuitem parent="menu_anodoo_base_address" id="menu_anodoo_base_address_state" name="省" action="base.action_country_state" />
 				<menuitem parent="menu_anodoo_base_address" id="menu_anodoo_base_address_city" name="市" action="action_res_country_state_city_list" />
 			<menuitem parent="menu_anodoo_base" id="menu_anodoo_base_currency" name="货币" action="base.action_currency_form"/>			
+		
+		<menuitem parent="base.menu_administration" id="odoo_other_menus" name="保留菜单" />
 		<!-- 	
 	    <menuitem parent="base.menu_administration" id="odoo_history_menu" name="保留菜单" />
 	    	<menuitem parent="odoo_history_menu" id="base.menu_management"/>

@@ -18,11 +18,11 @@
     # for the full list
     'category': 'Anodoo',
     'version': '13.1',
-    'application': False,
+    'application': True,
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['website_profile',
+    'depends': ['website_profile', 'gamification',
                 'anodoo_auth'],
 
     # always loaded
@@ -31,6 +31,8 @@
         'security/profile_security.xml',
         'security/ir.model.access.csv',
         'views/profile_views.xml',
+        'views/website_views.xml',
+        'views/res_config_settings_views.xml',
         'views/profile_menu.xml',
         'views/profile_templates.xml',
     ],

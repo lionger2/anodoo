@@ -71,7 +71,7 @@ class OAuthLogin(Home):
 #         ensure_db()
 #         
 #         #import pdb; pdb.set_trace()
-#         print("ab")
+#   
 #         
 #         user_agent = request.httprequest.user_agent.string.lower()
 # 
