@@ -15,6 +15,13 @@ class AnodooBlog(WebsiteBlog):
     #override
     @http.route()
     def blog(self, blog=None, tag=None, page=1, **opt):
+        tags = tag
+        active_tag_ids = tags and [unslug(tag)[1] for tag in tags.split(',')] or []
+        if active_tag_ids:
+            fixed_tag_slug = ",".join(slug(t) for t in request.env['blog.tag'].browse(active_tag_ids))
+            if fixed_tag_slug != tags:
+                return request.redirect(request.httprequest.full_path.replace("/tag/%s/" % tags, "/tag/%s/" % fixed_tag_slug, 1), 301)
+            
         ConfigParameter = request.env['ir.config_parameter'].sudo()
         is_blog_website_mana2many = ConfigParameter.get_param('anodoo_blog.is_blog_website_mana2many')
         
@@ -34,6 +41,7 @@ class AnodooBlog(WebsiteBlog):
 
         values = self._prepare_blog_values(blogs=blogs, blog=blog, date_begin=date_begin, date_end=date_end, tags=tag, series=series, state=state, page=page)
 
+        
         if blog:
             values['main_object'] = blog
             values['edit_in_backend'] = True
@@ -249,6 +257,11 @@ class AnodooBlog(WebsiteBlog):
             'all_series':all_series,
             'relative_posts':relative_posts,
         }
+        
+        #是否显示footer
+        ConfigParameter = request.env['ir.config_parameter'].sudo()
+        values['no_footer'] = ConfigParameter.get_param('anodoo_blog.is_hide_footer')
+        
         response = request.render("website_blog.blog_post_complete", values)
 
         request.session[request.session.sid] = request.session.get(request.session.sid, [])

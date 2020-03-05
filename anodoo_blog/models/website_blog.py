@@ -5,7 +5,7 @@ from odoo.osv import expression
 
 class Blog(models.Model):
     _inherit = 'blog.blog'
-    _order = 'website_id, sequence'
+    _order = 'sequence'
     
     name = fields.Char('栏目名称')
     subtitle = fields.Char('栏目概述')

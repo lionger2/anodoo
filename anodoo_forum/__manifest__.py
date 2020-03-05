@@ -23,7 +23,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['website_forum',
-                'anodoo_base'],
+                'anodoo_profile'],
 
     # always loaded
     'data': [

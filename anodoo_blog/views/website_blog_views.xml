@@ -60,7 +60,7 @@
                 </xpath>      
                 <xpath expr="//page[@name='seo']" position="after">
                 	<page name="relative" string="相关文章">
-                         <field name="relative_post_ids" domain="[('id', '!=', id), ('website_id', '=', website_id)]">
+                         <field name="relative_post_ids" domain="[('id', '!=', id), '|', ('website_id', '=', False), ('website_id', '=', website_id)]">
                          	<tree>
                          		<field name="name"/>
 			                    <field name="blog_id"/>
@@ -86,6 +86,7 @@
             		<field name="multi_blog_ids" attrs="{'invisible': [('is_post_blog_mana2many', '=', False)]}"/>
             		<field name="multi_website_ids" attrs="{'invisible': [('is_post_blog_mana2many', '=', False)]}"/>
             		<field name="series_id" />
+            		<field name="tag_ids" />
                     <field name="is_public" />
                     <field name="is_published" />
                     <field name="message_unread_counter" />

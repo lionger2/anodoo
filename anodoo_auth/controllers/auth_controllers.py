@@ -7,14 +7,14 @@ from odoo.http import request
 
 class LoginHome(Home):
     
-    @http.route(['/web/login', '/crm/login'], type='http', auth="none")
-    def web_login(self, redirect=None, *args, **kw):
+    @http.route('/crm/login', type='http', auth="none")
+    def crm_login(self, *args, **kw):
+#         
+#         path = request.httprequest.path;
+#         if path == '/crm/login':
+        request.params['crm_login'] = True
         
-        path = request.httprequest.path;
-        if path == '/crm/login':
-            request.params['crm_login'] = True
-        
-        response = super(LoginHome, self).web_login(redirect=redirect, *args, **kw)
+        response = super(LoginHome, self).web_login(*args, **kw)
                
         return response
     
