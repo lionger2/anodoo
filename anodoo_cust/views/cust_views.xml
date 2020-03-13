@@ -739,10 +739,17 @@
 			                     <field name="user_identity" />
 			                     <field name="product" />
 			                 </group>
-			                 <group name="group_right">			                 	
+			                 <group name="group_right">		
+			                 	         	
 			                     <field name="contact_id" />
 			                     <field name="register_date" />
 			                     <field name="comment" />
+			                 </group>
+			                 <group name="group_left2">		
+			                 	<field name="image_1920" widget='image' options='{"preview_image": "image_128"}'/>	        
+			                 	<field name="attachment_ids" widget="many2many_binary"/>
+			                 	<field name="attachment2_ids" />
+			                 	<field name="ir_attachment_id" />
 			                 </group>
 			             </group>
 	                </sheet>

@@ -18,7 +18,7 @@
     # for the full list
     'category': 'Anodoo',
     'version': '13.1',
-    'application': False,
+    'application': True,
     'installable': True,
 
     # any module necessary for this one to work correctly

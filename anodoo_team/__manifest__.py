@@ -20,9 +20,10 @@
     'version': '13.1',
     'application': True,
     'installable': True,
+    'auto_install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['mail', 'sales_team',
+    'depends': ['mail', 'sales_team', 'note_pad',
                 'anodoo_base'],
 
     # always loaded
@@ -31,6 +32,7 @@
         'security/team_security.xml',
         'security/ir.model.access.csv',
         'views/team_views.xml',
+        'views/note_views.xml',
         'views/res_config_settings_views.xml',
         'views/team_menu.xml',
         'views/templates.xml',

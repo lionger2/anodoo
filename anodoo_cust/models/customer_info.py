@@ -29,7 +29,9 @@ class Customer(models.Model):
     lifetime_id = fields.Many2one('anodoo.customer.lifetime', string='客户生命周期', help='客户使用的生命周期定义')
     
     
-    
+    is_prospect = fields.Boolean('是否潜在客户', compute='_compute_is_prospect', store=True)
+    is_losing = fields.Boolean('是否流失客户', compute='_compute_is_losing', store=True)
+    is_success = fields.Boolean('是否成功客户', compute='_compute_is_success', store=True)
     
     
     lifetime_stage_id = fields.Many2one('anodoo.customer.lifetime.stage', string='客户生命周期阶段', help='客户当前的生命周期阶段', 
@@ -61,61 +63,44 @@ class Customer(models.Model):
             values['lifetime_stage_id'] = lifetime_stage[0].id
         
         return  values
-'''
-切换lifetime_id时，根据当前的lifetime_state_id的类型，切换到新lifetime的对应类型
-    @api.onchange('lifetime_id')
-    def on_change_lifetime_id(self):
-        if not self.lifetime_id:
-            return
-
-        current_stage_id = self.lifetime_stage_id
-        change_stage_id = None
-        
-        if not current_stage_id:
-            if current_stage_id.is_prospect:
-                pass
-            elif current_stage_id.is_losing:
-                pass
-            elif current_stage_id.is_success:
-                pass
-        
-        if not change_stage_id:
-            lifetime_stage = self.env['anodoo.customer.lifetime.stage'].search([('lifetime_id', '=', self.lifetime_id)], order="is_default desc, sequence, id")
-            self.lifetime_stage_id = lifetime_stage[0]
- '''           
-        
-'''
-潜在客户
-'''
-class ProspectCustomer(models.Model):
-    #extend anodoo_cust.Customer
-    _inherit = 'res.partner' 
-    
-    is_prospect = fields.Boolean('是否潜在客户', compute='_compute_is_prospect', store=True)
-        
+# '''
+# 切换lifetime_id时，根据当前的lifetime_state_id的类型，切换到新lifetime的对应类型
+#     @api.onchange('lifetime_id')
+#     def on_change_lifetime_id(self):
+#         if not self.lifetime_id:
+#             return
+# 
+#         current_stage_id = self.lifetime_stage_id
+#         change_stage_id = None
+#         
+#         if not current_stage_id:
+#             if current_stage_id.is_prospect:
+#                 pass
+#             elif current_stage_id.is_losing:
+#                 pass
+#             elif current_stage_id.is_success:
+#                 pass
+#         
+#         if not change_stage_id:
+#             lifetime_stage = self.env['anodoo.customer.lifetime.stage'].search([('lifetime_id', '=', self.lifetime_id)], order="is_default desc, sequence, id")
+#             self.lifetime_stage_id = lifetime_stage[0]
+#  '''           
+  
     @api.depends('lifetime_stage_id')
     def _compute_is_prospect(self):
         for record in self:
             record.is_prospect = False
     
-'''流失客户'''
-class LosingCustomer(models.Model):
-    #extend Customer
-    _inherit = 'res.partner' 
+
     
-    is_losing = fields.Boolean('是否流失客户', compute='_compute_is_losing', store=True)
           
     @api.depends('lifetime_stage_id')
     def _compute_is_losing(self):
         for record in self:
             record.is_losing = False
     
-'''成功客户'''
-class SuccessCustomer(models.Model):
-    #extend Customer
-    _inherit = 'res.partner'
+
     
-    is_success = fields.Boolean('是否成功客户', compute='_compute_is_success', store=True)
         
     @api.depends('lifetime_stage_id')
     def _compute_is_success(self):

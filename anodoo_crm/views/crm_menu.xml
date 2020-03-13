@@ -7,7 +7,6 @@
 			<menuitem parent="crm_menu_root" id="crm_menu_analysis" name="分析"  sequence="90" />
 			
     		<menuitem parent="crm_menu_root" id="crm_menu_config" name="配置"  sequence="100" />
-    			<menuitem parent="crm_menu_config" id="crm_menu_config_crm" name="基本配置" action="crm.crm_config_settings_action"/>
     			<menuitem parent="crm_menu_config" id="crm_menu_config_anodoo_crm" name="基本配置" action="anodoo_crm_config_settings_action"/>
 
 	</data>

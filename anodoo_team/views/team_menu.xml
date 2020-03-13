@@ -51,7 +51,7 @@
     </record>
   
     <menuitem id="team_menu_root" name="Anodoo 团队协同" action="mail.action_discuss" sequence="1" web_icon="mail,static/description/icon.png"/>
-    	<menuitem parent="team_menu_root" id="team_menu_cooperation" name="协同" action="mail.action_discuss" />
+    	<menuitem parent="team_menu_root" id="team_menu_cooperation" name="讨论" action="mail.action_discuss" />
 
     		
     	<menuitem parent="team_menu_root" id="team_menu_group" name="群组" />
@@ -59,6 +59,11 @@
     		
     	<menuitem parent="team_menu_root" id="team_menu_team" name="团队" />
     		<menuitem parent="team_menu_team" id="team_menu_team_anodoo_team" name="团队列表" action="action_anodoo_team_list"/>
+    	
+    	<menuitem parent="team_menu_root" id="team_menu_note" name="笔记" />
+    		<menuitem parent="team_menu_note" id="team_menu_note_list" name="笔记列表" action="note.action_note_note"/>
+    		<menuitem parent="team_menu_note" id="team_menu_note_stages" name="类型" action="note.action_note_stage"/>
+    		<menuitem parent="team_menu_note" id="team_menu_note_tags" name="标签" action="note.note_tag_action"/>
     		
     	<menuitem parent="team_menu_root" id="team_menu_analysis" name="分析"  sequence="90" />
     		

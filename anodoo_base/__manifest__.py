@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Anodoo 基础",
+    'name': "基础",
 
     'summary': """
-        这个是对Odoo的base, web等基础模块的扩展, 也是Anodoo的所有应用和模块的基础。
+        基础模块,这个是对Odoo的架构,base, web等基础模块的扩展, 也是Anodoo的所有应用和模块的基础。
     """,
 
     'description': """
@@ -18,7 +18,7 @@
     # for the full list
     'category': 'Anodoo',
     'version': '13.1',
-    'application': True,
+    'application': False,
     'installable': True,
 
     # any module necessary for this one to work correctly

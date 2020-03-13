@@ -23,7 +23,8 @@
     'auto_install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_crm'],
+    'depends': ['contacts',
+                'anodoo_crm'],
 
     # always loaded
     'data': [
