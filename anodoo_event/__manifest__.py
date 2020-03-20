@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "活动",
+    'name': "Anodoo Event",
 
     'summary': """
         活动交互,包括活动营销

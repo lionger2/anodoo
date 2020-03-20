@@ -5,7 +5,7 @@
 		<record id="view_profile_users_form" model="ir.ui.view">
 	        <field name="name">profile.users.view.form</field>
 	        <field name="model">res.users</field>
-	        <field name="priority">200</field>
+	        <field name="priority">100</field>
 	        <field name="arch" type="xml">
 	            <form string="profile_users">
 	                <sheet>
@@ -42,7 +42,7 @@
 	    <record id="view_profile_users_list" model="ir.ui.view">
 	        <field name="name">profile.users.view.list</field>
 	        <field name="model">res.users</field>
-	        <field name="priority">200</field>
+	        <field name="priority">100</field>
 	        <field name="arch" type="xml">
 	            <tree>
 	                <field name="name"/>
@@ -59,7 +59,7 @@
 	    <record id="view_profile_users_search" model="ir.ui.view">
 	        <field name="name">profile.users.view.search</field>
 	        <field name="model">res.users</field>
-	        <field name="priority">200</field>
+	        <field name="priority">100</field>
 	        <field name="arch" type="xml">
 	            <search>
 	            	<field name="name" filter_domain="[('name', 'ilike', self)]" />

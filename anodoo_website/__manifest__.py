@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "官网",
+    'name': "Anodoo Website",
 
     'summary': """
-        官网
+        官网CMS
     """,
 
     'description': """
-        官网
+        面向客户的官网
     """,
 
     'author': "Anodoo",

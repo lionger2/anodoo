@@ -35,7 +35,7 @@
         'wizard/crm_lead_to_opportunity_views.xml',
         'views/lead_views.xml',
         'views/lead_menu.xml',
-        'views/templates.xml'
+        'views/lead_templates.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

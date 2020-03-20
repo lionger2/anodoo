@@ -20,16 +20,16 @@
 	    
         
         
-		<menuitem id="blog_menu_root" name="Anodoo 博客" sequence="84" />
-	    	<menuitem parent="blog_menu_root" id="blog_menu_blog" name="栏目" action="website_blog.action_blog_blog" sequence="10" />
-    		<menuitem parent="blog_menu_root" id="blog_menu_post" name="文章" sequence="20" />
+		<menuitem id="blog_menu_root_anodoo" name="Anodoo 博客" sequence="84" />
+	    	<menuitem parent="blog_menu_root_anodoo" id="blog_menu_blog" name="栏目" action="website_blog.action_blog_blog" sequence="10" />
+    		<menuitem parent="blog_menu_root_anodoo" id="blog_menu_post" name="文章" sequence="20" />
     			<menuitem parent="blog_menu_post" id="blog_menu_post_list" name="文章列表" action="website_blog.action_blog_post" sequence="10" />
     			<menuitem parent="blog_menu_post" id="blog_menu_post_series" name="文章系列" action="action_anodoo_blog_post_series_list" sequence="20"/>
-    		<menuitem parent="blog_menu_root" id="blog_menu_tag" name="标签" sequence="30" />
+    		<menuitem parent="blog_menu_root_anodoo" id="blog_menu_tag" name="标签" sequence="30" />
     			<menuitem parent="blog_menu_tag" id="blog_menu_tag_tagcategory" name="标签分类" action="website_blog.action_tag_category"/>
     			<menuitem parent="blog_menu_tag" id="blog_menu_tag_tags" name="标签" action="website_blog.action_tags"/>
-   			<menuitem parent="blog_menu_root" id="blog_menu_analyse" name="分析" sequence="90"/>
-    		<menuitem parent="blog_menu_root" id="blog_menu_config" name="配置" sequence="100"/>
+   			<menuitem parent="blog_menu_root_anodoo" id="blog_menu_analyse" name="分析" sequence="90"/>
+    		<menuitem parent="blog_menu_root_anodoo" id="blog_menu_config" name="配置" sequence="100"  groups="anodoo_base.group_anodoo_manager"/>
     			<menuitem parent="blog_menu_config" id="blog_menu_config_settings" name="基础配置" action="anodoo_blog_config_settings_action"/>
     			
     			    			

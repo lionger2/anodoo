@@ -15,15 +15,15 @@
 	        </field>
 	    </record>-->
 	  
-	    <menuitem id="engage_website_menu_root" name="Anodoo 网站" sequence="80" web_icon="website,static/description/icon.png"/>
-	    	<menuitem parent="engage_website_menu_root" id="engage_website_menu_website" name="官网" />
+	    <menuitem id="engage_website_menu_root_anodoo" name="Anodoo 网站" sequence="80" web_icon="website,static/description/icon.png"/>
+	    	<menuitem parent="engage_website_menu_root_anodoo" id="engage_website_menu_website" name="官网" />
 	    		<menuitem parent="engage_website_menu_website" id="engage_website_menu_website_vistors" name="访问者" />
 	    			<menuitem parent="engage_website_menu_website_vistors" id="engage_website_menu_website_vistors_list" name="访问者列表" action="website.website_visitors_action"/>
 	    			<menuitem parent="engage_website_menu_website_vistors" id="engage_website_menu_website_vistors_views" name="访问页面" action="website.website_visitor_view_action" />
 	    		<menuitem parent="engage_website_menu_website" id="engage_website_menu_website_report" name="分析" />
 	    			<menuitem parent="engage_website_menu_website_report" id="engage_website_menu_website_report_analytics" name="网站分析" action="website.ir_actions_server_website_google_analytics"/>
 	    			<menuitem parent="engage_website_menu_website_report" id="engage_website_menu_website_report_ecom" name="分析" action="website.ir_actions_server_website_dashboard"/>
-	    		<menuitem parent="engage_website_menu_website" id="engage_website_menu_website_config" name="配置" />
+	    		<menuitem parent="engage_website_menu_website" id="engage_website_menu_website_config" name="配置"  groups="anodoo_base.group_anodoo_manager"/>
 	    			<menuitem parent="engage_website_menu_website_config" id="engage_website_menu_website_config_setting" name="基本配置" action="website.action_website_configuration"/>
 	    			<menuitem parent="engage_website_menu_website_config" id="engage_website_menu_website_config_list" name="网站" action="website.action_website_list"/>
 	    			<menuitem parent="engage_website_menu_website_config" id="engage_website_menu_website_config_pages" name="页面" action="website.action_website_pages_list"/>
@@ -31,7 +31,7 @@
 	    			<menuitem parent="engage_website_menu_website_config" id="engage_website_menu_website_config_rewrite" name="重定向" action="website.action_website_rewrite_list"/>
 	    		
 					
-	    	<menuitem parent="engage_website_menu_root" id="engage_website_menu_livechat" name="在线聊天" />
+	    	<menuitem parent="engage_website_menu_root_anodoo" id="engage_website_menu_livechat" name="在线聊天" />
 	    		<menuitem parent="engage_website_menu_livechat" id="engage_website_menu_livechat_channels" name="会话通路" action="im_livechat.im_livechat_channel_action"/>
 	    		<menuitem parent="engage_website_menu_livechat" id="engage_website_menu_livechat_history" name="会话历史" action="im_livechat.mail_channel_action"/>
 	    		<menuitem parent="engage_website_menu_livechat" id="engage_website_menu_livechat_rating" name="评价" action="im_livechat.rating_rating_action_livechat_report"/>
@@ -43,7 +43,7 @@
 	    			
 	    			<!-- 14 没有 -->
 	    			<!-- 
-	    	<menuitem parent="engage_website_menu_root" id="engage_website_menu_survey" name="问卷调查" />
+	    	<menuitem parent="engage_website_menu_root_anodoo" id="engage_website_menu_survey" name="问卷调查" />
 	    		<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_list" name="问卷" action="survey.action_survey_form"/>
 				<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_questions" name="问题库"  action="survey.action_survey_question_form"/>
 	        	<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_label" name="问题选项" action="survey.action_survey_question_form"/>
@@ -51,12 +51,12 @@
 	        	<menuitem parent="engage_website_menu_survey" id="engage_website_menu_survey_line" name="答卷明细" action="survey.action_survey_user_input_line"/>
 	        	 
 	    	
-			<menuitem parent="engage_website_menu_root" id="engage_website_menu_portal" name="客户门户"/>
-			<menuitem parent="engage_website_menu_root" id="engage_website_menu_prm" name="代理商门户"/>
+			<menuitem parent="engage_website_menu_root_anodoo" id="engage_website_menu_portal" name="客户门户"/>
+			<menuitem parent="engage_website_menu_root_anodoo" id="engage_website_menu_prm" name="代理商门户"/>
 			
 				-->
 				<!-- 
-			<menuitem parent="engage_website_menu_root" id="engage_website_menu_utm" name="链接跟踪"/>
+			<menuitem parent="engage_website_menu_root_anodoo" id="engage_website_menu_utm" name="链接跟踪"/>
 				<menuitem parent="engage_website_menu_utm" id="engage_website_menu_utm_link" name="链接" action="link_tracker.link_tracker_action"/>
 				<menuitem parent="engage_website_menu_utm" id="engage_website_menu_utm_campaigns" name="活动" action="mass_mailing.action_view_utm_campaigns"/>
 				<menuitem parent="engage_website_menu_utm" id="engage_website_menu_utm_campaigns2" name="活动2" action="utm.utm_campaign_action"/>

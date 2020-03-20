@@ -14,7 +14,8 @@
 				<menuitem parent="menu_anodoo_base_address" id="menu_anodoo_base_address_country" name="国家"  action="base.action_country" />
 				<menuitem parent="menu_anodoo_base_address" id="menu_anodoo_base_address_state" name="省" action="base.action_country_state" />
 				<menuitem parent="menu_anodoo_base_address" id="menu_anodoo_base_address_city" name="市" action="action_res_country_state_city_list" />
-			<menuitem parent="menu_anodoo_base" id="menu_anodoo_base_currency" name="货币" action="base.action_currency_form"/>			
+			<menuitem parent="menu_anodoo_base" id="menu_anodoo_base_currency" name="货币" action="base.action_currency_form"/>	
+			<menuitem parent="menu_anodoo_base" id="menu_anodoo_base_industry" name="行业" action="base.res_partner_industry_action" />		
 		
 		<menuitem parent="base.menu_administration" id="odoo_other_menus" name="保留菜单" />
 		<!-- 	
@@ -25,14 +26,14 @@
 	    	<menuitem parent="odoo_history_menu" id="calendar.mail_menu_calendar"/>
 	    	<menuitem parent="odoo_history_menu" id="contacts.menu_contacts"/>
 	    	<menuitem parent="odoo_history_menu" id="odoo_history_menu_crm" name="CRM"/>
-	    		<menuitem parent="odoo_history_menu_crm" id="crm.crm_menu_root"/>
-	    		<menuitem parent="odoo_history_menu_crm" id="sale.sale_menu_root"/>
-	    		<menuitem parent="odoo_history_menu_crm" id="mass_mailing.mass_mailing_menu_root"/>
-	    		<menuitem parent="odoo_history_menu_crm" id="mass_mailing_sms.mass_mailing_sms_menu_root"/>
+	    		<menuitem parent="odoo_history_menu_crm" id="crm.crm_menu_root_anodoo"/>
+	    		<menuitem parent="odoo_history_menu_crm" id="sale.sale_menu_root_anodoo"/>
+	    		<menuitem parent="odoo_history_menu_crm" id="mass_mailing.mass_mailing_menu_root_anodoo"/>
+	    		<menuitem parent="odoo_history_menu_crm" id="mass_mailing_sms.mass_mailing_sms_menu_root_anodoo"/>
 	    		
 	   		<menuitem parent="odoo_history_menu" id="odoo_history_menu_channel" name="交互渠道"/>
 	    		<menuitem parent="odoo_history_menu_channel" id="website.menu_website_configuration"/>
-	    		<menuitem parent="odoo_history_menu_channel" id="website_slides.website_slides_menu_root"/>
+	    		<menuitem parent="odoo_history_menu_channel" id="website_slides.website_slides_menu_root_anodoo"/>
 	    		<menuitem parent="odoo_history_menu_channel" id="utm.menu_link_tracker_root"/>
 	    		<menuitem parent="odoo_history_menu_channel" id="event.event_main_menu"/>
 	    		<menuitem parent="odoo_history_menu_channel" id="survey.menu_surveys"/>
@@ -45,7 +46,7 @@
 	    		
 	   		<menuitem parent="odoo_history_menu" id="odoo_history_menu_project" name="Project"/>
 	    		<menuitem parent="odoo_history_menu_project" id="project.menu_main_pm"/>
-	    		<menuitem parent="odoo_history_menu_project" id="hr_timesheet.timesheet_menu_root"/>
+	    		<menuitem parent="odoo_history_menu_project" id="hr_timesheet.timesheet_menu_root_anodoo"/>
 	    	
 	    	<menuitem parent="odoo_history_menu" id="odoo_history_menu_hr" name="HR"/>
 	    		<menuitem parent="odoo_history_menu_hr" id="hr.menu_hr_root"/>

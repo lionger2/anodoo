@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "团队协同",
+    'name': "Anodoo Team",
 
     'summary': """
         团队协同
@@ -29,13 +29,14 @@
     # always loaded
     'data': [
         'data/team_data.xml',
+        'data/team_demo.xml',
         'security/team_security.xml',
         'security/ir.model.access.csv',
         'views/team_views.xml',
         'views/note_views.xml',
         'views/res_config_settings_views.xml',
         'views/team_menu.xml',
-        'views/templates.xml',
+        'views/team_templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

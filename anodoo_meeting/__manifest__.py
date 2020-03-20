@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "会议",
+    'name': "Anodoo Metting",
 
     'summary': """
         会议交互,通过线上,线下会议等形式和客户交互

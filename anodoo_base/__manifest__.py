@@ -28,12 +28,15 @@
     # always loaded
     'data': [
         'data/base_data.xml',
+        'data/base_demo.xml',
         'security/base_security.xml',
         'security/ir.model.access.csv', 
         #'views/iap_assets.xml',  #iap widget js依赖
         'views/ir_module_views.xml',   
         'views/res_users_views.xml', 
         'views/ir_ui_menu_views.xml',
+        'views/res_company_views.xml',
+        
         'views/ir_translation_views.xml',
         'views/res_country_views.xml', 
         'views/base_views.xml',                 

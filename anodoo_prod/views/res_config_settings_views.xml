@@ -7,8 +7,8 @@
             <field name="model">res.config.settings</field>
             <field name="inherit_id" ref="anodoo_base.view_res_config_settings_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//div[@class='settings']" position="after">
-                    <div class="app_settings_block" data-string="Anodoo Product Config" string="产品管理" data-key="anodoo_prod" groups="anodoo_base.anodoo_group_manager">
+                <xpath expr="//div[@class='settings']" position="inside">
+                    <div class="app_settings_block" data-string="Anodoo Product Config" string="产品管理" data-key="anodoo_prod" >
                     	<!-- 一部分 -->
 	                    <div id="sfa_test">
 	                    	<!-- 一行:标题 -->

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "营销自动化",
+    'name': "Anodoo MAP",
 
     'summary': """
-        营销自动化
+        Marketing Antomation Platfrom, 营销自动化
     """,
 
     'description': """
@@ -22,20 +22,21 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base'],
+    'depends': [
+        'anodoo_team', 'anodoo_proj', 'anodoo_content'],
 
     # always loaded
     'data': [
-        'data/mktauto_data.xml',
-        'security/mktauto_security.xml',
+        'data/map_data.xml',
+        'security/map_security.xml',
         'security/ir.model.access.csv',
-        'views/mktauto_views.xml',        
+        'views/map_views.xml',        
         'views/res_config_settings_views.xml',
-        'views/mktauto_menu.xml',
+        'views/map_menu.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/map_demo.xml',
     ],
 }

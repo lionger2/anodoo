@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "产品营销",
+    'name': "Anodoo PM",
 
     'summary': """
-        产品管理
+        Product Marketing, 实现产品管理,产品价格,产品促销,产品推荐
     """,
 
     'description': """
-        产品管理
+        实现产品管理,产品价格,产品促销,产品推荐
     """,
 
     'author': "Anodoo",
@@ -33,7 +33,7 @@
         'views/prod_views.xml',
         'views/res_config_settings_views.xml',
         'views/prod_menu.xml',
-        'views/templates.xml',
+        'views/prod_templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

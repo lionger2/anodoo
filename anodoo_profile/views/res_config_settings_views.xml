@@ -8,7 +8,7 @@
             <field name="inherit_id" ref="anodoo_base.view_res_config_settings_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//div[@class='settings']" position="inside">
-                    <div class="app_settings_block" data-string="Anodoo Profile Config" string="社区中心" data-key="anodoo_profile" groups="anodoo_base.anodoo_group_manager">
+                    <div class="app_settings_block" data-string="Anodoo Profile Config" string="社区中心" data-key="anodoo_profile" >
       
 	                    <div id="profile_base_settings">
 	                    	<h2>基础配置</h2>

@@ -28,7 +28,7 @@
 	    </record>
 	    
 	    <!-- 注入到sfa -->
-	    <menuitem parent="anodoo_sfa.sfa_menu_root" id="sfa_menu_opportunity" name="商机"  sequence="10" />
+	    <menuitem parent="anodoo_sfa.sfa_menu_root_anodoo" id="sfa_menu_opportunity" name="商机"  sequence="10" />
     		<menuitem parent="sfa_menu_opportunity" id="sfa_menu_opportunity_my" name="我的商机" action="crm.action_your_pipeline" />
 			<menuitem parent="sfa_menu_opportunity" id="sfa_menu_opportunity_team" name="团队商机" action="sales_team.crm_team_salesteams_pipelines_act"  />
 			<menuitem parent="sfa_menu_opportunity" id="sfa_menu_opportunity_anodoo_sfa_opportunity_register" name="商机报备" action="action_anodoo_sfa_opportunity_register_list"/>

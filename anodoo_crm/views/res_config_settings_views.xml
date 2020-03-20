@@ -7,33 +7,9 @@
             <field name="model">res.config.settings</field>
             <field name="inherit_id" ref="anodoo_base.view_res_config_settings_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//div[@class='settings']" position="after">
-                    <div class="app_settings_block" data-string="Anodoo CRM Config" string="客户关系管理" data-key="anodoo_crm" groups="anodoo_base.anodoo_group_manager">
-                    	<!-- 一部分 -->
-	                    <div id="sfa_test">
-	                    	<!-- 一行:标题 -->
-	                    	<h2>产品配置</h2>
-	                    	<!-- 一行 -->
-	                    	<div class="row mt16 o_settings_container">
-	                    		<!-- 一块 -->
-		                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead" title="Use leads if y.">
-		                            <div class="o_setting_left_pane">
-		                                
-		                            </div>
-		                            <div class="o_setting_right_pane">
-		                            	
-		                            </div>
-		                        </div>
-		                        
-		                        <div class="col-12 col-lg-6 o_setting_box" id="crm_lead2" title="Use leads if y.">
-		                            <div class="o_setting_left_pane">
-		                            </div>
-		                            <div class="o_setting_right_pane">				                                
-		                                
-		                            </div>
-		                        </div>				                        
-		                    </div>
-	                    </div>
+                <xpath expr="//div[@class='settings']" position="inside">
+                    <div class="app_settings_block" data-string="Anodoo CRM Config" string="客户关系管理" data-key="anodoo_crm" >
+                    	
                     </div>
                 </xpath>
             </field>

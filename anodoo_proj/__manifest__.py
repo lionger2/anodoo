@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "项目管理",
+    'name': "Anodoo Project",
 
     'summary': """
         项目管理
@@ -32,7 +32,7 @@
         'views/proj_views.xml',
         'views/res_config_settings_views.xml',
         'views/proj_menu.xml',
-        'views/templates.xml',
+        'views/proj_templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

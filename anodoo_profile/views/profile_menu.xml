@@ -16,17 +16,17 @@
 			
         </record>
 	
-		<menuitem id="profile_menu_root" name="Anodoo 社区" sequence="84" />
-			<menuitem parent="profile_menu_root" id="profile_menu_users" name="社区用户" action="action_profile_users" sequence="10" />
-			<menuitem parent="profile_menu_root" id="profile_menu_gamification" name="积分制" sequence="20" />
+		<menuitem id="profile_menu_root_anodoo" name="Anodoo 社区" sequence="84" />
+			<menuitem parent="profile_menu_root_anodoo" id="profile_menu_users" name="社区用户" action="action_profile_users" sequence="10" />
+			<menuitem parent="profile_menu_root_anodoo" id="profile_menu_gamification" name="积分制" sequence="20" />
 				<menuitem id="gamification_challenge_menu" parent="profile_menu_gamification" action="gamification.challenge_list_action" sequence="0"/>
 		        <menuitem id="gamification_goal_menu" parent="profile_menu_gamification" action="gamification.goal_list_action" sequence="10"/>
 		        <menuitem id="gamification_definition_menu" parent="profile_menu_gamification" action="gamification.goal_definition_list_action" sequence="20"/>
-			<menuitem parent="profile_menu_root" id="profile_menu_ranks" name="级别" action="gamification.gamification_karma_ranks_action" sequence="30" />
-			<menuitem parent="profile_menu_root" id="profile_menu_badge" name="徽章" action="gamification.badge_list_action" sequence="40" />
+			<menuitem parent="profile_menu_root_anodoo" id="profile_menu_ranks" name="级别" action="gamification.gamification_karma_ranks_action" sequence="30" />
+			<menuitem parent="profile_menu_root_anodoo" id="profile_menu_badge" name="徽章" action="gamification.badge_list_action" sequence="40" />
 		
-			<menuitem parent="profile_menu_root" id="profile_menu_report" name="分析" sequence="90" />
-			<menuitem parent="profile_menu_root" id="profile_menu_config" name="配置" sequence="100" />
+			<menuitem parent="profile_menu_root_anodoo" id="profile_menu_report" name="分析" sequence="90" />
+			<menuitem parent="profile_menu_root_anodoo" id="profile_menu_config" name="配置" sequence="100"  groups="anodoo_base.group_anodoo_manager"/>
     			<menuitem parent="profile_menu_config" id="profile_menu_config_setting" name="基本配置" action="anodoo_profile_config_settings_action" sequence="0"/>
     			
 		

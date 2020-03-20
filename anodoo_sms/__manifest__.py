@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "短信",
+    'name': "Anodoo SMS",
 
     'summary': """
         短信交互,包括短信营销

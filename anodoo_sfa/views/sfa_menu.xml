@@ -4,11 +4,11 @@
 
 
   
-	    <menuitem id="sfa_menu_root" name="Anodoo 销售自动化" sequence="31" />    	
+	    <menuitem id="sfa_menu_root_anodoo" name="Anodoo 销售自动化" sequence="31" />    	
 	    	
-	    	<menuitem parent="sfa_menu_root" id="sfa_menu_analysis" name="分析" sequence="90" />   		
+	    	<menuitem parent="sfa_menu_root_anodoo" id="sfa_menu_analysis" name="分析" sequence="90" />   		
 	   			
-	    	<menuitem parent="sfa_menu_root" id="sfa_menu_config" name="配置" sequence="100"   />
+	    	<menuitem parent="sfa_menu_root_anodoo" id="sfa_menu_config" name="配置" sequence="100"  groups="anodoo_base.group_anodoo_manager"  />
 	    		<menuitem parent="sfa_menu_config" id="sfa_menu_config_settings" name="基本配置" action="anodoo_sfa_config_settings_action"/>
 	</data>
 </odoo>

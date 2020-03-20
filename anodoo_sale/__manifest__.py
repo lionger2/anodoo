@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "销售管理",
+    'name': "Anodoo Sale",
 
     'summary': """
         销售管理
@@ -32,7 +32,7 @@
         'security/ir.model.access.csv',
         'views/sale_views.xml',
         'views/sale_menu.xml',
-        'views/templates.xml',
+        'views/sale_templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

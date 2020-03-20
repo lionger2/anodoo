@@ -30,6 +30,8 @@ class ResConfigSettings(models.TransientModel):
     
     active_group_count = fields.Integer('组数量', compute="_compute_active_group_count")
     
+    is_only_anodoo_menu = fields.Boolean('仅仅显示Anodoo根菜单', config_parameter='anodoo_base.is_only_anodoo_menu')
+    
     @api.depends('company_id')
     def _compute_active_portal_user_count(self):
         active_portal_user_count = self.env['res.users'].sudo().search_count([('share', '=', True)])
@@ -42,5 +44,9 @@ class ResConfigSettings(models.TransientModel):
         for record in self:
             record.active_group_count = active_group_count
     
-    
+    def set_values(self):
+        super(ResConfigSettings, self).set_values()
+        
+        self.env['ir.ui.menu'].only_display_anodoo_menu(self.is_only_anodoo_menu)
+
             

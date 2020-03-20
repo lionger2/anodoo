@@ -12,6 +12,11 @@ class AnodooProduct(models.Model):
     _rec_name = 'product_name'
     _order = 'id'
     
+    def _get_default_favicon(self):
+        image_path = get_resource_path('anodoo_base', 'static/src/img/favicon.ico')
+        with tools.file_open(image_path, 'rb') as f:
+            return base64.b64encode(f.read())
+    
     def _default_logo(self):
         image_path = get_resource_path('anodoo_base', 'static/src/img', 'anodoo.png')
         with tools.file_open(image_path, 'rb') as f:

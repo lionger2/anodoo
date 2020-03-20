@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "客户关系管理",
+    'name': "Anodoo CRM",
 
     'summary': """
         客户关系管理
@@ -22,7 +22,10 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['anodoo_base'],
+    'depends': [
+        'contacts', 'mail', #for anodoo_contact
+        'mail', #for anodoo_cust
+        'anodoo_team', 'anodoo_proj', 'anodoo_content'],
 
     # always loaded
     'data': [

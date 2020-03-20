@@ -13,7 +13,7 @@
 				<menuitem parent="engage_website_menu_elearning_report" id="engage_website_menu_elearning_report_revies" name="评论分析" action="website_slides.rating_rating_action_slide_channel_report"/>
 				<menuitem parent="engage_website_menu_elearning_report" id="engage_website_menu_elearning_report_quizzes" name="测验分析" action="website_slides.slide_question_action_report"/>
 				<menuitem parent="engage_website_menu_elearning_report" id="engage_website_menu_elearning_report_certifications" name="认证分析" action="website_slides_survey.survey_survey_action_slides_report"/>
-			<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_config" name="配置" sequence="100"/>
+			<menuitem parent="engage_website_menu_elearning" id="engage_website_menu_elearning_config" name="配置" sequence="100"  groups="anodoo_base.group_anodoo_manager"/>
 				<menuitem parent="engage_website_menu_elearning_config" id="engage_website_menu_elearning_config_settings" name="基本配置" action="website_slides.website_slides_action_settings"/>
 				<menuitem parent="engage_website_menu_elearning_config" id="engage_website_menu_elearning_config_coursetags" name="课程标签" action="website_slides.slide_channel_tag_group_action"/>/>
 				<menuitem parent="engage_website_menu_elearning_config" id="engage_website_menu_elearning_config_contenttags" name="内容标签" action="website_slides.action_slide_tag"/>

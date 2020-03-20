@@ -16,8 +16,8 @@
                             </div>
                         </div>
                         <header>
-                            <button string="Save" type="object" name="execute" class="oe_highlight" />
-                            <button string="Discard" type="object" name="cancel" special="cancel" />
+                            <button string="保存" type="object" name="execute" class="oe_highlight" />
+                            <button string="丢弃" type="object" name="cancel" special="cancel" />
                         </header>
                     </div>
                     <div class="o_setting_container">
@@ -28,7 +28,7 @@
 			                
 			                <!-- 系统配置 -->
 			                <field name="company_id" invisible="1"/>
-			                <div class="app_settings_block" data-string="System Config" string="系统配置" data-key="anodoo_base" groups="anodoo_base.anodoo_group_manager">
+			                <div class="app_settings_block" data-string="System Config" string="系统配置" data-key="anodoo_base" groups="anodoo_base.group_anodoo_manager">
 			                    <div id="invite_users">
 		                            <h2>用户</h2>
 		                            <div class="row mt16 o_settings_container">
@@ -221,6 +221,23 @@
 		                                        <button name="%(anodoo_base.action_anodoo_data_clean_list)d" icon="fa-arrow-right" type="action" string="管理数据清理" class="btn-link o_web_settings_access_rights"/>
 				                            </div>
 				                        </div>				                        
+				                    </div>
+				                    <div class="row mt16 o_settings_container">	                        
+				                        <div class="col-12 col-lg-6 o_setting_box" id="is_only_anodoo_menu" title="仅仅显示Anodoo根菜单">
+				                            <div class="o_setting_left_pane">
+				                                <field name="is_only_anodoo_menu"/>
+				                            </div>
+				                            <div class="o_setting_right_pane">
+				                                <span class='o_form_label'>
+		                                        <label for="is_only_anodoo_menu"/>
+		                                        </span>		
+		                                        <div class="text-muted">
+		                                        仅仅显示Anodoo根菜单,则其他根菜单会被移到设置的保留菜单下
+		                                        </div>
+		                                        <br/>
+		                                        <button name="%(base.grant_menu_access)d" icon="fa-arrow-right" type="action" string="管理用户菜单链接" class="btn-link o_web_settings_access_rights"/>
+				                            </div>
+				                        </div>		                        
 				                    </div>
 			                    </div>
 			                    
