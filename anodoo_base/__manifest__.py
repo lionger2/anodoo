@@ -22,7 +22,8 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'web', 'base_setup', 'mail'
+    'depends': ['base', 'web', 'base_setup', 'mail',
+                'auth_signup', 'auth_oauth', 'auth_password_policy', 'auth_password_policy_signup',
                 ],
 
     # always loaded
@@ -38,7 +39,8 @@
         'views/res_company_views.xml',
         
         'views/ir_translation_views.xml',
-        'views/res_country_views.xml', 
+        'views/res_country_views.xml',         
+        'views/auth_oauth_views.xml',
         'views/base_views.xml',                 
         'views/base_menu.xml',
         'views/base_templates.xml',        

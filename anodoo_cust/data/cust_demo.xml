@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="0">
+    	<!-- 客户标签分类 -->
+        <record id="anodoo_customer_label_category_0" model="anodoo.customer.label.category">
+        	<field name="name">基本标签</field>
+        </record>
+        <record id="anodoo_customer_label_category_1" model="anodoo.customer.label.category">
+        	<field name="name">营销类标签</field>
+        </record>
+        <record id="anodoo_customer_label_category_2" model="anodoo.customer.label.category">
+        	<field name="name">销售类标签</field>
+        </record>
+        
+        <!-- 客户标签 -->
+        <record id="anodoo_customer_label_category_00" model="anodoo.customer.label">
+        	<field name="name">行业龙头</field>
+        	<field name="color">1</field>
+        	<field name="is_auto">1</field>
+        	<field name="customers_domain">[["partner_type","=","customer"]]</field>
+        	<field name="category_id" ref="anodoo_customer_label_category_0"/>
+        </record>
+        <record id="anodoo_customer_label_category_10" model="anodoo.customer.label">
+        	<field name="name">促销敏感</field>
+        	<field name="color">2</field>
+        	<field name="category_id" ref="anodoo_customer_label_category_1"/>
+        </record>
+        <record id="anodoo_customer_label_category_11" model="anodoo.customer.label">
+        	<field name="name">参加过营销会议</field>
+        	<field name="color">3</field>
+        	<field name="category_id" ref="anodoo_customer_label_category_1"/>
+        </record>
+        <record id="anodoo_customer_label_category_12" model="anodoo.customer.label">
+        	<field name="name">邮件营销</field>
+        	<field name="color">4</field>
+        	<field name="category_id" ref="anodoo_customer_label_category_1"/>
+        </record>
+        <record id="anodoo_customer_label_category_20" model="anodoo.customer.label">
+        	<field name="name">频繁购买</field>
+        	<field name="color">5</field>
+        	<field name="category_id" ref="anodoo_customer_label_category_2"/>
+        </record>
+        <record id="anodoo_customer_label_category_21" model="anodoo.customer.label">
+        	<field name="name">金额大</field>
+        	<field name="color">6</field>
+        	<field name="category_id" ref="anodoo_customer_label_category_2"/>
+        </record>
+        <record id="anodoo_customer_label_category_22" model="anodoo.customer.label">
+        	<field name="name">两年内无交易</field>
+        	<field name="color">7</field>
+        	<field name="category_id" ref="anodoo_customer_label_category_2"/>
+        </record>
+        
         <!-- 个人客户 -->
         <record id="partner_zhao_customer" model="res.partner">
             <field name="name">赵客户</field>
@@ -251,55 +301,7 @@
             <field name="belong_team_id" ref="anodoo_team.team_sales_1"/>
         </record>
         
-        <!-- 客户标签分类 -->
-        <record id="anodoo_customer_label_category_0" model="anodoo.customer.label.category">
-        	<field name="name">基本标签</field>
-        </record>
-        <record id="anodoo_customer_label_category_1" model="anodoo.customer.label.category">
-        	<field name="name">营销类标签</field>
-        </record>
-        <record id="anodoo_customer_label_category_2" model="anodoo.customer.label.category">
-        	<field name="name">销售类标签</field>
-        </record>
         
-        <!-- 客户标签 -->
-        <record id="anodoo_customer_label_category_00" model="anodoo.customer.label">
-        	<field name="name">行业龙头</field>
-        	<field name="color">1</field>
-        	<field name="is_auto">1</field>
-        	<field name="customers_domain">[["partner_type","=","customer"]]</field>
-        	<field name="category_id" ref="anodoo_customer_label_category_0"/>
-        </record>
-        <record id="anodoo_customer_label_category_10" model="anodoo.customer.label">
-        	<field name="name">促销敏感</field>
-        	<field name="color">2</field>
-        	<field name="category_id" ref="anodoo_customer_label_category_1"/>
-        </record>
-        <record id="anodoo_customer_label_category_11" model="anodoo.customer.label">
-        	<field name="name">参加过营销会议</field>
-        	<field name="color">3</field>
-        	<field name="category_id" ref="anodoo_customer_label_category_1"/>
-        </record>
-        <record id="anodoo_customer_label_category_12" model="anodoo.customer.label">
-        	<field name="name">邮件营销</field>
-        	<field name="color">4</field>
-        	<field name="category_id" ref="anodoo_customer_label_category_1"/>
-        </record>
-        <record id="anodoo_customer_label_category_20" model="anodoo.customer.label">
-        	<field name="name">频繁购买</field>
-        	<field name="color">5</field>
-        	<field name="category_id" ref="anodoo_customer_label_category_2"/>
-        </record>
-        <record id="anodoo_customer_label_category_21" model="anodoo.customer.label">
-        	<field name="name">金额大</field>
-        	<field name="color">6</field>
-        	<field name="category_id" ref="anodoo_customer_label_category_2"/>
-        </record>
-        <record id="anodoo_customer_label_category_22" model="anodoo.customer.label">
-        	<field name="name">两年内无交易</field>
-        	<field name="color">7</field>
-        	<field name="category_id" ref="anodoo_customer_label_category_2"/>
-        </record>
         
         <!-- 客户分群 -->
         <record id="anodoo_customer_segment_1" model="anodoo.customer.segment">
@@ -330,26 +332,26 @@
         	<field name="customer_id" ref="partner_zhao_customer"/>
         	<field name="user_identity">zhao.customer</field>
         	<field name="application_id" ref="anodoo_customer_application_1"/>
-        	<field name="register_date" eval="(DateTime.today() - timedelta(days=18)).strftime('%Y-%m-%d %H:%M')"/>
+        	<field name="register_date" eval="DateTime.now() - timedelta(days=18)"/>
         </record>
         
         <record id="anodoo_customer_user_operation_1" model="anodoo.customer.user.operation">
         	<field name="user_id" ref="anodoo_customer_user_1"/>
         	<field name="application_id" ref="anodoo_customer_application_1"/>
         	<field name="operation_type">register</field>
-        	<field name="operation_time" eval="(DateTime.today() - timedelta(days=18)).strftime('%Y-%m-%d %H:%M')"/>
+        	<field name="operation_time" eval="DateTime.now() - timedelta(days=18)"/>
         </record>
         <record id="anodoo_customer_user_operation_2" model="anodoo.customer.user.operation">
         	<field name="user_id" ref="anodoo_customer_user_1"/>
         	<field name="application_id" ref="anodoo_customer_application_1"/>
         	<field name="operation_type">login</field>
-        	<field name="operation_time" eval="(DateTime.today() - timedelta(days=15)).strftime('%Y-%m-%d %H:%M')"/>
+        	<field name="operation_time" eval="DateTime.now() - timedelta(days=15)"/>
         </record>
         <record id="anodoo_customer_user_operation_3" model="anodoo.customer.user.operation">
         	<field name="user_id" ref="anodoo_customer_user_1"/>
         	<field name="application_id" ref="anodoo_customer_application_1"/>
         	<field name="operation_type">read blog</field>
-        	<field name="operation_time" eval="(DateTime.today() - timedelta(days=17)).strftime('%Y-%m-%d %H:%M')"/>
+        	<field name="operation_time" eval="DateTime.now() - timedelta(days=17)"/>
         </record>
         
         

@@ -11,7 +11,7 @@
             <field name="partner_type">contact</field>
             <field name="belong_company">兆富科技</field>
             <field name="function">总经理</field>
-            <field name="birth_date" eval="(DateTime.today() - timedelta(days=14000)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="birth_date" eval="DateTime.now() - timedelta(days=14000)"/>
             <field name="gender_type">man</field>
             <field  name="category_id" eval="[(6, 0, [ref('res_partner_category_0'), ref('res_partner_category_11')])]"/>
             <field name="user_id" ref="anodoo_team.user_zhao_sales"/>
@@ -38,7 +38,7 @@
             <field name="partner_type">contact</field>
             <field name="belong_company">乾宁软件</field>
             <field name="function">董事长</field>
-            <field name="birth_date" eval="(DateTime.today() - timedelta(days=18000)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="birth_date" eval="DateTime.now() - timedelta(days=18000)"/>
             <field name="gender_type">woman</field>
             <field  name="category_id" eval="[(6, 0, [ref('res_partner_category_0'), ref('res_partner_category_2')])]"/>
             <field name="user_id" ref="anodoo_team.user_qian_sales"/>
@@ -69,7 +69,7 @@
             <field name="partner_type">contact</field>
             <field name="belong_company">笋青培训</field>
             <field name="function">营销部负责人</field>
-            <field name="birth_date" eval="(DateTime.today() - timedelta(days=15000)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="birth_date" eval="DateTime.now() - timedelta(days=15000)"/>
             <field name="gender_type">woman</field>
             <field  name="category_id" eval="[(6, 0, [ref('res_partner_category_8'), ref('res_partner_category_12')])]"/>
         </record>
@@ -94,7 +94,7 @@
             <field name="partner_type">contact</field>
             <field name="belong_company">理广实业</field>
             <field name="function">副总经理</field>
-            <field name="birth_date" eval="(DateTime.today() - timedelta(days=16000)).strftime('%Y-%m-%d %H:%M')"/>
+            <field name="birth_date" eval="DateTime.now() - timedelta(days=16000)"/>
             <field name="gender_type">woman</field>        
             <field  name="category_id" eval="[(6, 0, [ref('res_partner_category_0'), ref('res_partner_category_14')])]"/>    
         </record>

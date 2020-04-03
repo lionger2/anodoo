@@ -23,7 +23,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['website_profile', 'gamification',
-                'anodoo_auth'],
+                'anodoo_base'],
 
     # always loaded
     'data': [

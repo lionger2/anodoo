@@ -55,5 +55,15 @@
 		    	<menuitem parent="odoo_history_menu_hr" id="hr_holidays.menu_hr_holidays_root"/>
 		    	<menuitem parent="odoo_history_menu_hr" id="hr_expense.menu_hr_expense_root"/>
 	    	 -->	
+	    	 
+	    	 <!-- 动作 anodoo.login.record-->
+		<record id="action_anodoo_login_record_list" model="ir.actions.act_window">
+	        <field name="name">用户登陆记录</field>
+	        <field name="res_model">anodoo.login.record</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="context">{}</field>
+	    </record>
+	    
+	    <menuitem parent="base.menu_users" id="cust_menu_config_segment_anodoo_login_record" name="用户登陆记录" action="action_anodoo_login_record_list"/>
 	</data>
 </odoo>

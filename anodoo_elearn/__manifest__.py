@@ -28,14 +28,20 @@
     # always loaded
     'data': [
         'data/elearn_data.xml',
+        'demo/elearn_demo.xml',
         'security/elearn_security.xml',
-        'security/ir.model.access.csv',
-        'views/elearn_views.xml',
+        'security/ir.model.access.csv',  
+        'views/slide_channel_views.xml',    
+        'views/slide_question_views.xml',  
+        'views/slide_slide_views.xml',
+        'views/website_slides_templates_homepage.xml',
+        'views/elearn_views.xml',        
+        'views/res_config_settings_views.xml',
         'views/elearn_menu.xml',
         'views/elearn_templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/elearn_demo.xml',
+        
     ],
 }
