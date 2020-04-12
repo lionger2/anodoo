@@ -35,7 +35,5 @@
         'views/relation_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/relation_demo.xml',
-    ],
+    'demo': ['demo/relation_demo.xml',],
 }

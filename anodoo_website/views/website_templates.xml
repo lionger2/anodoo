@@ -5,7 +5,7 @@
 		<record id="website.login_layout" model="ir.ui.view">
 			<field name="active">False</field>
 		</record>
-		<record id="anodoo_auth.login_layout" model="ir.ui.view">
+		<record id="anodoo_base.login_layout" model="ir.ui.view">
 			<field name="active">False</field>
 		</record>
 		
@@ -47,6 +47,20 @@
 		    </xpath>
 		</template>
 
-		 
+		<template id="assets_editor" inherit_id="website.assets_editor" name="Website Form Editor">
+	        <xpath expr="//script[last()]" position="after">
+	            <script type="text/javascript" src="/anodoo_website/static/src/js/website_form_editor.js"></script>
+	        </xpath>
+	    </template>
+	    
+	    <template id="footer_media_social" inherit_id="website.footer_custom" name="Footer Media Social">
+    		<xpath expr="//div[@id='connect']/p" position="inside">
+    			<a t-if="website.social_qq" t-att-href="website.social_qq" class="btn btn-sm btn-link"><i class="fa fa-2x fa-qq"/></a>
+    			<a t-if="website.social_weixin" t-att-href="website.social_weixin" class="btn btn-sm btn-link"><i class="fa fa-2x fa-weixin"/></a>
+    			<a t-if="website.social_weibo" t-att-href="website.social_weibo" class="btn btn-sm btn-link"><i class="fa fa-2x fa-weibo"/></a>
+    			<a t-if="website.social_tencent_weibo" t-att-href="website.social_tencent_weibo" class="btn btn-sm btn-link"><i class="fa fa-2x fa-tencent-weibo"/></a>
+    			<a t-if="website.social_renren" t-att-href="website.social_renren" class="btn btn-sm btn-link"><i class="fa fa-2x fa-renren-square"/></a>
+    		</xpath>
+    	</template>
     </data>
 </odoo>

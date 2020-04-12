@@ -35,7 +35,5 @@
         'views/meeting_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/meeting_demo.xml',
-    ],
+    'demo': ['demo/meeting_demo.xml',],
 }

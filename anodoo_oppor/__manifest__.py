@@ -36,7 +36,5 @@
         'views/oppor_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/oppor_demo.xml',
-    ],
+    'demo': ['demo/oppor_demo.xml',],
 }

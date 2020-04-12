@@ -36,7 +36,5 @@
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/map_demo.xml',
-    ],
+    'demo': ['demo/map_demo.xml',],
 }

@@ -22,8 +22,8 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['website', 'im_livechat', 'website_livechat', 'link_tracker',
-                'anodoo_base'],
+    'depends': ['website', 'website_theme_install', 'website_form', 'website_livechat',
+                'anodoo_portal'],
 
     # always loaded
     'data': [
@@ -31,11 +31,11 @@
         'security/website_security.xml',
         'security/ir.model.access.csv',
         'views/website_views.xml',
+        'views/res_company_views.xml',
+        'views/res_config_settings_views.xml',
         'views/website_menu.xml',
         'views/website_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/website_demo.xml',
-    ],
+    'demo': ['demo/website_demo.xml',],
 }

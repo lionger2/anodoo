@@ -35,7 +35,5 @@
         'views/content_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/content_demo.xml',
-    ],
+    'demo': ['demo/content_demo.xml',],
 }

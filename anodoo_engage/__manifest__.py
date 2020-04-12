@@ -35,7 +35,5 @@
         'views/engage_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'demo': ['demo/engage_demo.xml',],
 }

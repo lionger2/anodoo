@@ -35,7 +35,5 @@
         'views/ecomm_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/ecomm_demo.xml',
-    ],
+    'demo': ['demo/ecomm_demo.xml',],
 }

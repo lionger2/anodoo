@@ -38,7 +38,5 @@
         'views/lead_templates.xml'
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'demo': ['demo/lead_demo.xml',],
 }

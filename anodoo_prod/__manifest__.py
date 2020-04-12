@@ -36,7 +36,5 @@
         'views/prod_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'demo': ['demo/prod_demo.xml',],
 }

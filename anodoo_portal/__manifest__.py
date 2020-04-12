@@ -23,7 +23,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['portal',
-                'anodoo_auth'],
+                'anodoo_base'],
 
     # always loaded
     'data': [
@@ -36,7 +36,5 @@
         'views/portal_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/portal_demo.xml',
-    ],
+    'demo': ['demo/portal_demo.xml',],
 }

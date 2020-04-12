@@ -35,7 +35,5 @@
         'views/sms_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/sms_demo.xml',
-    ],
+    'demo': ['demo/sfa_demo.xml',],
 }

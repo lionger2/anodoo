@@ -28,7 +28,6 @@
     # always loaded
     'data': [
         'data/elearn_data.xml',
-        'demo/elearn_demo.xml',
         'security/elearn_security.xml',
         'security/ir.model.access.csv',  
         'views/slide_channel_views.xml',    
@@ -41,7 +40,5 @@
         'views/elearn_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        
-    ],
+    'demo': ['demo/elearn_demo.xml',],
 }

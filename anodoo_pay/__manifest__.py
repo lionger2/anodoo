@@ -36,7 +36,5 @@
         'views/pay_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/pay_demo.xml',
-    ],
+    'demo': ['demo/pay_demo.xml',],
 }

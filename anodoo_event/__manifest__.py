@@ -35,7 +35,5 @@
         'views/event_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/event_demo.xml',
-    ],
+    'demo': ['demo/event_demo.xml',],
 }

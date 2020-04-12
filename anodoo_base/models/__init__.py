@@ -8,3 +8,4 @@ from . import res_partner
 from . import ir_ui_menu
 from . import auth_oauth
 from . import res_users
+from . import res_lang

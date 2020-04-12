@@ -38,7 +38,5 @@
         'views/crm_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/crm_demo.xml',
-    ],
+    'demo': ['demo/crm_demo.xml',],
 }

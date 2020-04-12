@@ -36,7 +36,5 @@
         'views/quote_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/quote_demo.xml',
-    ],
+    'demo': ['demo/quote_demo.xml',],
 }

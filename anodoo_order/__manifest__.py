@@ -36,7 +36,5 @@
         'views/order_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/order_demo.xml',
-    ],
+    'demo': ['demo/order_demo.xml',],
 }

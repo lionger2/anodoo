@@ -35,7 +35,5 @@
         'views/email_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/email_demo.xml',
-    ],
+    'demo': ['demo/email_demo.xml',],
 }

@@ -35,7 +35,5 @@
         'views/process_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/process_demo.xml',
-    ],
+    'demo': ['demo/process_demo.xml',],
 }
