@@ -25,6 +25,7 @@
             <field name="favicon" model="anodoo.product" eval="obj()._get_default_favicon()"/>
             <field name="logo" type="base64" file="anodoo_base/static/src/img/anodoo.png"/>
             <field name="auth_signup_uninvited">b2c</field>
+            <field name="language_ids" eval="[(4, ref('base.lang_zh_CN'))]"/>
             <field name="channel_id" ref="im_livechat_channel_data2"></field>
         </record>       
         

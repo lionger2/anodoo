@@ -30,41 +30,7 @@
         	<field name="sequence">20</field>
         	<field name="parent_id" ref="slide_channel_category_2"/>
         </record>
-        
-    	<!-- 课程标签 -->
-        <record id="slide_channel_tag_group_level" model="slide.channel.tag.group">
-	        <field name="name">课程等级</field>
-	        <field name="is_published" eval="True"/>
-	    </record>
-	    <record id="slide_channel_tag_level_basic" model="slide.channel.tag">
-	        <field name="name">基础</field>
-	        <field name="group_id" ref="slide_channel_tag_group_level"/>
-	    </record>
-	    <record id="slide_channel_tag_level_intermediate" model="slide.channel.tag">
-	        <field name="name">中级</field>
-	        <field name="group_id" ref="slide_channel_tag_group_level"/>
-	    </record>
-	    <record id="slide_channel_tag_level_advanced" model="slide.channel.tag">
-	        <field name="name">高级</field>
-	        <field name="group_id" ref="slide_channel_tag_group_level"/>
-	    </record>
-	
-	    <record id="slide_channel_tag_group_role" model="slide.channel.tag.group">
-	        <field name="name">目标岗位</field>
-	        <field name="is_published" eval="True"/>
-	    </record>
-	    <record id="slide_channel_tag_role_salesman" model="slide.channel.tag">
-	        <field name="name">销售人员</field>
-	        <field name="group_id" ref="slide_channel_tag_group_role"/>
-	    </record>
-	    <record id="slide_channel_tag_role_manager" model="slide.channel.tag">
-	        <field name="name">管理人员</field>
-	        <field name="group_id" ref="slide_channel_tag_group_role"/>
-	    </record>
-	    <record id="slide_channel_tag_role_it" model="slide.channel.tag">
-	        <field name="name">IT人员</field>
-	        <field name="group_id" ref="slide_channel_tag_group_role"/>
-	    </record>
+       
 	    
 	    <!-- 课程模板 -->
 	    <record id="slide_channel_demo_template" model="slide.channel">
