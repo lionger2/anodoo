@@ -51,6 +51,7 @@
 	                                <div class="content-group" attrs="{'invisible': [('group_uom','=',False)]}">
 	                                    <div class="mt8">
 	                                        <button name="%(uom.product_uom_form_action)d" icon="fa-arrow-right" type="action" string="计量单位管理" class="btn-link"/>
+	                               
 	                                    </div>
 	                                </div>
 	                            </div>
@@ -69,7 +70,7 @@
 	                                </div>
 	                                <div class="content-group" attrs="{'invisible': [('group_product_variant','=',False)]}">
 	                                    <div class="mt8">
-	                                        <button name="%(product.attribute_action)d" icon="fa-arrow-right" type="action" string="Attributes" class="btn-link"/>
+	                                        <button name="%(product.attribute_action)d" icon="fa-arrow-right" type="action" string="管理产品属性" class="btn-link"/>
 	                                    </div>
 	                                </div>
 	                            </div>
@@ -86,19 +87,9 @@
 	                            </div>
 	                        </div>
 	                    </div>
-	                    <h2>Pricing</h2>
+	                    <h2>价格</h2>
 	                    <div class="row mt16 o_settings_container">
-	                      <div class="col-12 col-lg-6 o_setting_box" title="Apply manual discounts on sales order lines or display discounts computed from pricelists (option to activate in the pricelist configuration).">
-	                           <div class="o_setting_left_pane">
-	                               <field name="group_discount_per_so_line"/>
-	                           </div>
-	                           <div class="o_setting_right_pane">
-	                               <label for="group_discount_per_so_line"/>
-	                               <div class="text-muted">
-	                                   在订单中可以按照产品设定折扣
-	                               </div>
-	                           </div>
-	                       </div>
+	                      
 	                        <div class="col-12 col-lg-6 o_setting_box">
 	                            <div class="o_setting_left_pane">
 	                                <field name="group_product_pricelist"/>
@@ -114,11 +105,22 @@
 	                                        <field name="product_pricelist_setting" widget="radio" class="o_light_label"/>
 	                                    </div>
 	                                    <div class="mt8">
-	                                        <button name="%(product.product_pricelist_action2)d" icon="fa-arrow-right" type="action" string="Pricelists" groups="product.group_product_pricelist" class="btn-link"/>
+	                                        <button name="%(product.product_pricelist_action2)d" icon="fa-arrow-right" type="action" string="管理价格表" groups="product.group_product_pricelist" class="btn-link"/>
 	                                    </div>
 	                                </div>
 	                            </div>
 	                        </div>
+	                        <div class="col-12 col-lg-6 o_setting_box" title="Apply manual discounts on sales order lines or display discounts computed from pricelists (option to activate in the pricelist configuration).">
+	                           <div class="o_setting_left_pane">
+	                               <field name="group_discount_per_so_line"/>
+	                           </div>
+	                           <div class="o_setting_right_pane">
+	                               <label for="group_discount_per_so_line"/>
+	                               <div class="text-muted">
+	                                   在订单中可以按照产品设定折扣
+	                               </div>
+	                           </div>
+	                       </div>
 	                    </div>
                     </div>
                 </xpath>

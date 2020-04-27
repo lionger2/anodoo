@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<data noupdate="1">
-		<record id="slide_channel_tag_group_role" model="slide.channel.tag.group">
+    <data noupdate="1">
+    	<!-- 课程标签 -->
+    	<record id="slide_channel_tag_group_role" model="slide.channel.tag.group">
 	        <field name="name">目标岗位3</field>
 	        <field name="is_published" eval="True"/>
 	    </record>
@@ -17,9 +18,6 @@
 	        <field name="name">IT人员</field>
 	        <field name="group_id" ref="slide_channel_tag_group_role"/>
 	    </record>
-	</data>
-    <data noupdate="0">
-    	<!-- 课程标签 -->
         <record id="slide_channel_tag_group_level" model="slide.channel.tag.group">
 	        <field name="name">课程等级2</field>
 	        <field name="is_published" eval="True"/>

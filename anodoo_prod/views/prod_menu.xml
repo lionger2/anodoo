@@ -22,8 +22,8 @@
     		<menuitem parent="prod_menu_product" id="prod_menu_product_supplier" name="供应商信息" action="product.product_supplierinfo_type_action" />
     		
     		
-   		<menuitem parent="prod_menu_root_anodoo" id="prod_menu_price" name="价格管理" />
-    		<menuitem parent="prod_menu_price" id="prod_menu_price_list"  name="价格表" action="product.product_pricelist_action2" groups="product.group_product_pricelist" />
+   		<menuitem parent="prod_menu_root_anodoo" id="prod_menu_price" name="价格管理" groups="product.group_product_pricelist"/>
+    		<menuitem parent="prod_menu_price" id="prod_menu_price_list"  name="价格表" action="product.product_pricelist_action2"  />
     		<menuitem parent="prod_menu_price" id="prod_menu_price_list_item"  name="价格规则" action="product.product_pricelist_item_action" />
     	<!-- 
     	<menuitem parent="prod_menu_root_anodoo" id="prod_menu_promotion" name="促销管理" />

@@ -5,7 +5,7 @@
 	        <field name="name">购物车</field>
 	        <field name="res_model">sale.order</field>
 	        <field name="view_mode">tree,kanban,form,activity</field><!-- ('order_line', '!=', False),  -->
-	        <field name="domain">[('state', '=', 'draft'), ('partner_id', '!=', context.get('public_partner_id')), ('website_id', '!=', False)]</field>
+	        <field name="domain">[('state', '=', 'draft'), ('partner_id', '!=', context.get('public_partner_id')), ('website_id', '!=', False), ('date_order', '&gt;', (datetime.datetime.utcnow() - datetime.timedelta(hours=1)).strftime('%Y-%m-%d %H:%M:%S'))]</field>
 	        <field name="context" eval="{'create': False}"/>
 	        <field name="view_id" ref="sale.view_quotation_tree"/>
 	        <field name="search_view_id" ref="sale.view_sales_order_filter"/>	        
