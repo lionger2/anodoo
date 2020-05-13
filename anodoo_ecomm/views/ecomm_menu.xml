@@ -51,7 +51,8 @@
 				<menuitem parent="ecomm_menu_config" id="ecomm_menu_config_product" name="产品" />
 					<menuitem parent="ecomm_menu_config_product" id="ecomm_menu_config_product_attribute_category" name="产品属性类别" action="website_sale_comparison.product_attribute_category_action" groups="product.group_product_variant" />
 					<menuitem parent="ecomm_menu_config_product" id="ecomm_menu_config_product_attribute" name="产品属性" action="product.attribute_action" groups="product.group_product_variant" />
-					<menuitem parent="ecomm_menu_config_product" id="ecomm_menu_config_product_category" name="电商目录" action="website_sale.product_public_category_action" />
+					<menuitem parent="ecomm_menu_config_product" id="ecomm_menu_config_product_category" name="产品类别" action="product.product_category_action_form" />
+					<menuitem parent="ecomm_menu_config_product" id="ecomm_menu_config_product_public_category" name="电商目录" action="website_sale.product_public_category_action" />
 				<menuitem parent="ecomm_menu_config" id="ecomm_menu_config_payment" name="支付" />
 					<menuitem parent="ecomm_menu_config_payment" id="ecomm_menu_config_payment_acquirer" name="支付方式" action="payment.action_payment_acquirer"/>
 					<menuitem parent="ecomm_menu_config_payment" id="ecomm_menu_config_payment_icon" name="支付图标" action="payment.action_payment_icon"/>

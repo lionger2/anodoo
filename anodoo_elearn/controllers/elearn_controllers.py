@@ -55,7 +55,7 @@ class AnodooElearn(WebsiteSlides):
             'challenges': challenges,
             'challenges_done': challenges_done,
         })
-        
+                
         #以下为扩展的
         website_domain = request.website.website_domain()
         categs_domain = [('parent_id', '=', False)] + website_domain

@@ -23,7 +23,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['sale', 'sales_team',
-                'anodoo_team', 'anodoo_proj', 'anodoo_content', 'anodoo_sfa'],
+                'anodoo_sfa'],
 
     # always loaded
     'data': [

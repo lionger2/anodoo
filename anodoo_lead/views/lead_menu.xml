@@ -127,7 +127,7 @@
         <field name="context">{'search_default_is_copy':1}</field>
     </record>
   
-    <menuitem parent="anodoo_mktauto.mktauto_menu_root_anodoo" id="lead_menu_root_anodoo" name="营销线索" action="crm.crm_lead_all_leads" sequence="23" />
+    <menuitem parent="anodoo_map.map_menu_root_anodoo" id="lead_menu_root_anodoo" name="营销线索" action="crm.crm_lead_all_leads" sequence="23" />
     	<menuitem parent="lead_menu_root_anodoo" id="lead_menu_lead" name="线索管理" />
     		<menuitem parent="lead_menu_lead" id="lead_menu_lead_list" name="线索列表" action="crm.crm_lead_all_leads"/>
     		<menuitem parent="lead_menu_lead" id="lead_menu_lead_list_my" name="我的线索" action="action_lead_list_my"/>
@@ -150,7 +150,7 @@
     		<menuitem parent="lead_menu_analysis" id="lead_menu_analysis_lead" name="线索分析" action="crm.crm_opportunity_report_action_lead" />
 			<!-- crm_iap_lead_website<menuitem parent="lead_menu_analysis" id="lead_menu_analysis_reveal" name="线索收集分析" action="crm_iap_lead_website.crm_reveal_view_action" />-->
         
-    	<menuitem parent="anodoo_mktauto.mktauto_menu_config" id="lead_menu_config" name="线索管理" />
+    	<menuitem parent="anodoo_map.map_menu_config" id="lead_menu_config" name="线索管理" />
     		<menuitem parent="lead_menu_config" id="lead_menu_config_lead" name="线索管理"  />
     			<menuitem parent="lead_menu_config_lead" id="lead_menu_config_lead_anodoo_lead_lifetime" name="线索生命周期" action="action_anodoo_lead_lifetime_list"/>
     			<menuitem parent="lead_menu_config_lead" id="lead_menu_config_lead_tags" name="线索标签"  action="crm.crm_lead_tag_action" />

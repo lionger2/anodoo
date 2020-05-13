@@ -11,7 +11,7 @@
     """,
 
     'author': "Anodoo",
-    'website': "http://www.anodoo.com/module/anodoo-mktauto",
+    'website': "http://www.anodoo.com/module/anodoo-map",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -23,7 +23,7 @@
 
     # any module necessary for this one to work correctly
     'depends': [
-        'anodoo_team', 'anodoo_proj', 'anodoo_content'],
+        'anodoo_team', 'anodoo_proj', 'anodoo_content', 'anodoo_prod'],
 
     # always loaded
     'data': [
@@ -34,7 +34,7 @@
         'views/map_views.xml',        
         'views/res_config_settings_views.xml',
         'views/map_menu.xml',
-        'views/templates.xml',
+        'views/map_templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': ['demo/demo.xml',],
