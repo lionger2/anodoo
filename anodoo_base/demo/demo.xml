@@ -23,6 +23,31 @@ Administrator</span>]]></field>
             <field name="users" eval="[(4,ref('user_admin2'))]"/>
         </record>
         
+        <!-- 一个个人，一个公司 res.partner -->
+        <record id="res_partner_1" model="res.partner">
+            <field name="name">柯方</field>
+            <field name="is_company">0</field>
+            <field name="street">西街巷235号</field>
+            <field name="city">北京</field>
+            <field name="zip">95380</field>
+            <field name="country_id" ref="base.cn"/>
+            <field name="email">wood.corner26@example.com</field>
+            <field name="phone">(623)-853-7197</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_partner_address_7.jpg"/>
+        </record>
+        <record id="res_partner_2" model="res.partner">
+            <field name="name">德庆有限公司</field>
+            <field name="is_company">1</field>
+            <field name="street">东门大道23号</field>
+            <field name="city">深圳</field>
+            <field name="zip">94523</field>
+            <field name="country_id" ref="base.cn"/>
+            <field name="email">deco.addict82@example.com</field>
+            <field name="phone">(603)-996-3829</field>
+            <field name="website">http://www.deco-addict.com</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_partner_2-image.png"/>
+        </record>
+        
 		<!-- 增加赵钱孙李 4个门户用户 -->
         <record id="partner_zhao_portal" model="res.partner">
             <field name="name">赵用户</field>

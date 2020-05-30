@@ -28,7 +28,7 @@
     # always loaded
     'data': [
         'data/prod_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/prod_security.xml',
         'security/ir.model.access.csv',
         'views/prod_views.xml',

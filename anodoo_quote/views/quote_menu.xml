@@ -9,7 +9,8 @@
     		
     	<menuitem parent="anodoo_sfa.sfa_menu_config" id="sfa_menu_config_quotation" name="报价"  />
     			<menuitem parent="sfa_menu_config_quotation" id="sfa_menu_config_quotation_template" name="报价单模板" action="sale_management.sale_order_template_action"  />
-    			
+    			<menuitem parent="sfa_menu_config_quotation" id="sfa_menu_config_quotation_payment_term" name="付款条款" action="account.action_payment_term_form"/>
+    			<menuitem parent="sfa_menu_config_quotation" id="sfa_menu_config_quotation_tax" name="税率设置" action="account.action_tax_form"/>
     	
 	</data>
 </odoo>

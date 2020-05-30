@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data noupdate="0">
+	
         
         <record id="view_users_search" model="ir.ui.view">
             <field name="name">res.users.search</field>
@@ -22,6 +23,10 @@
             <field name="model">res.groups</field>
             <field name="inherit_id" ref="base.view_groups_search"/> 
             <field name="arch" type="xml">
+            	<xpath expr="//field[@name='name']" position="after">
+            		<field name="external_id"/>
+	        	</xpath>
+	        	
             	<xpath expr="//filter[@name='no_share']" position="after">
 	        		<group expand="1" string="Group By">
 		           		<filter name="groupby_category_id"  string="分类" context="{'group_by':'category_id'}" />               	

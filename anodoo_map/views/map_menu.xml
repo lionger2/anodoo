@@ -1,10 +1,36 @@
 <?xml version="1.0"?>
 <odoo>
+	<data noupdate="0">
+		<!-- 营销团队，销售团队 Action -->
+        <record id="map_team_act" model="ir.actions.act_window">
+            <field name="name">团队</field>
+            <field name="res_model">crm.team</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="view_id" ref="sales_team.crm_team_salesteams_search"/>
+            <field name="context">{}</field>
+            <field name="domain">['|', ('team_type', '=', 'sales'), ('team_type', '=', 'marketing'), ('is_template', '=', False)]</field>
+        </record>
   
-    <menuitem id="map_menu_root_anodoo" name="Anodoo 营销自动化" sequence="22" />
+    <menuitem id="map_menu_root_anodoo" name="Anodoo 营销自动化" sequence="20" />
+    	
+    	<menuitem parent="map_menu_root_anodoo" id="map_menu_team" name="团队" sequence="10" action="map_team_act"/>
+
+		<menuitem parent="map_menu_root_anodoo" id="map_menu_utm" name="营销跟踪" sequence="20"/>
+			<menuitem parent="map_menu_utm" id="map_menu_utm_link" name="链接追踪" action="link_tracker.link_tracker_action"/>
+			<!-- <menuitem parent="map_menu_utm" id="map_menu_utm_campaigns" name="活动" action="mass_mailing.action_view_utm_campaigns"/> -->
+			<menuitem parent="map_menu_utm" id="map_menu_utm_campaigns" name="UTM活动" action="utm.utm_campaign_action"/>
+			<menuitem parent="map_menu_utm" id="map_menu_utm_medium" name="UTM媒介" action="utm.utm_medium_action"/>
+			<menuitem parent="map_menu_utm" id="map_menu_utm_source" name="UTM来源" action="utm.utm_source_action"/>
+
     
     	<menuitem parent="map_menu_root_anodoo" id="map_menu_analysis" name="分析"  sequence="90" />
     	
     	<menuitem parent="map_menu_root_anodoo" id="map_menu_config" name="配置"  sequence="100"  groups="anodoo_base.group_anodoo_manager"/>
 			<menuitem parent="map_menu_config" id="map_menu_config_setting" name="基本配置" action="anodoo_map_config_settings_action"/>
+							
+			<menuitem parent="map_menu_config" id="map_menu_config_utm" name="UTM" />
+				<menuitem parent="map_menu_config_utm" id="map_menu_config_utm_stage" name="活动阶段" action="utm.action_view_utm_stage" />
+				<menuitem parent="map_menu_config_utm" id="map_menu_config_utm_tag" name="活动标签" action="utm.action_view_utm_tag" />
+
+	</data>
 </odoo>

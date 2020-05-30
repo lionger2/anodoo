@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+		<!-- 团队 model_id: crm.team-->
+	    <record id="view_anodoo_team_form" model="ir.ui.view">
+	        <field name="name">anodoo.team.view.form</field>
+	        <field name="model">crm.team</field>
+	        <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
+	        <field name="priority">100</field>
+	        <field name="arch" type="xml">
+	        	<xpath expr="//field[@name='user_id']" position="before">
+                    <field name="team_type"/>
+                </xpath>
+	        	<xpath expr="//group[@name='right']" position="inside">
+					<field name="use_team_roles" />
+                    <field name="description" />
+                </xpath>
+                <xpath expr="//page[@name='members']" position="attributes">
+	        		<attribute name="attrs">{'invisible': [('use_team_roles', '=', True)]}</attribute>
+	        	</xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page name="role_members" string="角色成员" attrs="{'invisible': [('use_team_roles', '=', False)]}">
+	                    <field name="team_member_ids" context="{'team_id': id}">
+	                    	<tree editable='bottom'>
+	                    		<field name="sequence" invisible="1"/> 
+			                <field name="role_id" />
+			                <field name="user_id" />			                 
+			                <field name="description" />              
+			            </tree>
+	                    </field>
+	                </page>
+	                <page name="role" string="角色" attrs="{'invisible': [('use_team_roles', '=', False)]}">
+	                	<field name="team_roles" context="{'team_id': id}">
+	                    	<tree editable='bottom'>
+	                    	<field name="sequence" invisible="1"/>  
+			                <field name="name" />
+			                <field name="is_leader" />
+			                <field name="is_default" />  
+			                <field name="group_id" />    
+			                
+			                <field name="description" />             
+			            </tree>
+	                    </field>
+		       		</page>
+                </xpath>     
+	        </field>
+	    </record>
+        
+	    <record id="view_anodoo_team_list" model="ir.ui.view">
+	        <field name="name">anodoo.team.view.list</field>
+	        <field name="model">crm.team</field>
+	        <field name="inherit_id" ref="sales_team.crm_team_view_tree"/>
+	        <field name="priority">100</field>
+	        <field name="arch" type="xml">
+	        	<xpath expr="//field[@name='company_id']" position="after">
+                    <field name="team_type" />
+                	<field name="team_member_count" />
+                	<field name="description" />  
+                </xpath>
+                
+	        </field>
+	    </record>
+
+	</data>
+</odoo>

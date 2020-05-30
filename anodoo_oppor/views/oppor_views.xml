@@ -25,9 +25,9 @@
 	            	<page name="opportunity_team" string="商机团队" attrs="{'invisible': [('type', '=', 'lead')]}">
                          <group name="group_top">
 	                     	<group name="group_left">
-	                         <field name="owner_team_id" invisible="1"/>
-	                         <field name="owner_team_name" />
-	                         <field name="owner_team_description" />      
+	                         <field name="team_id" invisible="1"/>
+	                         <field name="team_name" />
+	                         <field name="team_description" /> 
 	                      </group>
 	                      <group name="group_right">
 	                      </group>
@@ -78,13 +78,13 @@
 	        </field>
 	    </record>
 	    
-	    <!-- 商机报备 model_id: anodoo.sfa.opportunity.register-->
-	    <record id="view_anodoo_sfa_opportunity_register_form" model="ir.ui.view">
-	        <field name="name">anodoo.sfa.opportunity.register.view.form</field>
-	        <field name="model">anodoo.sfa.opportunity.register</field>
+	    <!-- 商机报备 model_id: anodoo.opportunity.register-->
+	    <record id="view_anodoo_opportunity_register_form" model="ir.ui.view">
+	        <field name="name">anodoo.opportunity.register.view.form</field>
+	        <field name="model">anodoo.opportunity.register</field>
 	        <field name="priority">100</field>
 	        <field name="arch" type="xml">
-	            <form string="anodoo_sfa_opportunity_register">
+	            <form string="anodoo_opportunity_register">
 	            	<header>
                         <button name="convert_to_opportunity" string="转为商机" type="object" class="oe_highlight"/>
                     </header>
@@ -107,9 +107,9 @@
 	            </form>            
 	        </field>
 	    </record>
-	    <record id="view_anodoo_sfa_opportunity_register_list" model="ir.ui.view">
-	        <field name="name">anodoo.sfa.opportunity.register.view.list</field>
-	        <field name="model">anodoo.sfa.opportunity.register</field>
+	    <record id="view_anodoo_opportunity_register_list" model="ir.ui.view">
+	        <field name="name">anodoo.opportunity.register.view.list</field>
+	        <field name="model">anodoo.opportunity.register</field>
 	        <field name="priority">100</field>
 	        <field name="arch" type="xml">
 	            <tree>
@@ -123,9 +123,9 @@
 	            </tree>
 	        </field>
 	    </record>
-	    <record id="view_anodoo_sfa_opportunity_register_search" model="ir.ui.view">
-	        <field name="name">anodoo.sfa.opportunity.register.view.search</field>
-	        <field name="model">anodoo.sfa.opportunity.register</field>
+	    <record id="view_anodoo_opportunity_register_search" model="ir.ui.view">
+	        <field name="name">anodoo.opportunity.register.view.search</field>
+	        <field name="model">anodoo.opportunity.register</field>
 	        <field name="priority">100</field>
 	        <field name="arch" type="xml">
 	            <search>

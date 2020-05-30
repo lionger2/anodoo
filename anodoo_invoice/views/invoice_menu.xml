@@ -3,10 +3,9 @@
 	<data noupdate="0">
 
 		<menuitem parent="anodoo_sfa.sfa_menu_root_anodoo" id="sfa_menu_invoice" name="开票"   sequence="50" />
-    		<menuitem parent="sfa_menu_invoice" id="sfa_menu_invoice_create" name="待开票订单" action="sale.action_orders_to_invoice" />
-    		<menuitem parent="sfa_menu_invoice" id="sfa_menu_invoice_upselling" name="追加销售" action="sale.action_orders_upselling" />
     		<menuitem parent="sfa_menu_invoice" id="sfa_menu_invoice_list" name="发票" action="account.action_move_out_invoice_type" />
     		<menuitem parent="sfa_menu_invoice" id="sfa_menu_invoice_receipt" name="收据" action="account.action_move_out_receipt_type" />
+    		<menuitem parent="sfa_menu_invoice" id="sfa_menu_invoice_refund" name="红字发票" action="account.action_move_out_refund_type" />
     		
     	<menuitem parent="anodoo_sfa.sfa_menu_analysis" id="sfa_menu_analysis_invoicing" name="开票分析" />
    				<menuitem parent="sfa_menu_analysis_invoicing" id="sfa_menu_analysis_invoicing_analysis" name="发票分析" action="account.action_account_invoice_report_all"/>

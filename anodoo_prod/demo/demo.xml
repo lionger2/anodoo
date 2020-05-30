@@ -21,7 +21,7 @@
         </record>
         <record id="product_category_6" model="product.category">
             <field name="parent_id" ref="product_category_3"/>
-            <field name="name">Saleable</field>
+            <field name="name">可售</field>
         </record>
         <record id="product_category_4" model="product.category">
             <field name="parent_id" ref="product.product_category_1"/>

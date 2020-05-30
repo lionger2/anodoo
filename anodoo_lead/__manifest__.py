@@ -23,19 +23,20 @@
     'auto_install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['crm', 'iap', 'crm_iap_lead', 'crm_iap_lead_enrich', #'crm_iap_lead_website',
+    'depends': ['crm', 'crm_iap_lead', 'crm_iap_lead_website',
                 'anodoo_map'],
 
     # always loaded
     'data': [
         'data/lead_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/lead_security.xml',
         'security/ir.model.access.csv',
         'wizard/crm_lead_lost_views.xml',
         'wizard/crm_merge_opportunities_views.xml',
         'wizard/crm_lead_to_opportunity_views.xml',
         'views/lead_views.xml',
+        'views/res_config_settings_views.xml',
         'views/lead_menu.xml',
         'views/lead_templates.xml'
     ],

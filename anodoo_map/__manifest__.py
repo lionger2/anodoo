@@ -22,13 +22,13 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': [
+    'depends': [ 'link_tracker',
         'anodoo_team', 'anodoo_proj', 'anodoo_content', 'anodoo_prod'],
 
     # always loaded
     'data': [
         'data/map_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/map_security.xml',
         'security/ir.model.access.csv',
         'views/map_views.xml',        

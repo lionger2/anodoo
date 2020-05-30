@@ -9,31 +9,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//div[@class='settings']" position="inside">
                     <div class="app_settings_block" data-string="Anodoo MAP Config" string="营销自动化" data-key="anodoo_map" >
-                    	<!-- 一部分 -->
-	                    <div id="sfa_test">
-	                    	<!-- 一行:标题 -->
-	                    	<h2>产品配置</h2>
-	                    	<!-- 一行 -->
-	                    	<div class="row mt16 o_settings_container">
-	                    		<!-- 一块 -->
-		                        <div class="col-12 col-lg-6 o_setting_box" id="map_lead" title="Use leads if y.">
-		                            <div class="o_setting_left_pane">
-		                                
-		                            </div>
-		                            <div class="o_setting_right_pane">
-		                            	
-		                            </div>
-		                        </div>
-		                        
-		                        <div class="col-12 col-lg-6 o_setting_box" id="map_lead2" title="Use leads if y.">
-		                            <div class="o_setting_left_pane">
-		                            </div>
-		                            <div class="o_setting_right_pane">				                                
-		                                
-		                            </div>
-		                        </div>				                        
-		                    </div>
-	                    </div>
+                    	
                     </div>
                 </xpath>
             </field>

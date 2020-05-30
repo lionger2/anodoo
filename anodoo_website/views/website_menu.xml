@@ -70,21 +70,7 @@
 			<menuitem parent="website_menu_root_anodoo" id="website_menu_prm" name="代理商门户"/>
 			
 				-->
-				<!-- 
-			<menuitem parent="website_menu_root_anodoo" id="website_menu_utm" name="链接跟踪"/>
-				<menuitem parent="website_menu_utm" id="website_menu_utm_link" name="链接" action="link_tracker.link_tracker_action"/>
-				<menuitem parent="website_menu_utm" id="website_menu_utm_campaigns" name="活动" action="mass_mailing.action_view_utm_campaigns"/>
-				<menuitem parent="website_menu_utm" id="website_menu_utm_campaigns2" name="活动2" action="utm.utm_campaign_action"/>
-				<menuitem parent="website_menu_utm" id="website_menu_utm_medium" name="媒介" action="utm.utm_medium_action"/>
-				<menuitem parent="website_menu_utm" id="website_menu_utm_source" name="来源" action="utm.utm_source_action"/>
-				
-				<menuitem parent="website_menu_utm" id="website_menu_utm_report" name="分析" />
-					
-				<menuitem parent="website_menu_utm" id="website_menu_utm_config" name="配置" />
-					<menuitem parent="website_menu_utm_config" id="website_menu_utm_config_stage" name="活动阶段" action="utm.action_view_utm_stage" />
-					<menuitem parent="website_menu_utm_config" id="website_menu_utm_config_tag" name="活动标签" action="utm.action_view_utm_tag" />
-	 -->
-		
+	
 			
 
 	</data>

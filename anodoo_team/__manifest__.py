@@ -29,9 +29,10 @@
     # always loaded
     'data': [
         'data/team_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/team_security.xml',
         'security/ir.model.access.csv',
+        'views/crm_team_views.xml',
         'views/team_views.xml',
         'views/note_views.xml',
         'views/res_config_settings_views.xml',

@@ -28,10 +28,12 @@
     # always loaded
     'data': [
         'data/process_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/process_security.xml',
         'security/ir.model.access.csv',
         'views/process_views.xml',
+        'views/mail_activity_views.xml',
+        'views/res_config_settings_views.xml',
         'views/process_menu.xml',
         'views/process_templates.xml',
     ],

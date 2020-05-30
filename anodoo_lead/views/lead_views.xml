@@ -7,12 +7,16 @@
 	        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
 	        <field name="arch" type="xml">
 	        	<xpath expr="//field[@name='stage_id']" position="attributes">
-	        		<attribute name="attrs">{'invisible': ['|', ('active', '=', False)]}</attribute>
+	        		<attribute name="attrs">{'invisible': [ ('active', '=', False)]}</attribute>
 	        		<attribute name="domain">['|', ('team_id', '=', team_id), ('team_id', '=', False), ('lifetime_id','=',lifetime_id)]</attribute>
 	        	</xpath>
 	        	<xpath expr="//button[@name='%(crm.action_crm_lead2opportunity_partner)d']" position="attributes">
 	        		<attribute name="attrs">{'invisible': ['|','|',('can_convert', '=', False), ('type', '=', 'opportunity'), ('active', '=', False)]}</attribute>
 	        	</xpath>
+
+                <xpath expr="//button[@name='%(crm.crm_lead_lost_action)d']" position="attributes">
+	        		<attribute name="context">{'default_lead_id': active_id, 'default_is_for_lead':True}</attribute>
+	        	</xpath>            
 	        	<xpath expr="//button[@name='%(crm.action_crm_lead2opportunity_partner)d']" position="after">
 	        		<field name="is_qualify" invisible="1"/>
 	        		<field name="can_convert" invisible="1"/>
@@ -22,26 +26,34 @@
                             type="action" class="btn btn-secondary" context="{'default_lead_id': active_id, 'default_is_for': type}" attrs="{'invisible':[('is_qualify', '=', False)]}"/>
                             
 	            </xpath>
+	            <xpath expr="//div[hasclass('col')][1]" position="attributes">
+	        		<attribute name="attrs">{}</attribute>
+	        	</xpath>
 	            <xpath expr="//label[@for='contact_name']" position="before">
 	                <field name="contact_id" widget="res_partner_many2one" />
 	            </xpath>
 	            <xpath expr="//field[@name='user_id']" position="before">	            	
-	                <field name="lifetime_id"/>
+	                <field name="lifetime_id" domain="[('is_for_lead','=',True)]"/>
+	                <!-- 
 	                <field name="owner_type"/>
 	                <field name="owner_team_id" attrs="{'invisible': [('owner_type','==', 'user')]}"/>
+	                 -->
 	            </xpath>
+	            <!-- 
 	            <xpath expr="//field[@name='user_id']" position="attributes">
                 	<attribute name="attrs">{'invisible': [('owner_type','==', 'team')]}</attribute>
                	</xpath>
                	<xpath expr="//field[@name='team_id']" position="attributes">
                 	<attribute name="invisible">1</attribute>
                	</xpath>
+               	-->
                	<xpath expr="//field[@name='partner_id']" position="attributes">
 	                <attribute name="groups"></attribute>
 	            </xpath>
 	        </field>
 	    </record>
 	    
+	    <!-- 
 	    <record id="crm_case_tree_view_leads" model="ir.ui.view">
             <field name="name">crm.lead.tree.lead</field>
             <field name="model">crm.lead</field>
@@ -68,6 +80,7 @@
 	            </xpath>
             </field>
         </record>
+         -->
 	    
 	    <!-- 认定失败原因 model_id: anodoo.lead.qualify.lost.reason-->
 	    <record id="view_anodoo_lead_qualify_lost_reason_form" model="ir.ui.view">

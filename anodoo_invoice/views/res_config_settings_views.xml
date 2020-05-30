@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+    	<!--  插入到anodoo_sfa的配置中 -->
+        <record id="view_res_config_settings_sfa_form" model="ir.ui.view">
+            <field name="name">anodoo.config.settings.view.form.inherit.sfa</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="anodoo_sfa.view_res_config_settings_sfa_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='invoice']" position="inside">
+                    
+	                    	<h2>开票</h2>
+	                    	<div class="row mt16 o_settings_container">
+		                        <div class="col-12 col-lg-6 o_setting_box" title="Sending an email is useful if you need to share specific information or content about a product (instructions, rules, links, media, etc.). Create and set the email template from the product detail form (in Sales tab).">
+		                            <div class="o_setting_left_pane">
+		                                <field name="module_product_email_template"/>
+		                            </div>
+		                            <div class="o_setting_right_pane">
+		                                <label for="module_product_email_template" string="发送产品内容"/>
+		                                <div class="text-muted">
+		                                    发票验证后，发送针对发票内特定产品的EMail
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div id="sales_settings_invoicing_policy"
+		                             class="col-12 col-lg-6 o_setting_box"
+		                             title="This default value is applied to any new product created. This can be changed in the product detail form.">
+		                            <div class="o_setting_right_pane">
+		                                <label for="default_invoice_policy"/>
+		                                <div class="text-muted">
+		                                    开票策略，基于订单或配送单数量来计算开票数量
+		                                </div>
+		                                <div class="content-group">
+		                                    <div class="mt16">
+		                                        <field name="default_invoice_policy" class="o_light_label" widget="radio"/>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <field name="portal_confirmation_pay" invisible="1"/>
+		                        <div class="col-xs-12 col-md-6 o_setting_box"
+		                             attrs="{'invisible': ['|', ('default_invoice_policy', '!=', 'order'), ('portal_confirmation_pay', '=', False)]}">
+		                            <div class="o_setting_left_pane">
+		                                <field name="automatic_invoice"/>
+		                            </div>
+		                            <div class="o_setting_right_pane">
+		                                <label for="automatic_invoice"/>
+		                                <div class="text-muted">
+		                                    当在线支付确认时，自动生成发票
+		                                </div>
+		                                <div  attrs="{'invisible': [('automatic_invoice','=',False)]}" groups="base.group_no_one">
+		                                    <label for="template_id" class="o_light_label"/>
+		                                    <field name="template_id" class="oe_inline" options="{'no_create': True}"/>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-12 col-lg-6 o_setting_box">
+		                            <div class="o_setting_left_pane"/>
+		                            <div class="o_setting_right_pane">
+		                                <span class="o_form_label">预付款</span>
+		                                <div class="text-muted">
+		                                    用于预付款的产品
+		                                </div>
+		                                <div class="text-muted">
+		                                    <field name="deposit_default_product_id"/>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-12 col-lg-6 o_setting_box">
+	                                <div class="o_setting_left_pane">
+	                                </div>
+	                                <div class="o_setting_right_pane">
+	                                    <span class="o_form_label">默认发送选项</span>
+	                                    <div class="text-muted">
+	                                    当发送打印发票时的默认选项
+	                                    </div>
+	                                    <div class="mt16">
+	                                        <div class="content-group" id="send_default">
+	                                            <div class="row">
+	                                                <field name="invoice_is_print" class="col-lg-1 ml16"/>
+	                                                <label for="invoice_is_print"/>
+	                                                <span class="fa fa-lg fa-building-o" title="Values set here are company-specific."/>
+	                                            </div>
+	                                            <div class="row">
+	                                                <field name="invoice_is_email" class="col-lg-1 ml16"/>
+	                                                <label for="invoice_is_email"/>
+	                                                <span class="fa fa-lg fa-building-o" title="Values set here are company-specific."/>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="col-12 col-lg-6 o_setting_box">
+	                                <div class="o_setting_left_pane">
+	                                    <field name="module_snailmail_account"/>
+	                                </div>
+	                                <div class="o_setting_right_pane" id="snailmail_settings">
+	                                    <label for="module_snailmail_account"/>
+	                                    <div class="text-muted">
+	                                        支持通过邮寄的方式向客户发送发票
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="col-12 col-lg-6 o_setting_box">
+	                                <div class="o_setting_left_pane">
+	                                </div>
+	                                <div class="o_setting_right_pane">
+	                                    <label for="show_line_subtotals_tax_selection"/>
+	                                    <div class="text-muted">
+	                                        在发票行上是否显示税
+	                                    </div>
+	                                    <div class="mt16">
+	                                        <field name="show_line_subtotals_tax_selection" class="o_light_label" widget="radio"/>
+	                                        <field name="group_show_line_subtotals_tax_excluded" invisible="1"/>
+	                                        <field name="group_show_line_subtotals_tax_included" invisible="1"/>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="col-12 col-lg-6 o_setting_box">
+	                                <div class="o_setting_left_pane">
+	                                    <field name="use_invoice_terms"/>
+	                                </div>
+	                                <div class="o_setting_right_pane">
+	                                    <label for="use_invoice_terms"/>
+	                                    <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." aria-label="Values set here are company-specific." groups="base.group_multi_company" role="img"/>
+	                                    <div class="text-muted">
+	                                        在发票，订单中显示默认的标准条款等
+	                                    </div>
+	                                    <div class="content-group" attrs="{'invisible': [('use_invoice_terms','=',False)]}">
+	                                        <div class="mt16">
+	                                            <field name="invoice_terms" placeholder="Insert your terms &amp; conditions here..."/>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="col-12 col-lg-6 o_setting_box">
+	                                <div class="o_setting_left_pane">
+	                                    <field name="group_warning_account"/>
+	                                </div>
+	                                <div class="o_setting_right_pane">
+	                                    <label for="group_warning_account" string="告警"/>
+	                                    <div class="text-muted">
+	                                        Get warnings when invoicing specific customers
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="col-12 col-lg-6 o_setting_box">
+	                                <div class="o_setting_left_pane">
+	                                    <field name="group_cash_rounding"/>
+	                                </div>
+	                                <div class="o_setting_right_pane">
+	                                    <label for="group_cash_rounding"/>
+	                                    <div class="text-muted">
+	                                        定义用于通过现金支付的货币的最小硬币
+	                                    </div>
+	                                    <div class="mt8">
+	                                        <button name="%(account.rounding_list_action)d" icon="fa-arrow-right"
+	                                                type="action" string="Cash Roundings" class="btn-link"
+	                                                attrs="{'invisible': [('group_cash_rounding', '=', False)]}"/>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="col-12 col-lg-6 o_setting_box">
+	                                <div class="o_setting_left_pane"/>
+	                                <div class="o_setting_right_pane">
+	                                    <span class="o_form_label">默认的贸易术语</span>
+	                                    <div class="text-muted">
+	                                        公司默认的贸易术语
+	                                    </div>
+	                                    <div class="text-muted">
+	                                        <field name="incoterm_id"/>
+	                                    </div>
+	                                </div>
+	                            </div>
+		                    </div>
+                </xpath>
+            </field>
+        </record>
+	</data>
+</odoo>

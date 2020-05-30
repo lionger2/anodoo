@@ -30,6 +30,7 @@ class Stage(models.Model):
     _inherit = 'crm.stage'
     
     lifetime_id = fields.Many2one('anodoo.lead.lifetime', string='生命周期')
+    
     is_for_lead = fields.Boolean('线索适用', related='lifetime_id.is_for_lead', default=True, store=True)
     
     is_qualify = fields.Boolean('是否认定阶段', default=False)
@@ -50,8 +51,8 @@ class Stage(models.Model):
                 args.append(('is_for_lead', '=', True))
             else:
                 args.append(('is_for_lead', '=', False))
-        else:
-            args.append(('is_for_lead', '=', False))        
+        #else:
+        #    args.append(('is_for_lead', '=', False))        
         
         return super()._search(args = args, offset=offset, limit=limit, order=order, count=count, access_rights_uid=access_rights_uid)
     

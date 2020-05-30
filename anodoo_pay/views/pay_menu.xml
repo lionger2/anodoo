@@ -4,7 +4,7 @@
 
 		<menuitem parent="anodoo_sfa.sfa_menu_root_anodoo" id="sfa_menu_payment" name="付款"  sequence="70" />
     		<menuitem parent="sfa_menu_payment" id="sfa_menu_payment_customer" name="客户付款" action="account.action_account_payments" />
-    		<menuitem parent="sfa_menu_payment" id="sfa_menu_payment_refund" name="客户退款" action="account.action_move_out_refund_type" />
+    		
     		
     	<menuitem parent="anodoo_sfa.sfa_menu_config" id="sfa_menu_config_payment" name="付款"  />
      			<menuitem parent="sfa_menu_config_payment" id="sfa_menu_config_payment_acquirers" name="付款方式"  action="payment.action_payment_acquirer"/>

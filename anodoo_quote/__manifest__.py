@@ -23,16 +23,18 @@
     'auto_install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['sale', 'sale_management',
+    'depends': ['sale', 'sale_management', 'sale_margin', 'sale_product_configurator', 'sale_product_matrix', 'sale_quotation_builder',
                 'anodoo_sfa'],
 
     # always loaded
     'data': [
         'data/quote_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/quote_security.xml',
         'security/ir.model.access.csv',
         'views/quote_views.xml',
+        'views/sale_order_template_views.xml',
+        'views/res_config_settings_views.xml',
         'views/quote_menu.xml',
         'views/quote_templates.xml',
     ],

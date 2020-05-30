@@ -6,18 +6,21 @@ from . import crm_stage
 class Lead(models.Model):    
     _inherit = 'crm.lead'
     
-    name = fields.Char('名称')
-    partner_id = fields.Many2one('res.partner', string='客户', domain="['&', ('partner_type', '=', 'customer'), '|', ('company_id', '=', False), ('company_id', '=', company_id)]")
+    #name = fields.Char('名称')
+    
+    #继续使用lead自带的partner_id
+    #'&', ('partner_type', '=', 'customer'), 
+    #partner_id = fields.Many2one('res.partner', string='客户', domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     
     contact_id = fields.Many2one('res.partner', string='联系人', domain="['&', ('partner_type', '=', 'contact'), '|', ('company_id', '=', False), ('company_id', '=', company_id)]", help="关联联系人,自动带出其联系信息")
     
-    owner_type = fields.Selection([('team', '分配给线索团队'), ('user', '分配给负责人')], required=True, string='分配方式', default='user', help="线索可以分配给团队负责,或者分配给指定具体人员负责")
+    #owner_type = fields.Selection([('team', '分配给线索团队'), ('user', '分配给负责人')], required=True, string='分配方式', default='user', help="线索可以分配给团队负责,或者分配给指定具体人员负责")
     
-    user_id = fields.Many2one('res.users', string='线索负责人')
+    #user_id = fields.Many2one('res.users', string='线索负责人')
     
-    owner_team_id = fields.Many2one('crm.team', string='线索团队')
-    owner_team_name = fields.Char('团队名称', related='owner_team_id.name')
-    owner_team_description = fields.Text('团队描述')
+    #owner_team_id = fields.Many2one('crm.team', string='线索团队')
+    #owner_team_name = fields.Char('团队名称', related='owner_team_id.name')
+    #owner_team_description = fields.Text('团队描述')
     #, related='owner_team_id.description'
     
     
@@ -70,7 +73,11 @@ class Lead(models.Model):
     def _lifetime_find(self):
         search_domain = []
         
-        if self.type == 'opportunity':
+        type = self._context.get('default_type')
+        if not type:
+            type = self.type
+        
+        if type == 'opportunity':
             search_domain.append(('is_for_lead', '=', False))
         else:
             search_domain.append(('is_for_lead', '=', True))
@@ -82,7 +89,7 @@ class Lead(models.Model):
         '''
             合并线索商机后,将被合并的线索/商机关联到新线索/商机上.
         '''
-        return self.super().merge_opportunity(user_id=user_id, team_id=team_id)
+        return super().merge_opportunity(user_id=user_id, team_id=team_id)
     
     def qualify_success(self):
         pass

@@ -29,10 +29,11 @@
     # always loaded
     'data': [
         'data/pay_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/pay_security.xml',
         'security/ir.model.access.csv',
         'views/pay_views.xml',
+        'views/res_config_settings_views.xml',
         'views/pay_menu.xml',
         'views/pay_templates.xml',
     ],

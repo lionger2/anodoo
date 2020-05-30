@@ -29,7 +29,7 @@
     # always loaded
     'data': [
         'data/base_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/base_security.xml',
         'security/ir.model.access.csv', 
         #'views/iap_assets.xml',  #iap widget js依赖

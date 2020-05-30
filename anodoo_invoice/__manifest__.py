@@ -29,10 +29,11 @@
     # always loaded
     'data': [
         'data/invoice_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/invoice_security.xml',
         'security/ir.model.access.csv',
         'views/invoice_views.xml',
+        'views/res_config_settings_views.xml',
         'views/invoice_menu.xml',
         'views/invoice_templates.xml',
     ],

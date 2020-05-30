@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data noupdate="0">
+		<record id="process_activity_action" model="ir.actions.act_window">
+	        <field name="name">商机活动</field>
+	        <field name="res_model">mail.activity</field>
+	        <field name="view_mode">kanban,tree,calendar,form</field>    
+	        <field name="search_view_id" ref="process_activity_view_search"/>
+	        <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'kanban', 'view_id': ref('process_activity_kanban')}),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('process_activity_list')})]"/>
+	        <field name="domain">[('res_model', '=', 'crm.lead')]</field>       
+	    </record>
+	    
+	    <record id="process_activity_type_action_config_sales" model="ir.actions.act_window">
+	    	<field name="name">活动配置</field>
+            <field name="res_model">mail.activity.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="mail_activity_type_view_search"/>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('mail_activity_type_view_tree')})]"/>
+            <field name="domain">[('res_model_id.model', 'in', ['crm.lead'])]</field>
+            <field name="context">{'default_res_model': 'crm.lead', 'search_default_groupby_stage_id':1}</field>
+        </record>
+	    
 
 		<menuitem parent="anodoo_sfa.sfa_menu_root_anodoo" id="sfa_menu_process" name="销售流程"  sequence="20" />
+			<menuitem parent="sfa_menu_process" id="sfa_menu_process_activity" name="商机活动"  action="process_activity_action"/>
+		
+		<menuitem parent="anodoo_sfa.sfa_menu_config" id="sfa_menu_config_process" name="销售流程"/>
+    		<menuitem parent="sfa_menu_config_process" id="sfa_menu_config_process_activity_type" name="活动配置"  action="process_activity_type_action_config_sales" />
 	</data>
 </odoo>

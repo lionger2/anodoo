@@ -24,15 +24,16 @@
 
     # any module necessary for this one to work correctly
     'depends': ['crm', 'sales_team', 'sale',
-                'anodoo_sfa' ],
+                'anodoo_sfa', 'anodoo_lead' ],
 
     # always loaded
     'data': [
         'data/oppor_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/oppor_security.xml',
         'security/ir.model.access.csv',
         'views/oppor_views.xml',
+        'views/res_config_settings_views.xml',
         'views/oppor_menu.xml',
         'views/oppor_templates.xml',
     ],

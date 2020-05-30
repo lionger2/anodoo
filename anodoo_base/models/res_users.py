@@ -16,6 +16,14 @@ import json
 
 from odoo.exceptions import except_orm, Warning, RedirectWarning,AccessDenied
 
+class Groups(models.Model):
+    _inherit = 'res.groups'
+    
+# update res_groups t1 set external_id=t2.name
+# from (select name,res_id from ir_model_data where model='res_groups') t2 
+# where t2.res_id=t1.id
+    external_id = fields.Char('外部Id')
+
 class Users(models.Model):
     _inherit = 'res.users'
     

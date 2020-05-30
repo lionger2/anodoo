@@ -12,7 +12,7 @@
 	    </record>
 	    
 	    <record id="engage_channel_event_event" model="mail.activity.type">
-            <field name="name">活动</field>
+            <field name="name">参加活动</field>
             <field name="engage_channel_id" ref="engage_channel_event"/>
         </record>
          -->

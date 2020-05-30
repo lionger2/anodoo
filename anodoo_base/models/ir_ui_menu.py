@@ -8,6 +8,11 @@ class IrUiMenu(models.Model):
     
     is_root_display = fields.Boolean('根目录显示', default=True)
     
+#     update ir_ui_menu t1 set external_id=t2.name
+#     from (select name,res_id from ir_model_data where model='ir.ui.menu') t2 
+#     where t2.res_id=t1.id
+    external_id = fields.Char('外部Id')
+    
  #   is_anodoo_root_menu = fields.Boolean('是否是Anodoo根目录', compute="_compute_is_anodoo_root_menu", _default=False)
     
     @api.model

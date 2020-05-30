@@ -22,13 +22,13 @@
     'installable': True,
 
     # any module necessary for this one to work correctly
-    'depends': [
-        'anodoo_team', 'anodoo_proj', 'anodoo_content', 'anodoo_prod', 'anodoo_crm', ],
+    'depends': ['l10n_cn_small_business', 'l10n_cn_standard',
+        'anodoo_team', 'anodoo_proj', 'anodoo_content', 'anodoo_prod', 'anodoo_map' ],
 
     # always loaded
     'data': [
         'data/sfa_data.xml',
-        #'demo/demo.xml',#demo
+        'demo/demo.xml',#demo
         'security/sfa_security.xml',
         'security/ir.model.access.csv',
         'views/res_config_settings_views.xml',

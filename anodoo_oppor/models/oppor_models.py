@@ -9,7 +9,10 @@ class Opportunity(models.Model):
     
     lead_id = fields.Many2one('crm.lead', string='线索', ondelete='restrict')
     
-    opportunity_relation_ids = fields.One2many('anodoo.sfa.opportunity.relation', 'opportunity_id', string='商机与商机关系')
+    opportunity_relation_ids = fields.One2many('anodoo.opportunity.relation', 'opportunity_id', string='商机与商机关系')
+    
+    team_name = fields.Char('团队名称', related='team_id.name')
+    team_description = fields.Text('团队描述', related='team_id.description')
     
     project_id = fields.Many2one('project.project', string='商机项目', ondelete='set null')
     project_name = fields.Char('项目名称', related='project_id.name')
@@ -31,12 +34,12 @@ class Opportunity(models.Model):
                 for opportunity in res:
                     if opportunity.type == 'opportunity':
                         team_vals = {
-                            'name' : opportunity.name,
+                            'name' : opportunity.name + "的商机团队",
                             'team_type' : 'opportunity',
                             'description' : '商机' + opportunity.name + "自动根据团队模板创建的商机团队",                            
                             }
                         team = self.env['crm.team'].create(team_vals)
-                        opportunity.write({'owner_team_id' : team[0].id})
+                        opportunity.write({'team_id' : team[0].id})
                     
         
         #根据配置,是否创建默认商机项目
@@ -56,7 +59,7 @@ class Opportunity(models.Model):
         return res
 
 class OpportunityRelation(models.Model):
-    _name = 'anodoo.sfa.opportunity.relation'
+    _name = 'anodoo.opportunity.relation'
     _description = '商机和商机的关系'
     _rec_name = 'opportunity_to_id'
     _order = 'id'
@@ -71,7 +74,7 @@ class OpportunityRelation(models.Model):
     description = fields.Text('说明')
     
 class OpportunityRegister(models.Model):
-    _name = 'anodoo.sfa.opportunity.register'
+    _name = 'anodoo.opportunity.register'
     _description = '商机注册,商机报备'
     _rec_name = 'name'
     _order = 'id'

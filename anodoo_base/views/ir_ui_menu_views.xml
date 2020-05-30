@@ -8,6 +8,7 @@
             <field name="arch" type="xml">
             	<xpath expr="//field[@name='sequence']" position="after">
 	        		<field name="is_root_display"/>	
+	        		<field name="external_id"/>	
 	        	</xpath>
             </field>
         </record>
@@ -20,6 +21,7 @@
             		<field name="action"/>
             		<field name="web_icon"/>	
 	        		<field name="is_root_display"/>	
+	        		<field name="external_id"/>	
 	        	</xpath>
             </field>
         </record>
@@ -28,6 +30,9 @@
             <field name="model">ir.ui.menu</field>
             <field name="inherit_id" ref="base.edit_menu_access_search"/> 
             <field name="arch" type="xml">
+            	<xpath expr="//field[@name='parent_id']" position="after">
+            		<field name="external_id"/>
+	        	</xpath>
             	<xpath expr="//filter[@name='inactive']" position="after">
             		<separator/>
             		<filter string="根菜单" name="is_root" domain="[('parent_id', '=', False)]"/>
@@ -35,6 +40,7 @@
             </field>
         </record>
         
+        <!-- 菜单 -->
         <record id="base.grant_menu_access" model="ir.actions.act_window">
             <field name="context">{'ir.ui.menu.full_list':True, 'search_default_is_root':1}</field>
         </record>
