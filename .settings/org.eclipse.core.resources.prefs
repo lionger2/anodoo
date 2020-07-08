@@ -11,6 +11,7 @@ encoding//anodoo_base/models/res_partner.py=utf-8
 encoding//anodoo_base/models/res_users.py=utf-8
 encoding//anodoo_blog/__manifest__.py=utf-8
 encoding//anodoo_blog/controllers/blog_controllers.py=utf-8
+encoding//anodoo_contact/__manifest__.py=utf-8
 encoding//anodoo_content/__manifest__.py=utf-8
 encoding//anodoo_cust/__manifest__.py=utf-8
 encoding//anodoo_demo/__manifest__.py=utf-8
