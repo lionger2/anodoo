@@ -29,7 +29,7 @@
     # always loaded
     'data': [
         'data/oppor_data.xml',
-        'demo/demo.xml',#demo
+        #'demo/demo.xml',#demo
         'security/oppor_security.xml',
         'security/ir.model.access.csv',
         'views/oppor_views.xml',
@@ -38,5 +38,5 @@
         'views/oppor_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': ['demo/demo.xml',],
+    'demo': [],
 }

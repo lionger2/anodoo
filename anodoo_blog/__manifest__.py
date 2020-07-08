@@ -23,7 +23,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['website_blog',
-                'anodoo_profile'],
+                'anodoo_website'],
 
     # always loaded
     'data': [
@@ -38,5 +38,5 @@
         'views/blog_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': ['demo/demo.xml',],
+    'demo': [],
 }

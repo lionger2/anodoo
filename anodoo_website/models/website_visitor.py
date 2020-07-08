@@ -8,7 +8,7 @@ from odoo.http import request
 class WebsiteTrack(models.Model):
     _inherit = 'website.track'
 
-    referrer = fields.Text('Referrer')
+    referrer = fields.Text('Referrer信息')
 
 
 class WebsiteVisitor(models.Model):

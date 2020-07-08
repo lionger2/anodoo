@@ -14,6 +14,9 @@ class ResConfigSettings(models.TransientModel):
     social_tencent_weibo = fields.Char(related='website_id.social_tencent_weibo', readonly=False)
     social_renren = fields.Char(related='website_id.social_renren', readonly=False)
 
+    need_email_validate = fields.Boolean('需要邮件确认', config_parameter='need_email_validate')    
+    need_karma_to_view_profile = fields.Boolean('需要最低积分去查看他人信息', config_parameter='need_karma_to_view_profile')
+    
     #Override
     @api.depends('website_id', 'social_twitter', 'social_facebook', 'social_github', 'social_linkedin', 'social_youtube', 'social_instagram', 'social_qq', 'social_weixin', 'social_weibo', 'social_tencent_weibo', 'social_renren')
     def has_social_network(self):

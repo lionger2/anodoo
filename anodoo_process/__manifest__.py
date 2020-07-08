@@ -28,7 +28,7 @@
     # always loaded
     'data': [
         'data/process_data.xml',
-        'demo/demo.xml',#demo
+        #'demo/demo.xml',#demo
         'security/process_security.xml',
         'security/ir.model.access.csv',
         'views/process_views.xml',
@@ -38,5 +38,5 @@
         'views/process_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': ['demo/demo.xml',],
+    'demo': [],
 }

@@ -23,13 +23,13 @@
     'auto_install': True,
 
     # any module necessary for this one to work correctly
-    'depends': ['mail', 'sales_team', 'note_pad',
+    'depends': ['mail', 'sales_team', 'note',#'note_pad',
                 'anodoo_base'],
 
     # always loaded
     'data': [
         'data/team_data.xml',
-        'demo/demo.xml',#demo
+        #'demo/demo.xml',#demo
         'security/team_security.xml',
         'security/ir.model.access.csv',
         'views/crm_team_views.xml',
@@ -40,5 +40,5 @@
         'views/team_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': ['demo/demo.xml',],
+    'demo': [],
 }

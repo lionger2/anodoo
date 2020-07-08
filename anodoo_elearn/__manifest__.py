@@ -23,7 +23,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['website_slides', 'website_slides_survey', 'website_sale_slides',
-                'anodoo_profile'],
+                'anodoo_website'],
 
     # always loaded
     'data': [
@@ -41,5 +41,5 @@
         'views/elearn_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': ['demo/demo.xml',],
+    'demo': [],
 }

@@ -23,7 +23,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['event', 'website_event_track',
-                'anodoo_base'],
+                'anodoo_website'],
 
     # always loaded
     'data': [
@@ -36,5 +36,5 @@
         'views/event_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': ['demo/demo.xml',],
+    'demo': [],
 }

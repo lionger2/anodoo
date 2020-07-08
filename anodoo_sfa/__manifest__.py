@@ -28,7 +28,7 @@
     # always loaded
     'data': [
         'data/sfa_data.xml',
-        'demo/demo.xml',#demo
+        #'demo/demo.xml',#demo
         'security/sfa_security.xml',
         'security/ir.model.access.csv',
         'views/res_config_settings_views.xml',
@@ -37,5 +37,5 @@
         'views/sfa_templates.xml',
     ],
     # only loaded in demonstration mode
-    'demo': ['demo/demo.xml',],
+    'demo': [],
 }

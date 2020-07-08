@@ -27,3 +27,4 @@ class Website(models.Model):
     social_weibo = fields.Char('微博', default=_default_social_weibo)
     social_tencent_weibo = fields.Char('腾讯微博', default=_default_social_tencent_weibo)
     social_renren = fields.Char('人人网', default=_default_social_renren)
+    

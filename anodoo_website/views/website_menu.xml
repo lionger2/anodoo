@@ -23,7 +23,22 @@
 	        <field name="context">{}</field>
 	    </record>
 	    
-	    
+	    <record id="action_profile_users" model="ir.actions.act_window">
+            <field name="name">社区用户</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.users</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_profile_users_search"/>
+			<field name="view_ids"
+		                   eval="[(5, 0, 0),
+		                          (0, 0, {'view_mode': 'tree', 'view_id': ref('view_profile_users_list')}),
+		                          (0, 0, {'view_mode': 'form', 'view_id': ref('view_profile_users_form')})]"/>
+			<field name="context">{}</field>
+			<field name="domain">[('karma', '>', 0)]</field>
+			
+        </record>
+	
+			
 	  
 	    <menuitem id="website_menu_root_anodoo" name="Anodoo 网站" sequence="80"/>
 	    	<menuitem parent="website_menu_root_anodoo" id="website_menu_dashboard" name="仪表盘" sequence="1" action="website.ir_actions_server_website_google_analytics"/>
@@ -35,12 +50,23 @@
    			<menuitem parent="website_menu_root_anodoo" id="website_menu_forms" name="网站表单" sequence="20"/>
    				<menuitem parent="website_menu_forms" id="website_menu_forms_anodoo_website_form" name="网站表单" action="action_anodoo_website_form_list"/>
 	    
-	    	<menuitem parent="website_menu_root_anodoo" id="website_menu_livechat" name="在线聊天" />
+	    	<menuitem parent="website_menu_root_anodoo" id="website_menu_livechat" name="在线聊天" sequence="30"/>
 	    		<menuitem parent="website_menu_livechat" id="website_menu_livechat_channels" name="聊天频道" action="im_livechat.im_livechat_channel_action"/>
 	    		<menuitem parent="website_menu_livechat" id="website_menu_livechat_history" name="会话历史" action="im_livechat.mail_channel_action"/>
 	    		<menuitem parent="website_menu_livechat" id="website_menu_livechat_rating" name="客户点评" action="im_livechat.rating_rating_action_livechat_report"/>
 	    		<menuitem parent="website_menu_livechat" id="website_menu_livechat_canned" name="预设回复" action="im_livechat.im_livechat_canned_response_action" />
 
+			<menuitem parent="website_menu_root_anodoo" id="website_menu_gamification" name="积分制" sequence="40" />
+				<menuitem parent="website_menu_gamification" id="website_menu_gamification_challenge" name="挑战" action="gamification.challenge_list_action"/>				
+		        <menuitem parent="website_menu_gamification" id="website_menu_gamification_definition" name="目标定义" action="gamification.goal_definition_list_action"/>
+		        <menuitem parent="website_menu_gamification" id="website_menu_gamification_goal" name="所有目标" action="gamification.goal_list_action"/>
+			
+			<menuitem parent="website_menu_root_anodoo" id="website_menu_users" name="社区" sequence="50" />
+				<menuitem parent="website_menu_users" id="website_menu_users_list" name="社区会员" action="action_profile_users"  sequence="30" />
+				<menuitem parent="website_menu_users" id="website_menu_users_ranks" name="级别" action="gamification.gamification_karma_ranks_action" sequence="30" />
+				<menuitem parent="website_menu_users" id="website_menu_users_badge" name="徽章" action="gamification.badge_list_action" sequence="40" />
+			
+			
     		<menuitem parent="website_menu_root_anodoo" id="website_menu_report" name="分析" sequence="90"/>
     			<menuitem parent="website_menu_report" id="website_menu_report_analytics" name="网站分析" action="website.ir_actions_server_website_google_analytics"/>
     			<menuitem parent="website_menu_report" id="website_menu_report_ecom" name="分析" action="website.ir_actions_server_website_dashboard"/>
